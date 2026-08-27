@@ -95,7 +95,7 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 
 <header class="mast"><div class="wrap">
 <p class="eyebrow">Meta Ad Library census &#183; refreshed ${e(fmtDate)}</p>
-<h1>Persona&nbsp;Census</h1>
+<h1>Persona Census</h1>
 <p class="dek">The longest-running live ads from ${brands.length} tracked competitors across ten DTC categories &#8212; each read for <strong>who it casts</strong> and <strong>what it needs them to believe</strong>. Harvested straight from Meta's Ad Library, so there is no spend and no impressions here: the ranking metric is survival.</p>
 <dl class="tally">
 <div><dt>Brands</dt><dd>${brands.length}</dd></div>
