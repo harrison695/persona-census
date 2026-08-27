@@ -1,7 +1,7 @@
 {
- "harvestedAt": "2026-08-27T14:40:51.856Z",
+ "harvestedAt": "2026-08-27T15:47:32.129Z",
  "brands": 120,
- "ads": 640,
+ "ads": 639,
  "rows": [
   {
    "brand": "Huel",
@@ -240,19 +240,6 @@
   {
    "brand": "David Protein",
    "lane": "nutrition",
-   "adId": "786410947418100",
-   "days": 164,
-   "kind": "STATIC",
-   "title": "{{product.name}}",
-   "persona": "The Skeptical Flavor Auditor",
-   "psychographic": "Assumes high-protein means bad-tasting and needs a civilian to break that prior before she'll try it.",
-   "readBy": "hand",
-   "landing": "https://davidprotein.com/pages/meet-david-gold",
-   "adLibrary": "https://www.facebook.com/ads/library/?id=786410947418100"
-  },
-  {
-   "brand": "David Protein",
-   "lane": "nutrition",
    "adId": "2144036669705723",
    "days": 162,
    "kind": "STATIC",
@@ -266,54 +253,54 @@
   {
    "brand": "David Protein",
    "lane": "nutrition",
-   "adId": "2407643103088169",
-   "days": 160,
+   "adId": "913167051420029",
+   "days": 157,
    "kind": "VIDEO",
    "title": "20g Protein. 150 Calories. 0g Sugar.",
    "persona": "The Shirtless Kitchen Proof",
    "psychographic": "Believes a visible body is the only credential a supplement needs; the physique IS the ingredient panel.",
    "readBy": "hand",
    "landing": "https://davidprotein.com/pages/meet-david-bronze",
-   "adLibrary": "https://www.facebook.com/ads/library/?id=2407643103088169"
+   "adLibrary": "https://www.facebook.com/ads/library/?id=913167051420029"
   },
   {
    "brand": "David Protein",
    "lane": "nutrition",
-   "adId": "2693526877700148",
-   "days": 157,
-   "kind": "STATIC",
-   "title": "{{product.name}}",
-   "persona": "The Spec-Sheet Buyer",
-   "psychographic": "Reads food like hardware; three numbers on black is more persuasive than any lifestyle image.",
-   "readBy": "hand",
-   "landing": "https://davidprotein.com/products/cookie-dough-caramel-chocolate",
-   "adLibrary": "https://www.facebook.com/ads/library/?id=2693526877700148"
-  },
-  {
-   "brand": "David Protein",
-   "lane": "nutrition",
-   "adId": "4010230945933945",
+   "adId": "1441181220633189",
    "days": 155,
    "kind": "VIDEO",
-   "title": "28g Protein. 150 Calories. 0g Sugar.",
-   "persona": "The Dessert-Deprived Dieter",
-   "psychographic": "Wants permission to eat like a kid inside an adult's macro budget; food-porn texture does the persuading.",
+   "title": "{{product.name}}",
+   "persona": "The Skeptical Flavor Auditor",
+   "psychographic": "Assumes high-protein means bad-tasting and needs a civilian to break that prior before she'll try it.",
    "readBy": "hand",
    "landing": "https://davidprotein.com/pages/meet-david-gold",
-   "adLibrary": "https://www.facebook.com/ads/library/?id=4010230945933945"
+   "adLibrary": "https://www.facebook.com/ads/library/?id=1441181220633189"
   },
   {
    "brand": "David Protein",
    "lane": "nutrition",
-   "adId": "1474054674372377",
-   "days": 155,
+   "adId": "925516146896831",
+   "days": 146,
    "kind": "VIDEO",
-   "title": "28g of Protein. 150 Calories. 0g of Sugar.",
+   "title": "20g Protein. 150 Calories. 0g Sugar.",
    "persona": "The Macro Spec-Sheet Buyer",
    "psychographic": "Reads food like hardware; a small set of numbers is more persuasive than any lifestyle image.",
    "readBy": "auto",
-   "landing": "https://davidprotein.com/pages/meet-david-gold",
-   "adLibrary": "https://www.facebook.com/ads/library/?id=1474054674372377"
+   "landing": "https://davidprotein.com/pages/meet-david-bronze",
+   "adLibrary": "https://www.facebook.com/ads/library/?id=925516146896831"
+  },
+  {
+   "brand": "David Protein",
+   "lane": "nutrition",
+   "adId": "1346449840763835",
+   "days": 70,
+   "kind": "VIDEO",
+   "title": "20g Protein. 150 Calories. 0g Sugar.",
+   "persona": "The Macro Spec-Sheet Buyer",
+   "psychographic": "Reads food like hardware; a small set of numbers is more persuasive than any lifestyle image.",
+   "readBy": "auto",
+   "landing": "https://davidprotein.com/pages/meet-david-bronze",
+   "adLibrary": "https://www.facebook.com/ads/library/?id=1346449840763835"
   },
   {
    "brand": "Magic Spoon",
