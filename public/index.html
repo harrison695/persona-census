@@ -171,8 +171,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <dl class="tally">
 <div><dt>Brands</dt><dd>120</dd></div>
 <div><dt>Ads profiled</dt><dd>639</dd></div>
-<div><dt>Creatives scanned</dt><dd>4,132</dd></div>
-<div><dt>Distinct concepts</dt><dd>1,316</dd></div>
+<div><dt>Hand-read</dt><dd>139</dd></div>
 <div><dt>Longest runner</dt><dd>529<small>d</small></dd></div>
 </dl></div></header>
 
@@ -180,6 +179,9 @@ html,body{max-width:100%;overflow-x:hidden}
 <div><h3>How this is built</h3>
 <p>Meta's Ad Library pagination query is replayed for each advertiser, filtered to ads whose <em>start date</em> precedes a descending ladder of cutoffs. Everything surviving a restrictive cutoff is by definition that brand's set of longest runners &#8212; so the picks are <strong>provably the oldest</strong>, not a sample.</p>
 <p>Creatives are deduplicated on CDN content id, then clustered by <strong>concept</strong> (landing path + copy fingerprint), so each brand's cards are different <em>arguments</em> rather than re-uploads of one.</p></div>
+<div class="flag"><h3>Why there are no volume figures</h3>
+<p>The ladder stops as soon as it has enough long runners, and a session can be rate-limited part-way through a brand. Any count of &ldquo;creatives scanned&rdquo; is therefore a measure of <strong>how far the scan got</strong>, not of how much that advertiser is running &#8212; 102 of these 120 brands stopped early.</p>
+<p>So this report deliberately publishes <strong>no creative counts, no concept ratios and no video/static splits</strong>. What survives the method is each ad and the date it started, which is measured directly and does not depend on scan depth.</p></div>
 <div class="flag"><h3>What days-running is not</h3>
 <p>The Ad Library exposes <strong>no impressions and no spend</strong> for US commercial ads, so nothing here is a performance ranking. Days-running measures <strong>competitor conviction</strong> &#8212; how long a team has kept paying for something &#8212; which is a survival proxy, not a return.</p>
 <p>Cadence differs by more than 25&#215; across these advertisers, so longevity is only comparable <strong>within</strong> a brand, never across the table.</p></div>
@@ -192,7 +194,7 @@ html,body{max-width:100%;overflow-x:hidden}
 
 <section class="sig"><div class="wrap">
 <div class="secthead"><h2>What repeats across the set</h2><p class="sub">Patterns visible only once the personas are named</p></div>
-<div class="finds"><article class="find"><h3>Hormones are the universal villain &#8212; for both sexes</h3><p>Cortisol, testosterone and peri-menopause do identical work across the set: they move the cause of a body the buyer dislikes from their behaviour to their biology. Happy Mammoth's <em>5 signs cortisol is controlling your body</em>, Primal Queen's <em>you're not broken &#8230; it's peri-menopause</em> and Mars Men's <em>no beer? no problem, cortisol's got your belly covered</em> are one psychographic in three costumes: <strong>it isn't my fault, and the mechanism has a name.</strong></p></article><article class="find"><h3>GLP-1 is generating personas, not just demand</h3><p>Four brands address four <em>different</em> people created by the same drug. Huel sells to the patient whose appetite vanished; Gr&#252;ns to the one with constipation and sulfur burps; Primal Queen sells PQ7 as <em>no injections, no jitters</em>; Mars Men catches the man at <em>before you start injections</em>. Companion, side-effect fixer and refusenik are three separate buyers &#8212; treating GLP-1 as one audience leaves two of them unserved.</p></article><article class="find"><h3>The heaviest spenders run the fewest ideas</h3><p>RYZE keeps 80 distinct creatives alive that express only <strong>3</strong> concepts. Lineage runs 31 for 3. Flamingo runs 30 for 2. Volume advertisers vary the <em>asset</em>, never the <em>argument</em> &#8212; which is why their copy is useless for identifying a format and the composition has to be read instead. Watch the creatives&#8594;concepts column: a tight ratio marks a brand running a machine, not a test.</p></article><article class="find"><h3>Medical-authority cosplay is the default proof device</h3><p>Lab coats at Primal Queen and Resilia, <em>Doctor Reacts</em> at Ulike, <em>from a real cancer researcher</em> at Resilia, <em>made by Yale-educated scientists</em> at Thesis, and Primal Viking's <em>my doctor told me something he'd never told a patient before</em>. In none of these is the clinician the advertiser's own. The persona being served distrusts their actual doctor and trusts a credentialed dissenter.</p></article><article class="find"><h3>Apology as an offer mechanic</h3><p><em>We Made Too Much</em> (Primal Viking), <em>We really fcked up this time</em> (Hismile), <em>Apologies to last week's buyers</em> (Mars Men), <em>We're sorry &#8212; here's 55% off</em> (Paleovalley). Framing the discount as a mistake or a logistics failure lets the price drop without conceding the product was ever worth less.</p></article><article class="find"><h3>At the premium end, risk reversal replaced the discount</h3><p>R&#332;Z's longest-running structure is a checkout screen reading <em>Due Today $0.00 &#8212; only pay if your hair loves it</em>. Norse Organics converts its returns policy into the efficacy claim: <em>our return policy is simple. Acne will never return.</em> Where price is the objection, the winning offer is <strong>don't pay yet</strong>, not <strong>pay less</strong>.</p></article></div></div></section>
+<div class="finds"><article class="find"><h3>Hormones are the universal villain &#8212; for both sexes</h3><p>Cortisol, testosterone and peri-menopause do identical work across the set: they move the cause of a body the buyer dislikes from their behaviour to their biology. Happy Mammoth's <em>5 signs cortisol is controlling your body</em>, Primal Queen's <em>you're not broken &#8230; it's peri-menopause</em> and Mars Men's <em>no beer? no problem, cortisol's got your belly covered</em> are one psychographic in three costumes: <strong>it isn't my fault, and the mechanism has a name.</strong></p></article><article class="find"><h3>GLP-1 is generating personas, not just demand</h3><p>Four brands address four <em>different</em> people created by the same drug. Huel sells to the patient whose appetite vanished; Gr&#252;ns to the one with constipation and sulfur burps; Primal Queen sells PQ7 as <em>no injections, no jitters</em>; Mars Men catches the man at <em>before you start injections</em>. Companion, side-effect fixer and refusenik are three separate buyers &#8212; treating GLP-1 as one audience leaves two of them unserved.</p></article><article class="find"><h3>Medical-authority cosplay is the default proof device</h3><p>Lab coats at Primal Queen and Resilia, <em>Doctor Reacts</em> at Ulike, <em>from a real cancer researcher</em> at Resilia, <em>made by Yale-educated scientists</em> at Thesis, and Primal Viking's <em>my doctor told me something he'd never told a patient before</em>. In none of these is the clinician the advertiser's own. The persona being served distrusts their actual doctor and trusts a credentialed dissenter.</p></article><article class="find"><h3>Apology as an offer mechanic</h3><p><em>We Made Too Much</em> (Primal Viking), <em>We really fcked up this time</em> (Hismile), <em>Apologies to last week's buyers</em> (Mars Men), <em>We're sorry &#8212; here's 55% off</em> (Paleovalley). Framing the discount as a mistake or a logistics failure lets the price drop without conceding the product was ever worth less.</p></article><article class="find"><h3>At the premium end, risk reversal replaced the discount</h3><p>R&#332;Z's longest-running structure is a checkout screen reading <em>Due Today $0.00 &#8212; only pay if your hair loves it</em>. Norse Organics converts its returns policy into the efficacy claim: <em>our return policy is simple. Acne will never return.</em> Where price is the objection, the winning offer is <strong>don't pay yet</strong>, not <strong>pay less</strong>.</p></article></div></div></section>
 
 <div class="bar"><div class="wrap">
 <button class="chip" data-lane="*" aria-pressed="true">All lanes</button><button class="chip" data-lane="nutrition">Functional Nutrition &amp; GLP-1</button><button class="chip" data-lane="hormone">Women's Hormone &amp; Intimate Health</button><button class="chip" data-lane="hairremoval">Hair Removal &amp; Personal Care</button><button class="chip" data-lane="coffee">Functional Coffee &amp; Nootropics</button><button class="chip" data-lane="haircare">Haircare &amp; Grooming</button><button class="chip" data-lane="mens">Men's Performance, Scent &amp; Skin</button><button class="chip" data-lane="skincare">Skincare &amp; Beauty</button><button class="chip" data-lane="fragrance">Fragrance</button><button class="chip" data-lane="sleep">Sleep &amp; Home</button><button class="chip" data-lane="outdoor">Outdoor &amp; Performance</button>
@@ -206,9 +208,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-huel">
 <header class="bh"><h3>Huel</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">254<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">195<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">24&#8202;&#8594;&#8202;8</dd></div>
-<div><dt>Video / static</dt><dd class="num">8<small>/</small>16</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the sprouts aisle convert trusts the grocery store more than the internet; a free sample at sprouts de-risks a brand she'd never buy cold online. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Huel_1359808319109124.webp" alt="The Sprouts Aisle Convert" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>254</b>d</span></div>
@@ -261,9 +261,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-gruns">
 <header class="bh"><h3>Gr&#252;ns</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">92<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">87<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">81&#8202;&#8594;&#8202;29</dd></div>
-<div><dt>Video / static</dt><dd class="num">48<small>/</small>33</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the stress-aware self-optimizer believes chronic stress is silently degrading her immunity; wants an adaptogen stack that feels like insider knowledge, not medicine. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/Gruns_1707182057133923.webp" alt="The Stress-Aware Self-Optimizer" width="620" height="775" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>92</b>d</span></div>
@@ -316,9 +314,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-ag1">
 <header class="bh"><h3>AG1</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">196<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">72<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">32&#8202;&#8594;&#8202;12</dd></div>
-<div><dt>Video / static</dt><dd class="num">26<small>/</small>6</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the celebrity-anchored skeptic outsources diligence to a famous man's reputation; if hugh jackman's name is on it the testing claim is assumed true. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/AG1_898841652932275.webp" alt="The Celebrity-Anchored Skeptic" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>196</b>d</span></div>
@@ -371,9 +367,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-davidprotein">
 <header class="bh"><h3>David Protein</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">162<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">153<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">13&#8202;&#8594;&#8202;5</dd></div>
-<div><dt>Video / static</dt><dd class="num">4<small>/</small>9</dd></div>
+<div><dt>Ads shown</dt><dd class="num">5</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the macro-disciplined aesthete treats appetite as an adversary to be out-engineered; &quot;discipline meets desire&quot; flatters him for wanting the treat and beating it. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/DavidProtein_2144036669705723.webp" alt="The Macro-Disciplined Aesthete" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>162</b>d</span></div>
@@ -418,9 +412,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-magicspoon">
 <header class="bh"><h3>Magic Spoon</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">58<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">58<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">57&#8202;&#8594;&#8202;5</dd></div>
-<div><dt>Video / static</dt><dd class="num">7<small>/</small>50</dd></div>
+<div><dt>Ads shown</dt><dd class="num">5</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the flavor-drop follower follows the brand for launches the way she follows sneakers; novelty is the product and the macros are the alibi. 15g protein. 6g fiber. 1g sugar. meet magic spoon protein oatmeal - the warm, creamy oatmeal you love, reimagined with the macros you expect from magic spoon. 15g protein. 6g fiber. 1g sugar. available in maple brown sugar, apple cinnamon, and banana bread.">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/MagicSpoon_1351719313589185.webp" alt="The Flavor-Drop Follower" width="620" height="775" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>58</b>d</span></div>
@@ -465,9 +457,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-lineage">
 <header class="bh"><h3>Lineage Provisions</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">164<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">163<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">31&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">0<small>/</small>31</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the bar-fatigued real-food believer believes protein bars are engineered sludge; &quot;actually tastes like food&quot; is aimed at that exact disillusionment. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1103"><img src="img/Lineage_920548150864448.webp" alt="The Bar-Fatigued Real-Food Believer" width="620" height="1103" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>164</b>d</span></div>
@@ -496,9 +486,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-consciousbar">
 <header class="bh"><h3>The Conscious Bar</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">42<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">42<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">26&#8202;&#8594;&#8202;9</dd></div>
-<div><dt>Video / static</dt><dd class="num">16<small>/</small>10</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the premium-chocolate stash builder buys in quantity to normalise a luxury; ten bars at one price converts an indulgence into a pantry staple. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/ConsciousBar_1631371921970839.webp" alt="The Premium-Chocolate Stash Builder" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>42</b>d</span></div>
@@ -551,9 +539,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-paleovalley">
 <header class="bh"><h3>Paleovalley</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">49<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">49<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">43&#8202;&#8594;&#8202;15</dd></div>
-<div><dt>Video / static</dt><dd class="num">29<small>/</small>14</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the bogo deadline responder moves only on a stacked deal with an expiry; &quot;last chance&quot; is the operative word, not the ingredient. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Paleovalley_3604351659703170.webp" alt="The BOGO Deadline Responder" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>49</b>d</span></div>
@@ -606,9 +592,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-chomps">
 <header class="bh"><h3>Chomps</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">73<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">43<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">32&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">10<small>/</small>22</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the chicken-snack seeker wants a specific sku located, not a brand explained; the ad is a store-locator with branding. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Chomps_1306817474938231.webp" alt="The Chicken-Snack Seeker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>73</b>d</span></div>
@@ -645,9 +629,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-primebites">
 <header class="bh"><h3>Prime Bites</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">21<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">21<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">80&#8202;&#8594;&#8202;7</dd></div>
-<div><dt>Video / static</dt><dd class="num">51<small>/</small>29</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the macro spec-sheet buyer reads food like hardware; a small set of numbers is more persuasive than any lifestyle image. limitied time offer&#129316; the brownie everyone&#8217;s been asking for&#8230; &#127827; &#10024; strawberry shortcake &#10024; 19g protein &#10024; our first brownie with sprinkles very limited edition. don&#8217;t say we didn&#8217;t warn you. &#128064;">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/PrimeBites_1440901414517916.webp" alt="The Macro Spec-Sheet Buyer" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>21</b>d</span></div>
@@ -700,9 +682,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-built">
 <header class="bh"><h3>BUILT</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">57<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">57<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">34&#8202;&#8594;&#8202;6</dd></div>
-<div><dt>Video / static</dt><dd class="num">16<small>/</small>18</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/BUILT_1480198377120413.webp" alt="The Flavour-Led SKU Picker" width="620" height="775" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>57</b>d</span></div>
@@ -755,9 +735,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-questnutrition">
 <header class="bh"><h3>Quest Nutrition</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">87<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">51<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">25&#8202;&#8594;&#8202;20</dd></div>
-<div><dt>Video / static</dt><dd class="num">19<small>/</small>6</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the macro spec-sheet buyer reads food like hardware; a small set of numbers is more persuasive than any lifestyle image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/QuestNutrition_1272981591248804.webp" alt="The Macro Spec-Sheet Buyer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>87</b>d</span></div>
@@ -810,9 +788,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-rxbar">
 <header class="bh"><h3>RXBAR</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">57<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">57<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">26&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">26<small>/</small>0</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/RXBAR_2277498192994120.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>57</b>d</span></div>
@@ -841,9 +817,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-gomacro">
 <header class="bh"><h3>GoMacro</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">164<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">141<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">24&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">7<small>/</small>17</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the macro spec-sheet buyer reads food like hardware; a small set of numbers is more persuasive than any lifestyle image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/GoMacro_4434084863481659.webp" alt="The Macro Spec-Sheet Buyer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>164</b>d</span></div>
@@ -872,9 +846,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-clifbar">
 <header class="bh"><h3>CLIF Bar</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">57<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">57<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">67&#8202;&#8594;&#8202;7</dd></div>
-<div><dt>Video / static</dt><dd class="num">25<small>/</small>42</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the retail-shelf verifier needs to see it in a store they already walk through; physical availability retires the is-this-a-scam question. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/CLIFBar_1751797752480038.webp" alt="The Retail-Shelf Verifier" width="620" height="775" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>57</b>d</span></div>
@@ -927,9 +899,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-muchobars">
 <header class="bh"><h3>Mucho Bars</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">45<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">45<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">80&#8202;&#8594;&#8202;26</dd></div>
-<div><dt>Video / static</dt><dd class="num">66<small>/</small>14</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/MuchoBars_1337224647956993.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>45</b>d</span></div>
@@ -982,9 +952,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-jacob">
 <header class="bh"><h3>Jacob</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">195<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">65<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">20&#8202;&#8594;&#8202;14</dd></div>
-<div><dt>Video / static</dt><dd class="num">6<small>/</small>14</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the macro spec-sheet buyer reads food like hardware; a small set of numbers is more persuasive than any lifestyle image. the world's cleanest protein bar 20g grass-fed protein. no seed oils. nothing artificial.">
 <div class="shot" style="aspect-ratio:576/1024"><img src="img/Jacob_2157159488448225.webp" alt="The Macro Spec-Sheet Buyer" width="576" height="1024" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>195</b>d</span></div>
@@ -1037,9 +1005,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-eatmancereal">
 <header class="bh"><h3>Eat Man Cereal</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">38<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">13<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">24&#8202;&#8594;&#8202;13</dd></div>
-<div><dt>Video / static</dt><dd class="num">3<small>/</small>21</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the macro spec-sheet buyer reads food like hardware; a small set of numbers is more persuasive than any lifestyle image. 40% off science-backed cereal the world&#8217;s first high protein cereal with creatine &#10004;&#65039; whey protein isolate &#10004;&#65039; creatine monohydrate &#10004;&#65039; keto friendly &#10004;&#65039; no added sugar &#10004;&#65039; all-in-one meal solution no powder. no pills. no shaker bottle. just tasty cereal.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Eatmancereal_1812582266781129.webp" alt="The Macro Spec-Sheet Buyer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>38</b>d</span></div>
@@ -1092,9 +1058,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-iconicprotein">
 <header class="bh"><h3>ICONIC Protein</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">31<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">2<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">19&#8202;&#8594;&#8202;10</dd></div>
-<div><dt>Video / static</dt><dd class="num">10<small>/</small>9</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/ICONICProtein_1057581026617100.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>31</b>d</span></div>
@@ -1147,9 +1111,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-cleansimpleeats">
 <header class="bh"><h3>Clean Simple Eats</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">71<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">43<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">18&#8202;&#8594;&#8202;11</dd></div>
-<div><dt>Video / static</dt><dd class="num">13<small>/</small>5</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the macro spec-sheet buyer reads food like hardware; a small set of numbers is more persuasive than any lifestyle image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1097"><img src="img/CleanSimpleEats_1499648911168068.webp" alt="The Macro Spec-Sheet Buyer" width="620" height="1097" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>71</b>d</span></div>
@@ -1202,9 +1164,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-primals">
 <header class="bh"><h3>Primals</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">383<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">323<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">21&#8202;&#8594;&#8202;21</dd></div>
-<div><dt>Video / static</dt><dd class="num">11<small>/</small>10</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. stop brushing microplastics into your bloodstream &#128680; viral health alert: a new study (pubmed pmid: 38092338) reveals that brushing with a plastic toothbrush exposes you to up to 120 microplastic particles every time you brush - adding up to over 88,000 particles a year. and here&#8217;s the scary part - your plastic toothbrush started as crude oil, refined into petroleum-based nylon bristles. those bristles shed microplastic particles that don&#8217;t just stay in your mouth. t">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Primals_1440279613858046.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>383</b>d</span></div>
@@ -1257,9 +1217,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-im8health">
 <header class="bh"><h3>IM8 Health</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">72<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">72<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">23&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">6<small>/</small>17</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the focus-deprived self-optimiser believes their attention has been chemically degraded and wants a prescription-grade result without the prescription. finally. a body that feels like you again. most people won't feel this good in their 30s, 40s, or 50s. you can. im8 replaces 16 daily supplements in one clinically dosed, nsf certified scoop &#8212; built to transform your energy, immunity and focus. &#10022; free welcome kit with subscription. 30-day money-back guarantee.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/IM8Health_2034927480749794.webp" alt="The Focus-Deprived Self-Optimiser" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>72</b>d</span></div>
@@ -1296,9 +1254,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-joinzoe">
 <header class="bh"><h3>Join ZOE</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">28<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">3<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">53&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">30<small>/</small>23</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. try zoe daily30 for $33 zoe daily30 is scientifically proven to improve gut health. now you can try it for yourself with our new $33 trial pack. daily30 features ingredients that support gut health, energy, daily nutrition, and skin and hair. *trial automatically renews onto a 4-month subscription at $220 every 4 months unless cancelled before trial end.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/JoinZOE_1075055478511439.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>28</b>d</span></div>
@@ -1327,9 +1283,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-ritual">
 <header class="bh"><h3>Ritual</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">168<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">126<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">2&#8202;&#8594;&#8202;2</dd></div>
-<div><dt>Video / static</dt><dd class="num">1<small>/</small>1</dd></div>
+<div><dt>Ads shown</dt><dd class="num">2</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the diagnostic-quiz completer distrusts one-size-fits-all and wants to be told which variant is theirs before they will hand over money. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Ritual_2538078149922144.webp" alt="The Diagnostic-Quiz Completer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>168</b>d</span></div>
@@ -1350,9 +1304,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-lemme">
 <header class="bh"><h3>Lemme</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">128<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">76<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">21&#8202;&#8594;&#8202;5</dd></div>
-<div><dt>Video / static</dt><dd class="num">11<small>/</small>10</dd></div>
+<div><dt>Ads shown</dt><dd class="num">5</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the wound-up evening self-soother believes the day has left a residue that has to be actively cleared before sleep will come. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Lemme_1549687293219536.webp" alt="The Wound-Up Evening Self-Soother" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>128</b>d</span></div>
@@ -1397,9 +1349,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-llamanaturals">
 <header class="bh"><h3>Llama Naturals</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">44<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">37<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">31&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">31<small>/</small>0</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. the multivitamin made from real fruit a daily multivitamin for kids, made with 13 essential vitamins from real fruits and veggies to help fill the most common nutrient gaps. trusted by parents and loved by picky eaters, it&#8217;s a worry-free way to support your child&#8217;s healthy growth and development&#8212;with no added sugar cane or synthetic junk. &#10004;&#65039; whole food nutrition &#10004;&#65039; no added sugar cane &#10004;&#65039; third party tested">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/LlamaNaturals_1360165025442504.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>44</b>d</span></div>
@@ -1428,9 +1378,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-goldenchild">
 <header class="bh"><h3>Golden Child</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">72<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">21<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">19&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">13<small>/</small>6</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/GoldenChild_1338170311601786.webp" alt="Unread &#8212; needs a human pass" width="620" height="775" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>72</b>d</span></div>
@@ -1467,9 +1415,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-gfuel">
 <header class="bh"><h3>G FUEL</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">97<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">86<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">81&#8202;&#8594;&#8202;24</dd></div>
-<div><dt>Video / static</dt><dd class="num">11<small>/</small>70</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. &#129497;&#8205;&#9794;&#65039; critical role x g fuel is live! &#127922; round two of chaos and consequence is here. &#127825; vox machina&#8217;s flavor &#128073; f**k s**t up! &#128073; peach + orange + raspberry">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/GFUEL_981551944737621.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>97</b>d</span></div>
@@ -1522,9 +1468,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-hexclad">
 <header class="bh"><h3>HexClad</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">195<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">195<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">18&#8202;&#8594;&#8202;7</dd></div>
-<div><dt>Video / static</dt><dd class="num">2<small>/</small>16</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ready to continue upgrading your kitchen with the cookware you know and love? &#128293; hexclad's kitchenware performs just as good as it looks. shop now to find the next addition to your collection! &#128588;">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/HexClad_1263963232260183.webp" alt="Unread &#8212; needs a human pass" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>195</b>d</span></div>
@@ -1579,9 +1523,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-primalqueen">
 <header class="bh"><h3>Primal Queen</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">129<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">82<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">31&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">21<small>/</small>10</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the woman who followed the fat-loss rules and got worse believes the mainstream advice was actively lying to her; anger at the old protocol is the buying emotion. learn the benefits of female-focused beef organs &#8594; not all nutrients are absorbed the same. your body absorbs vitamins best when they come from real food, not synthetic isolates. that&#8217;s why beef organs focus on bioavailability, not megadoses. real nourishment. better absorption.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/PrimalQueen_2124041391784559.webp" alt="The Woman Who Followed the Fat-Loss Rules and Got Worse" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>129</b>d</span></div>
@@ -1610,9 +1552,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-happymammoth">
 <header class="bh"><h3>Happy Mammoth</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">174<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">15<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">65&#8202;&#8594;&#8202;12</dd></div>
-<div><dt>Video / static</dt><dd class="num">29<small>/</small>36</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the woman who named her belly &quot;menobelly&quot; believes the weight is hormonal, not caloric; the promise that it &quot;shifts on its own&quot; removes the moral burden of dieting. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/HappyMammoth_2396002680918954.webp" alt="The Woman Who Named Her Belly &quot;Menobelly&quot;" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>174</b>d</span></div>
@@ -1665,9 +1605,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-opositiv">
 <header class="bh"><h3>O Positiv</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">106<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">105<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">47&#8202;&#8594;&#8202;13</dd></div>
-<div><dt>Video / static</dt><dd class="num">4<small>/</small>43</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the woman quietly managing pcos symptoms reads chin hair and irregular cycles as shameful private evidence; a clinical before/after grid lets her self-identify without saying the word. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/774"><img src="img/OPositiv_1344012544256324.webp" alt="The Woman Quietly Managing PCOS Symptoms" width="620" height="774" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>106</b>d</span></div>
@@ -1720,9 +1658,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-happymammothus">
 <header class="bh"><h3>Happy Mammoth US</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">63<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">63<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">19&#8202;&#8594;&#8202;9</dd></div>
-<div><dt>Video / static</dt><dd class="num">6<small>/</small>13</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/HappyMammothUS_945849368488325.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>63</b>d</span></div>
@@ -1775,9 +1711,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-spoiledchild">
 <header class="bh"><h3>SpoiledChild</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">300<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">233<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">89&#8202;&#8594;&#8202;8</dd></div>
-<div><dt>Video / static</dt><dd class="num">77<small>/</small>12</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the zero-risk trialist will not pay before proof; removing the gamble is worth more to them than a discount. try before you buy got tired morning eyes? &#128064; banish dark circles and puffiness with spoiledchild's&#8482; miracle eye treatment! make the switch today and see why it has so many 5-star reviews! &#10024; try a full size product before you buy. take the spoiledbrain&#8482; quiz and start seeing the results you&#8217;ve been craving.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/SpoiledChild_799564552949558.webp" alt="The Zero-Risk Trialist" width="620" height="620" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>300</b>d</span></div>
@@ -1832,9 +1766,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-flamingo">
 <header class="bh"><h3>Flamingo</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">190<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">175<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">30&#8202;&#8594;&#8202;2</dd></div>
-<div><dt>Video / static</dt><dd class="num">15<small>/</small>15</dd></div>
+<div><dt>Ads shown</dt><dd class="num">2</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the packing-cube traveler believes preparedness is a personality; a purpose-built travel case sells organisation more than shaving. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Flamingo_1189684526301087.webp" alt="The Packing-Cube Traveler" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>190</b>d</span></div>
@@ -1855,9 +1787,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-nood">
 <header class="bh"><h3>Nood</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">210<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">58<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">30&#8202;&#8594;&#8202;8</dd></div>
-<div><dt>Video / static</dt><dd class="num">20<small>/</small>10</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the aesthetic-procedure curious frames hair removal as a cosmetic treatment rather than grooming; borrowing botox and brazilian language raises the perceived tier. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Nood_1596945898029209.webp" alt="The Aesthetic-Procedure Curious" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>210</b>d</span></div>
@@ -1910,9 +1840,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-bushbalm">
 <header class="bh"><h3>Bushbalm</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">66<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">22<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">24&#8202;&#8594;&#8202;16</dd></div>
-<div><dt>Video / static</dt><dd class="num">21<small>/</small>3</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the salon client who waited too long regret is the hook; the wax technician functions as the authority she should have obeyed. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Bushbalm_1705888250723145.webp" alt="The Salon Client Who Waited Too Long" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>66</b>d</span></div>
@@ -1965,9 +1893,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-ulike">
 <header class="bh"><h3>Ulike</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">378<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">164<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">22&#8202;&#8594;&#8202;21</dd></div>
-<div><dt>Video / static</dt><dd class="num">21<small>/</small>1</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the man who wants clinic results without a clinic uses a doctor's reaction as permission; if a physician is impressed the at-home shortcut is legitimate.  who said hair removal has to hurt? not me! ulike air10's new-gen ice cooling technology has just solved this problem and you can use it at home. it's effective in a little as 2 weeks! use my code myro2025 to get $110 off, link in bio @ulikeglobal #ulikepartner #ulikehairremoval #aad2025 #ipl">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Ulike_1255102825921303.webp" alt="The Man Who Wants Clinic Results Without a Clinic" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>378</b>d</span></div>
@@ -2020,9 +1946,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-dollarshaveclub">
 <header class="bh"><h3>Dollar Shave Club</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">16<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">16<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">80&#8202;&#8594;&#8202;10</dd></div>
-<div><dt>Video / static</dt><dd class="num">44<small>/</small>36</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the locker-room joke audience buys from brands willing to be crude about male anatomy; the innuendo plate is the whole ad. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/DollarShaveClub_1071791935360517.webp" alt="The Locker-Room Joke Audience" width="620" height="775" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>16</b>d</span></div>
@@ -2075,9 +1999,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-carpe">
 <header class="bh"><h3>Carpe</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">177<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">160<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">68&#8202;&#8594;&#8202;5</dd></div>
-<div><dt>Video / static</dt><dd class="num">60<small>/</small>8</dd></div>
+<div><dt>Ads shown</dt><dd class="num">5</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the free-gift-threshold shopper buys when a tangible extra is attached; the towels do more work than the percentage. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Carpe_794100686504394.webp" alt="The Free-Gift-Threshold Shopper" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>177</b>d</span></div>
@@ -2122,9 +2044,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-hismile">
 <header class="bh"><h3>Hismile</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">88<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">80<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">77&#8202;&#8594;&#8202;6</dd></div>
-<div><dt>Video / static</dt><dd class="num">74<small>/</small>3</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the science-experiment watcher watches for spectacle, not information; a chicken leg in acid earns the view that the toothpaste could not. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Hismile_1471384164209286.webp" alt="The Science-Experiment Watcher" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>88</b>d</span></div>
@@ -2177,9 +2097,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-manscaped">
 <header class="bh"><h3>MANSCAPED</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">43<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">9<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">31&#8202;&#8594;&#8202;24</dd></div>
-<div><dt>Video / static</dt><dd class="num">13<small>/</small>18</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the visible-smile self-auditor judges themselves on a feature other people see first; wants a fast, checkable before/after. trim the fluff introducing the beard hedger&#174; plus, a streamlined beard-sculpting machine designed to give you a quick and easy trim. &#129397; skinsafe&#174; technology &#10004;&#65039;stainless-steel blade &#129682;quick-adjust slider with 14 comb settings, 1 mm&#8211;20 mm &#128166;waterproof &#128274;travel lock &#128268;up to 60 minutes of runtime">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/MANSCAPED_1559404805889097.webp" alt="The Visible-Smile Self-Auditor" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>43</b>d</span></div>
@@ -2232,9 +2150,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-billie">
 <header class="bh"><h3>Billie</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">139<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">85<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">25&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">12<small>/</small>13</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the shaving-fatigued body groomer reads the daily razor as a losing chore and wants permanence; explicitness about the body part is the trust signal. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Billie_1597185351580278.webp" alt="The Shaving-Fatigued Body Groomer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>139</b>d</span></div>
@@ -2263,9 +2179,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-roseskinco">
 <header class="bh"><h3>Rose Skin Co</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">77<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">76<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">8&#8202;&#8594;&#8202;2</dd></div>
-<div><dt>Video / static</dt><dd class="num">8<small>/</small>0</dd></div>
+<div><dt>Ads shown</dt><dd class="num">2</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the shaving-fatigued body groomer reads the daily razor as a losing chore and wants permanence; explicitness about the body part is the trust signal. ditch the razor. forever. &#10024; ditch the blade. keep the glow. lumi zaps hair at the root for silky results that actually last. &#10024;">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/RoseSkinCo_1357264849600964.webp" alt="The Shaving-Fatigued Body Groomer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>77</b>d</span></div>
@@ -2286,9 +2200,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-fur">
 <header class="bh"><h3>Fur</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">311<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">205<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">14&#8202;&#8594;&#8202;9</dd></div>
-<div><dt>Video / static</dt><dd class="num">6<small>/</small>8</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the shaving-fatigued body groomer reads the daily razor as a losing chore and wants permanence; explicitness about the body part is the trust signal. {{product.name}} ingrowns and razor burn? no thanks. our best-sellers are here to treat and prevent them. shop now and see the difference! &#9889;&#65039;">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/Fur_2019734538851378.webp" alt="The Shaving-Fatigued Body Groomer" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>311</b>d</span></div>
@@ -2341,9 +2253,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-sugardoh">
 <header class="bh"><h3>Sugardoh</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">175<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">44<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">24&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">20<small>/</small>4</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} new to sugaring? this beginner-friendly kit teaches you how to remove hair gently at home with long-lasting results.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/Sugardoh_27001912079410125.webp" alt="The Flavour-Led SKU Picker" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>175</b>d</span></div>
@@ -2372,9 +2282,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-oyoskincare">
 <header class="bh"><h3>OYO Skincare</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">35<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">1<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">12&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">9<small>/</small>3</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the shaving-fatigued body groomer reads the daily razor as a losing chore and wants permanence; explicitness about the body part is the trust signal. carry-on approved hair removal routine your vacation checklist is long enough &#129393; with our smooth skin system, you can tick hair removal off before you leave and spend more time enjoying your trip. not worrying about when you'll need to shave again. 5 dermatologist-tested products work together to prep, remove, soothe and nourish your skin for smoother, softer results with fewer bumps and less irritation. now 25% off. give your skin the care it deserves be">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/OYOSkincare_1034987802235777.webp" alt="The Shaving-Fatigued Body Groomer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>35</b>d</span></div>
@@ -2411,9 +2319,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-touchland">
 <header class="bh"><h3>touchland</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">72<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">15<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">26&#8202;&#8594;&#8202;7</dd></div>
-<div><dt>Video / static</dt><dd class="num">11<small>/</small>15</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/touchland_2382171252273145.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>72</b>d</span></div>
@@ -2466,9 +2372,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-paume">
 <header class="bh"><h3>PAUME</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">85<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">84<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">33&#8202;&#8594;&#8202;12</dd></div>
-<div><dt>Video / static</dt><dd class="num">31<small>/</small>2</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the week-by-week progress tracker needs a dated timeline to sustain a daily habit, because the benefit is otherwise invisible.  your resident handcare expert here &#9757;&#65039;&#8211; did you know your hands have 80% less collagen than your face? more importantly, did you know there is something you can do about it? &#129782; psst&#8230; use code welcome15 if you&#8217;re new to the world of @mypaume.">
 <div class="shot" style="aspect-ratio:620/1101"><img src="img/PAUME_1795692645207375.webp" alt="The Week-by-Week Progress Tracker" width="620" height="1101" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>85</b>d</span></div>
@@ -2523,9 +2427,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-ryze">
 <header class="bh"><h3>RYZE Superfoods</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">236<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">205<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">80&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">0<small>/</small>80</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the man who calls it a beer belly accepts a comic, self-deprecating name for his own body; the mushroom coffee is smuggled in as the fix. pour yourself a better cup of coffee &#9749;&#65039; ryze is powered by functional mushrooms and adaptogens. our creamy and delicious blend features six functional mushrooms, prebiotics, zero added sugar and 100% organic or non-gmo ingredients. these clean, no bs ingredients come to you sustainably from right here in the usa to provide game-changing daily immune support and long-lasting energy in every cup. just add water for easy prep and on-the-go wellness. try now &#10145;">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/RYZE_4177894092472151.webp" alt="The Man Who Calls It a Beer Belly" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>236</b>d</span></div>
@@ -2554,9 +2456,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-everydaydose">
 <header class="bh"><h3>Everyday Dose</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">274<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">140<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">5&#8202;&#8594;&#8202;3</dd></div>
-<div><dt>Video / static</dt><dd class="num">5<small>/</small>0</dd></div>
+<div><dt>Ads shown</dt><dd class="num">3</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the side-by-side taster needs the comparison staged in front of him; two glasses on a table is the entire proof structure. pour yourself coffee that does more &#9749; dose is powered with functional mushrooms and nootropics. our smooth and delicious blend features 100% organic and non-gmo lion&#8217;s mane and chaga mushroom extracts, grass-fed collagen protein, and l-theanine. zero junk, no misleading &#8220;natural&#8221; flavors, no fake myceliated grain mushroom. just 100% clean ingredients that are 3rd party tested and designed to provide daily mental clarity, long-lasting energy, and gut supp">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/EverydayDose_818885337616738.webp" alt="The Side-By-Side Taster" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>274</b>d</span></div>
@@ -2585,9 +2485,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-javvy">
 <header class="bh"><h3>Javvy</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">268<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">100<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">71&#8202;&#8594;&#8202;16</dd></div>
-<div><dt>Video / static</dt><dd class="num">58<small>/</small>13</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the bundle-maximiser computes the free-gift dollar value as the real price; the coffee is nearly incidental to the arithmetic. unlock huge black friday savings &#128420; black friday is here and the deals are huge. get up to 58% off plus free gifts when you stock up on javvy&#8217;s protein coffee. power through the season with bold flavor and real benefits!">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/Javvy_839115475534246.webp" alt="The Bundle-Maximiser" width="620" height="775" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>268</b>d</span></div>
@@ -2640,9 +2538,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-mudwtr">
 <header class="bh"><h3>MUD\WTR</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">21<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">20<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">12&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">8<small>/</small>4</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the dose-curious ritualist reads the pour itself as the ritual; the cup and the motion carry more meaning than the ingredient list. get $20 off &amp; a free frother mud\wtr is powered by functional mushrooms, superfoods and spices. designed by food scientists to boost your energy, focus, and immune system&#8212;without the jitters. plus, it supports gut health with prebiotic fiber. &#128267; energy without jitters &#128525; 100% usda organic &#127812; 2,240 mg of mushrooms per serving &#129505; try today and get free frother and shipping try now &#11015;&#65039; www.mudwtr.com">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/MUDWTR_1050238534276041.webp" alt="The Dose-Curious Ritualist" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>21</b>d</span></div>
@@ -2679,9 +2575,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-thesis">
 <header class="bh"><h3>Thesis</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">22<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">22<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">28&#8202;&#8594;&#8202;13</dd></div>
-<div><dt>Video / static</dt><dd class="num">19<small>/</small>9</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the student facing finals without a prescription wants adderall's outcome and neither the diagnosis nor the pharmacy; &quot;prescription-free&quot; is the precise wedge. focus sharper. think faster. nature&#8217;s adderall is here. our best-selling clarity blend boosts your focus, memory, and mental drive with ingredients like lion&#8217;s mane and 7,8-dhf &#8212; trusted by high performers to stay locked in, naturally. shop now!">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/Thesis_1058480206578323.webp" alt="The Student Facing Finals Without a Prescription" width="620" height="775" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>22</b>d</span></div>
@@ -2734,9 +2628,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-resilia">
 <header class="bh"><h3>Resilia</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">93<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">93<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">32&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">27<small>/</small>5</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the woman watching her belly month by month believes bloat is a timeline she can reverse; three silhouettes across three months makes progress legible. the daily ritual 2,000 years in the making&#127807; resilia is powered by two of the world's most time-tested botanicals. our easy-to-swallow softgels feature premium oil of oregano and cold-pressed ethiopian black seed oil. zero fillers. 100% non-gmo. rooted in 2,000 years of mediterranean wellness tradition. clean, no-bs ingredients, third-party tested and shipped straight from the usa to deliver powerful daily support for a healthy gut, a healthy inflammatory respo">
 <div class="shot" style="aspect-ratio:620/1111"><img src="img/Resilia_1523786479380053.webp" alt="The Woman Watching Her Belly Month by Month" width="620" height="1111" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>93</b>d</span></div>
@@ -2773,9 +2665,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-manukora">
 <header class="bh"><h3>Manukora</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">74<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">58<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">29&#8202;&#8594;&#8202;8</dd></div>
-<div><dt>Video / static</dt><dd class="num">12<small>/</small>17</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/Manukora_1685564882872999.webp" alt="Unread &#8212; needs a human pass" width="620" height="775" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>74</b>d</span></div>
@@ -2828,9 +2718,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-neutonic">
 <header class="bh"><h3>Neutonic</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">9<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">6<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">15&#8202;&#8594;&#8202;2</dd></div>
-<div><dt>Video / static</dt><dd class="num">14<small>/</small>1</dd></div>
+<div><dt>Ads shown</dt><dd class="num">2</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the focus-deprived self-optimiser believes their attention has been chemically degraded and wants a prescription-grade result without the prescription. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Neutonic_1721664619055915.webp" alt="The Focus-Deprived Self-Optimiser" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>9</b>d</span></div>
@@ -2851,9 +2739,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-celsius">
 <header class="bh"><h3>CELSIUS</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">58<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">58<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">29&#8202;&#8594;&#8202;7</dd></div>
-<div><dt>Video / static</dt><dd class="num">2<small>/</small>27</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. game day starts with celsius fuel the first whistle to the final minute. celsius keeps you match ready. &#9917;&#65039;&#128293; #celsiuslivefit">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/CELSIUS_2050055219202242.webp" alt="Unread &#8212; needs a human pass" width="620" height="775" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>58</b>d</span></div>
@@ -2906,9 +2792,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-poca">
 <header class="bh"><h3>POCA</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">172<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">28<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">21&#8202;&#8594;&#8202;20</dd></div>
-<div><dt>Video / static</dt><dd class="num">21<small>/</small>0</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the macro spec-sheet buyer reads food like hardware; a small set of numbers is more persuasive than any lifestyle image. welcome to the new sugar. welcome to the new sugar. poca is zero calories, a good source of fiber and all natural. syrup for coffee and matcha - without the crash out.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/POCA_2059883361232223.webp" alt="The Macro Spec-Sheet Buyer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>172</b>d</span></div>
@@ -2961,9 +2845,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-harmlessharvest">
 <header class="bh"><h3>Harmless Harvest</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">38<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">13<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">44&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">25<small>/</small>19</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/HarmlessHarvest_27164446299899846.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>38</b>d</span></div>
@@ -3000,9 +2882,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-mellowsleep">
 <header class="bh"><h3>Mellow Sleep</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">221<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">103<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">20&#8202;&#8594;&#8202;17</dd></div>
-<div><dt>Video / static</dt><dd class="num">20<small>/</small>0</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the poor sleeper blaming their setup believes the room and the bedding, not their behaviour, are what is costing them the night. world&#8217;s fluffiest comforter for $100 double-stuffed loft that stands inches higher than anything else. it&#8217;s like upgrading from a blanket to a cloud.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/MellowSleep_1201564708221139.webp" alt="The Poor Sleeper Blaming Their Setup" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>221</b>d</span></div>
@@ -3057,9 +2937,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-olaplex">
 <header class="bh"><h3>Olaplex</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">86<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">80<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">24&#8202;&#8594;&#8202;15</dd></div>
-<div><dt>Video / static</dt><dd class="num">12<small>/</small>12</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the damage-repair loyalist believes her hair is structurally damaged and needs professional-grade chemistry, not cosmetics. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Olaplex_1307188387663124.webp" alt="The Damage-Repair Loyalist" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>86</b>d</span></div>
@@ -3112,9 +2990,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-prose">
 <header class="bh"><h3>Prose</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">63<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">22<small>d</small></dd></div>
-<div class="tight"><dt>Creatives &#8594; concepts</dt><dd class="num">18&#8202;&#8594;&#8202;2</dd></div>
-<div><dt>Video / static</dt><dd class="num">16<small>/</small>2</dd></div>
+<div><dt>Ads shown</dt><dd class="num">2</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the oily-roots-dry-ends sufferer has two contradictory hair problems and believes no mass-market product can serve both; the contradiction is the wedge. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Prose_1548819656922775.webp" alt="The Oily-Roots-Dry-Ends Sufferer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>63</b>d</span></div>
@@ -3135,9 +3011,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-highlandhaircare">
 <header class="bh"><h3>Highland Haircare</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">26<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">26<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">57&#8202;&#8594;&#8202;16</dd></div>
-<div><dt>Video / static</dt><dd class="num">38<small>/</small>19</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the man who just started caring about his hair newly attentive and slightly embarrassed about it; profanity gives him permission to admit he cares. voted 'best overall shampoo' of 2025 men's journal's 'best overal shampoo' of 2025 &#127942; combining our team&#8217;s innovative perspective with world-class hair professionals, organic chemists, and talented natural cosmetic producers &#8211; with 11 grueling months of iterating, testing, and failing &#8211; we meticulously developed a cleanser that is unmatched in the hair cleansing landscape&#8230; we coined it &#8220;the wash&#8221;. highland's the wash is... &#128167; deeply hydrating + follicle">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/HighlandHaircare_1813675396470516.webp" alt="The Man Who Just Started Caring About His Hair" width="620" height="775" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>26</b>d</span></div>
@@ -3190,9 +3064,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-roz">
 <header class="bh"><h3>R&#332;Z</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">168<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">68<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">27&#8202;&#8594;&#8202;18</dd></div>
-<div><dt>Video / static</dt><dd class="num">18<small>/</small>9</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the zero-risk trialist will not pay before proof; a $0.00 due-today line is the entire conversion mechanism. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/ROZ_3833853110084998.webp" alt="The Zero-Risk Trialist" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>168</b>d</span></div>
@@ -3245,9 +3117,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-colorwow">
 <header class="bh"><h3>Color Wow</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">20<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">20<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">28&#8202;&#8594;&#8202;8</dd></div>
-<div><dt>Video / static</dt><dd class="num">28<small>/</small>0</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the damage-aware hair rebuilder believes their hair is structurally damaged and needs professional-grade chemistry rather than cosmetics. frizz-free, humidity-proof hair celebrity hairstylist-approved frizz protection. &#128074; extra strength dream coat is an ultra-moisturizing treatment that delivers unbeatable humidity protection&#8212;even in the most extreme conditions. &#10024;">
 <div class="shot" style="aspect-ratio:576/1024"><img src="img/ColorWow_1372520531490553.webp" alt="The Damage-Aware Hair Rebuilder" width="576" height="1024" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>20</b>d</span></div>
@@ -3300,9 +3170,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-amika">
 <header class="bh"><h3>amika</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">24<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">20<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">20&#8202;&#8594;&#8202;11</dd></div>
-<div><dt>Video / static</dt><dd class="num">20<small>/</small>0</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the damage-aware hair rebuilder believes their hair is structurally damaged and needs professional-grade chemistry rather than cosmetics.  this will save me from over dyeing my hair!! &#127912;&#128133;&#127996; @amika @sephoracanada #amikapartner #curlyhair">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/amika_1246352667533873.webp" alt="The Damage-Aware Hair Rebuilder" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>24</b>d</span></div>
@@ -3355,9 +3223,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-verb">
 <header class="bh"><h3>Verb Products</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">118<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">66<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">24&#8202;&#8594;&#8202;9</dd></div>
-<div><dt>Video / static</dt><dd class="num">19<small>/</small>5</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument.  don&#8217;t mind us...just taking one of each &#9986;&#65039;&#129335;&#8205;&#9792;&#65039; what are you grabbing first?">
 <div class="shot" style="aspect-ratio:620/1101"><img src="img/Verb_1574170224225955.webp" alt="The Flavour-Led SKU Picker" width="620" height="1101" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>118</b>d</span></div>
@@ -3410,9 +3276,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-oribe">
 <header class="bh"><h3>Oribe</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">155<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">119<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">22&#8202;&#8594;&#8202;10</dd></div>
-<div><dt>Video / static</dt><dd class="num">10<small>/</small>12</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the woman whose intimate health became a health problem treats a private, embarrassing symptom as fixable biology rather than a personal failing; frankness is the permission. {{product.name}} unlock the luxury of oribe&#8212;where hair and body care meet luxury. pamper yourself with high-performance products that turn routine into ritual.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/Oribe_1618467206069108.webp" alt="The Woman Whose Intimate Health Became a Health Problem" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>155</b>d</span></div>
@@ -3465,9 +3329,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-randco">
 <header class="bh"><h3>R+Co</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">188<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">37<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">24&#8202;&#8594;&#8202;11</dd></div>
-<div><dt>Video / static</dt><dd class="num">15<small>/</small>9</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} &quot;people keep stopping me in the street to ask how i got my hair to look this good &#8211; it's all r+co.&quot;">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/RandCo_925948386573490.webp" alt="The Flavour-Led SKU Picker" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>188</b>d</span></div>
@@ -3520,9 +3382,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-hairstory">
 <header class="bh"><h3>Hairstory</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">87<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">59<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">19&#8202;&#8594;&#8202;12</dd></div>
-<div><dt>Video / static</dt><dd class="num">13<small>/</small>6</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the damage-aware hair rebuilder believes their hair is structurally damaged and needs professional-grade chemistry rather than cosmetics. what happens when you go back to regular shampoo greasy roots. dry ends. reaching for more and more styling products and not knowing why. sound familiar? that is what regular detergent-based shampoo does to your scalp. it strips your natural oils and your scalp spends all its time trying to recover. new wash is detergent-free, keeps your scalp balanced, and lets your hair actually behave. once you know, you cannot go back.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Hairstory_944599715304604.webp" alt="The Damage-Aware Hair Rebuilder" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>87</b>d</span></div>
@@ -3575,9 +3435,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-uppercutdeluxe">
 <header class="bh"><h3>Uppercut Deluxe</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">158<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">31<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">20&#8202;&#8594;&#8202;9</dd></div>
-<div><dt>Video / static</dt><dd class="num">17<small>/</small>3</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} designed by barbers with the everyday guy in mind, uppercut deluxe grooming products are proudly australian made. using only the finest ingredients, our products are small batch crafted to ensure consistency and quality. &#8226; a product for every style &#8226; australian made &#8226; cruelty free">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/UppercutDeluxe_1504653511330455.webp" alt="Unread &#8212; needs a human pass" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>158</b>d</span></div>
@@ -3630,9 +3488,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-gooddyeyoung">
 <header class="bh"><h3>Good Dye Young</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">289<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">107<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">14&#8202;&#8594;&#8202;10</dd></div>
-<div><dt>Video / static</dt><dd class="num">8<small>/</small>6</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} dye happy with vibrant colors by founders hayley williams &amp; brian o'connor. get exclusive colors, merch &amp; bundles only at good dye young.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/GoodDyeYoung_1362233362268085.webp" alt="Unread &#8212; needs a human pass" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>289</b>d</span></div>
@@ -3685,9 +3541,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-kitsch">
 <header class="bh"><h3>Kitsch</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">89<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">82<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">22&#8202;&#8594;&#8202;14</dd></div>
-<div><dt>Video / static</dt><dd class="num">17<small>/</small>5</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the damage-aware hair rebuilder believes their hair is structurally damaged and needs professional-grade chemistry rather than cosmetics. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Kitsch_2755526194825064.webp" alt="The Damage-Aware Hair Rebuilder" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>89</b>d</span></div>
@@ -3740,9 +3594,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-nello">
 <header class="bh"><h3>Nello</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">258<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">124<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">39&#8202;&#8594;&#8202;5</dd></div>
-<div><dt>Video / static</dt><dd class="num">1<small>/</small>38</dd></div>
+<div><dt>Ads shown</dt><dd class="num">5</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the cortisol explainer has adopted one hormone as the single villain unifying her sleep, fog, fatigue and bloat; wants a symptom checklist that confirms it. get 30% off supercalm at walmart supercalm is now available at walmart. save money. stress less. balance better. made with clinically studied ashwagandha and magnesium glycinate to help lower cortisol, boost focus, and support calm energy&#8212;without the crash. your daily dose of real, natural calm just got easier to find.">
 <div class="shot" style="aspect-ratio:576/1024"><img src="img/Nello_728711456975129.webp" alt="The Cortisol Explainer" width="576" height="1024" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>258</b>d</span></div>
@@ -3789,9 +3641,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-marsmen">
 <header class="bh"><h3>Mars Men</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">126<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">118<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">73&#8202;&#8594;&#8202;30</dd></div>
-<div><dt>Video / static</dt><dd class="num">34<small>/</small>39</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the man with moobs and a summer deadline reads his chest as a public humiliation with a date attached; a six-panel body grid makes the fix look procedural. fix your hormones. lose the moobs. summer's 90 days away. your hormones don't care. right now, your body is running a 24/7 sabotage operation on your physique. elevated cortisol is telling your body to store fat &#8212; especially around your midsection. an enzyme called aromatase is converting your testosterone into estrogen. and a protein called shbg is locking up whatever t you have left so your muscles can't even use it. three systems working against yo">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/MarsMen_945030035026073.webp" alt="The Man With Moobs and a Summer Deadline" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>126</b>d</span></div>
@@ -3844,9 +3694,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-primalviking">
 <header class="bh"><h3>Primal Viking</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">148<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">99<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">82&#8202;&#8594;&#8202;19</dd></div>
-<div><dt>Video / static</dt><dd class="num">19<small>/</small>63</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="hand" data-s="the joint-pain sufferer who wants to see inside believes the pain has a visible mechanical cause; a glowing joint render externalises what he feels. #1 joint pain healer &#129482; &#128680; ibuprofen and synthetic painkillers are destroying your joints!!..&#129327; masking the pain just hides the real damage while your joint fluid dries out, friction skyrockets, and the cartilage burns away! and if you think taking standard joint supplements is helping, think again. 99% of them fail because they ignore the root cause: your joints are literally starving. modern food has lost 80% of its nutritional value, mak">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/PrimalViking_1488181932903424.webp" alt="The Joint-Pain Sufferer Who Wants to See Inside" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>148</b>d</span></div>
@@ -3899,9 +3747,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-penroseskin">
 <header class="bh"><h3>Penrose Skin</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">46<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">46<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">80&#8202;&#8594;&#8202;5</dd></div>
-<div><dt>Video / static</dt><dd class="num">53<small>/</small>27</dd></div>
+<div><dt>Ads shown</dt><dd class="num">5</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the designer-dupe fluent shopper believes fragrance pricing is a con and dupe knowledge is a skill; the reference name is the entire product. attract real attention now warning: this body butter isn't for the shy! &#128067; attract real attention with pheromone-infused formula &#128166; natural ingredients, long-lasting scent &amp; deep hydration &#129524; no grease, no bs! &quot;it's not just how i smell... it's how she looks at me.&quot; - marcus d. &#11088;&#11088;&#11088;&#11088;&#11088; want to be unforgettable? shop now before it sells out!">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/PenroseSkin_1055366076882894.webp" alt="The Designer-Dupe Fluent Shopper" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>46</b>d</span></div>
@@ -3946,9 +3792,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-norseorganics">
 <header class="bh"><h3>Norse Organics</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">529<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">286<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">26&#8202;&#8594;&#8202;7</dd></div>
-<div><dt>Video / static</dt><dd class="num">6<small>/</small>20</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="hand" data-s="the twelve-year acne veteran has tried everything and expects failure; a nine-day claim is calibrated to break that learned hopelessness. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/NorseOrganics_1188618079298343.webp" alt="The Twelve-Year Acne Veteran" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>529</b>d</span></div>
@@ -4001,9 +3845,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-maro">
 <header class="bh"><h3>MARO Natural Clothing</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">86<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">81<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">75&#8202;&#8594;&#8202;27</dd></div>
-<div><dt>Video / static</dt><dd class="num">29<small>/</small>46</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the stacked-offer arithmetician computes the free-gift dollar value as the real price; the product is close to incidental to the maths. preorder now - 20% off the organic cotton no-shows and crew socks have been selling faster than we can restock them. good news: we just opened pre-orders. white, natural, charcoal, and black. reserve your size now and we'll ship as soon as the next batch lands.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/MARO_1696313354842805.webp" alt="The Stacked-Offer Arithmetician" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>86</b>d</span></div>
@@ -4056,9 +3898,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-hollowsocks">
 <header class="bh"><h3>Hollow Alpaca Socks</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">62<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">50<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">28&#8202;&#8594;&#8202;7</dd></div>
-<div><dt>Video / static</dt><dd class="num">21<small>/</small>7</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. 14+ hours. no swelling. no painful red marks. compression socks aren&#8217;t supposed to hurt. but most options are way too tight, overheat your feet, and start sliding down halfway through your day. hollow socks were built to solve that problem. we combined ultra-soft alpaca fibers with light, breathable compression that stays up, feels good, and actually works. &#9989; 15&#8211;20 mmhg compression &#9989; cushioned support to relieve foot pain &#9989; made from breathable alpaca fiber &#9989; mo">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/HollowSocks_4291410927790208.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>62</b>d</span></div>
@@ -4111,9 +3951,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-neroclothing">
 <header class="bh"><h3>Nero Clothing</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">344<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">229<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">19&#8202;&#8594;&#8202;8</dd></div>
-<div><dt>Video / static</dt><dd class="num">8<small>/</small>11</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the sweat-anxious self-monitor experiences an involuntary body process as a social threat and wants it controlled, not managed. ditch toxic gym shorts ditch your toxic polyester gym shorts. switch to nero, the same athletic fit you love, minus the plastic. our new built-in-liner shorts feature a 100% organic cotton outer and a 100% merino wool liner, giving you the ultimate breathable, odor-fighting workout gear. &#9989; plastic &amp; polyester-free &#9989; no hormone-disrupting chemicals &#9989; 100% natural fibers &#9989; true athletic fit">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/NeroClothing_1305721724615956.webp" alt="The Sweat-Anxious Self-Monitor" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>344</b>d</span></div>
@@ -4166,9 +4004,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-starshoney">
 <header class="bh"><h3>Stars + Honey</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">101<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">66<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">19&#8202;&#8594;&#8202;12</dd></div>
-<div><dt>Video / static</dt><dd class="num">3<small>/</small>16</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the macro spec-sheet buyer reads food like hardware; a small set of numbers is more persuasive than any lifestyle image. new: &#127819; iced lemon cookie limited edition flavor: iced lemon cookie irresistible flavor with just 3g sugar and 14g protein. get this flavor before it sells out!">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/StarsHoney_966626235989995.webp" alt="The Macro Spec-Sheet Buyer" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>101</b>d</span></div>
@@ -4221,9 +4057,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-industryofallnations">
 <header class="bh"><h3>Industry of All Nations</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">185<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">112<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">23&#8202;&#8594;&#8202;18</dd></div>
-<div><dt>Video / static</dt><dd class="num">6<small>/</small>17</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/IndustryOfAllNations_1452968902858334.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>185</b>d</span></div>
@@ -4276,9 +4110,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-motherffoods">
 <header class="bh"><h3>MotherF Foods</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">98<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">50<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">28&#8202;&#8594;&#8202;20</dd></div>
-<div><dt>Video / static</dt><dd class="num">28<small>/</small>0</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. natural doesn't have to taste bad let's be honest. most &#8220;natural&#8221; bars either taste bland or the texture is way off. mother f is different. whole food ingredients, real flavor, and a texture that actually makes you want another bite. real food without sacrificing taste.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/MotherFFoods_2455559308291710.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>98</b>d</span></div>
@@ -4333,9 +4165,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-rhode">
 <header class="bh"><h3>rhode</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">100<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">79<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">18&#8202;&#8594;&#8202;5</dd></div>
-<div><dt>Video / static</dt><dd class="num">5<small>/</small>13</dd></div>
+<div><dt>Ads shown</dt><dd class="num">5</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image.  meet rhode &#127872; a line of curated skincare essentials and hybrid makeup developed by hailey rhode bieber.">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/rhode_971491768826079.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>100</b>d</span></div>
@@ -4380,9 +4210,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-theordinary">
 <header class="bh"><h3>The Ordinary</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">56<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">26<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">20&#8202;&#8594;&#8202;10</dd></div>
-<div><dt>Video / static</dt><dd class="num">16<small>/</small>4</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image.  #theordinarypartner the new @theordinary caffeine 3% and escin 1% serum has been a lifesaver for my skin during the end of the school year! &#9749;&#65039; #ihcxtheordinary #ad">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/TheOrdinary_1515830220567089.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>56</b>d</span></div>
@@ -4435,9 +4263,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-glossier">
 <header class="bh"><h3>Glossier</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">92<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">44<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">19&#8202;&#8594;&#8202;7</dd></div>
-<div><dt>Video / static</dt><dd class="num">16<small>/</small>3</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the scent-as-social-outcome buyer buys the compliment rather than the product; being asked what they are wearing is the specific fantasy. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Glossier_1423144219569238.webp" alt="The Scent-as-Social-Outcome Buyer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>92</b>d</span></div>
@@ -4490,9 +4316,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-glowrecipe">
 <header class="bh"><h3>Glow Recipe</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">114<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">44<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">25&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">11<small>/</small>14</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/GlowRecipe_957262416905322.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>114</b>d</span></div>
@@ -4529,9 +4353,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-naturium">
 <header class="bh"><h3>Naturium</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">56<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">17<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">77&#8202;&#8594;&#8202;18</dd></div>
-<div><dt>Video / static</dt><dd class="num">43<small>/</small>34</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the woman whose intimate health became a health problem treats a private, embarrassing symptom as fixable biology rather than a personal failing; frankness is the permission.  my perfect summer glow starts with my shower routine &#128703;&#129767;&amp; these favs from @naturium #ad #naturiumpartner">
 <div class="shot" style="aspect-ratio:620/1101"><img src="img/Naturium_2080982952810040.webp" alt="The Woman Whose Intimate Health Became a Health Problem" width="620" height="1101" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>56</b>d</span></div>
@@ -4584,9 +4406,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-primallypure">
 <header class="bh"><h3>Primally Pure</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">17<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">17<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">40&#8202;&#8594;&#8202;12</dd></div>
-<div><dt>Video / static</dt><dd class="num">21<small>/</small>19</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} clean skincare made with ingredients you can actually trust. thoughtfully crafted to nourish your skin&#8212;without fillers, toxins, or compromises.">
 <div class="shot" style="aspect-ratio:620/827"><img src="img/PrimallyPure_1420242903341530.webp" alt="Unread &#8212; needs a human pass" width="620" height="827" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>17</b>d</span></div>
@@ -4639,9 +4459,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-wondervalley">
 <header class="bh"><h3>Wonder Valley</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">197<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">73<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">18&#8202;&#8594;&#8202;13</dd></div>
-<div><dt>Video / static</dt><dd class="num">11<small>/</small>7</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the scent-as-social-outcome buyer buys the compliment rather than the product; being asked what they are wearing is the specific fantasy. sandalwood yuzu shampoo &amp; conditioner &#128703;&#127807;&#127819; meet this powerful duo, our dream shampoo &amp; conditioner. inside these sustainable aluminum bottles are high-performing formulas, naturally scented with a citrus and woodsy combination of essential oils and fortified with potent plant extracts. all to cleanse your hair without stripping it and hydrate it without weighing it down.">
 <div class="shot" style="aspect-ratio:620/1101"><img src="img/WonderValley_1231384355845815.webp" alt="The Scent-as-Social-Outcome Buyer" width="620" height="1101" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>197</b>d</span></div>
@@ -4694,9 +4512,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-furtunaskin">
 <header class="bh"><h3>Furtuna Skin</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">22<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">10<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">18&#8202;&#8594;&#8202;11</dd></div>
-<div><dt>Video / static</dt><dd class="num">11<small>/</small>7</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the shaving-fatigued body groomer reads the daily razor as a losing chore and wants permanence; explicitness about the body part is the trust signal. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/FurtunaSkin_1042092778741370.webp" alt="The Shaving-Fatigued Body Groomer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>22</b>d</span></div>
@@ -4749,9 +4565,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-kyliecosmetics">
 <header class="bh"><h3>Kylie Cosmetics</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">105<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">64<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">20&#8202;&#8594;&#8202;8</dd></div>
-<div><dt>Video / static</dt><dd class="num">10<small>/</small>10</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the shaving-fatigued body groomer reads the daily razor as a losing chore and wants permanence; explicitness about the body part is the trust signal.  your new everyday essential &#9729;&#65039; &#8288; &#8288; - 100% say it instantly hydrates dry, dehydrated lips&#8288; - 100% say it&#8217;s lightweight and feels extra comfortable&#8288; - 100% say it&#8217;s non-sticky, non-greasy, and doesn&#8217;t leave a waxy residue&#8288; - 100% say it revives the lips, visibly improving lip lines and flakiness&#8288; &#8288; cloud balm is now available at kyliecosmetics.com and @ultabeauty!">
 <div class="shot" style="aspect-ratio:620/1101"><img src="img/KylieCosmetics_2066267197254358.webp" alt="The Shaving-Fatigued Body Groomer" width="620" height="1101" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>105</b>d</span></div>
@@ -4804,9 +4618,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-sleepglow">
 <header class="bh"><h3>Sleep&amp;Glow</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">104<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">13<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">18&#8202;&#8594;&#8202;11</dd></div>
-<div><dt>Video / static</dt><dd class="num">11<small>/</small>7</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the poor sleeper blaming their setup believes the room and the bedding, not their behaviour, are what is costing them the night.  proven effect&#8212;wrinkles reduced by up to 67% &#10071;&#65039; the sleep&amp;glow omnia helps reduce the length and depth of sleep wrinkles and is proven in clinical trials conducted in spain. the studies were carried out at the corium dermatology clinic (barcelona) &#8203;&#8203;in 2023. &#128313; over the course of 12 weeks, 23 women aged 37 to 60 slept exclusively on the sleep&amp;glow omnia pillow. wrinkle depth measurements were taken using liveviz micro">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/SleepGlow_962693959689243.webp" alt="The Poor Sleeper Blaming Their Setup" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>104</b>d</span></div>
@@ -4861,9 +4673,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-altfragrances">
 <header class="bh"><h3>ALT. Fragrances</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">101<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">101<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">80&#8202;&#8594;&#8202;33</dd></div>
-<div><dt>Video / static</dt><dd class="num">54<small>/</small>26</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the scent-as-social-outcome buyer buys the compliment rather than the product; being asked what they are wearing is the specific fantasy. beautiful scents for less bold. magnetic. unforgettable. 'reality' delivers the luxury experience you deserve without the designer markup. &#128167; premium oil concentration &#9200; 12+ hours longevity &#127919; impressive projection &#128260; easy exchanges &#10024; clean ingredients">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/ALTFragrances_1269870265129253.webp" alt="The Scent-as-Social-Outcome Buyer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>101</b>d</span></div>
@@ -4916,9 +4726,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-dossier">
 <header class="bh"><h3>Dossier</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">38<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">37<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">69&#8202;&#8594;&#8202;11</dd></div>
-<div><dt>Video / static</dt><dd class="num">42<small>/</small>27</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Dossier_1729443618301675.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>38</b>d</span></div>
@@ -4971,9 +4779,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-phlur">
 <header class="bh"><h3>PHLUR</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">48<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">8<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">78&#8202;&#8594;&#8202;33</dd></div>
-<div><dt>Video / static</dt><dd class="num">33<small>/</small>45</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the scent-as-social-outcome buyer buys the compliment rather than the product; being asked what they are wearing is the specific fantasy. {{product.name}} modern fragrance for every desire, mood, and moment. meticulously created by world-class perfumers.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/PHLUR_1687526978966282.webp" alt="The Scent-as-Social-Outcome Buyer" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>48</b>d</span></div>
@@ -5026,9 +4832,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-lelabo">
 <header class="bh"><h3>Le Labo</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">26<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">26<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">16&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">9<small>/</small>7</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the scent-as-social-outcome buyer buys the compliment rather than the product; being asked what they are wearing is the specific fantasy. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/LeLabo_2567739097002048.webp" alt="The Scent-as-Social-Outcome Buyer" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>26</b>d</span></div>
@@ -5065,9 +4869,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-dsdurga">
 <header class="bh"><h3>D.S. &amp; DURGA</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">133<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">15<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">10&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">5<small>/</small>5</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} a world inside every bottle. find the one that stays with you.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/DSDurga_1683509152832343.webp" alt="Unread &#8212; needs a human pass" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>133</b>d</span></div>
@@ -5104,9 +4906,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-aroma360">
 <header class="bh"><h3>Aroma360</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">96<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">87<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">51&#8202;&#8594;&#8202;23</dd></div>
-<div><dt>Video / static</dt><dd class="num">35<small>/</small>16</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument.  everytime i come home it feels like walking into a luxury 5 star hotel!! all thanks to my @aroma360 mini pro diffuser that has completely transformed my space into a calming escape that just puts me at ease! #aroma360partner #aroma360 #diffuser #diffusers #luxlifestyle">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Aroma360_1649697286326258.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>96</b>d</span></div>
@@ -5159,9 +4959,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-aesop">
 <header class="bh"><h3>Aesop</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">35<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">17<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">12&#8202;&#8594;&#8202;5</dd></div>
-<div><dt>Video / static</dt><dd class="num">5<small>/</small>7</dd></div>
+<div><dt>Ads shown</dt><dd class="num">5</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Aesop_1057153566813947.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>35</b>d</span></div>
@@ -5206,9 +5004,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-chanel">
 <header class="bh"><h3>CHANEL</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">30<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">30<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">71&#8202;&#8594;&#8202;23</dd></div>
-<div><dt>Video / static</dt><dd class="num">56<small>/</small>15</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image.  live from the venice biennale, meet today&#8217;s pioneers&#8212;emeka ogboh, ayoung kim &amp; pol taburet&#8212;on chanel connects s6.">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/CHANEL_2052580365389737.webp" alt="Unread &#8212; needs a human pass" width="620" height="775" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>30</b>d</span></div>
@@ -5261,9 +5057,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-gucci">
 <header class="bh"><h3>Gucci</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">24<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">21<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">33&#8202;&#8594;&#8202;17</dd></div>
-<div><dt>Video / static</dt><dd class="num">8<small>/</small>25</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. explore our selection emily ratajkowski stars for the giglio handbag campaign that spotlights the connection between object and desire.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/Gucci_2255769571903547.webp" alt="Unread &#8212; needs a human pass" width="620" height="620" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>24</b>d</span></div>
@@ -5318,9 +5112,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-brooklinen">
 <header class="bh"><h3>Brooklinen</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">115<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">52<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">31&#8202;&#8594;&#8202;15</dd></div>
-<div><dt>Video / static</dt><dd class="num">15<small>/</small>16</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the poor sleeper blaming their setup believes the room and the bedding, not their behaviour, are what is costing them the night. {{product.name}} better sleep starts here. award-winning sheets, naturally cool fabrics, and layers you will love night after night. find out why we&#8217;re the best in bed.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/Brooklinen_1677177466801038.webp" alt="The Poor Sleeper Blaming Their Setup" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>115</b>d</span></div>
@@ -5373,9 +5165,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-bollbranch">
 <header class="bh"><h3>Boll &amp; Branch</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">71<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">45<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">51&#8202;&#8594;&#8202;12</dd></div>
-<div><dt>Video / static</dt><dd class="num">10<small>/</small>41</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the poor sleeper blaming their setup believes the room and the bedding, not their behaviour, are what is costing them the night. {{product.name}} cooling percale___night sweats and waking up hot aren&#8217;t normal. start sleeping through the night with the breathable, cool-to-the-touch comfort of percale sheets from boll &amp; branch.">
 <div class="shot" style="aspect-ratio:620/595"><img src="img/BollBranch_982849241312231.webp" alt="The Poor Sleeper Blaming Their Setup" width="620" height="595" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>71</b>d</span></div>
@@ -5428,9 +5218,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-casper">
 <header class="bh"><h3>Casper</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">97<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">9<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">46&#8202;&#8594;&#8202;22</dd></div>
-<div><dt>Video / static</dt><dd class="num">19<small>/</small>27</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Casper_2248685125971563.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>97</b>d</span></div>
@@ -5483,9 +5271,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-saatva">
 <header class="bh"><h3>Saatva</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">20<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">10<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">17&#8202;&#8594;&#8202;9</dd></div>
-<div><dt>Video / static</dt><dd class="num">14<small>/</small>3</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image.  our bedroom has officially become my favorite place. &#9729;&#65039;&#129293; @saatva #partner #saatva">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Saatva_2104314496785528.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>20</b>d</span></div>
@@ -5538,9 +5324,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-theoodie">
 <header class="bh"><h3>The Oodie</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">92<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">14<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">36&#8202;&#8594;&#8202;14</dd></div>
-<div><dt>Video / static</dt><dd class="num">16<small>/</small>20</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the poor sleeper blaming their setup believes the room and the bedding, not their behaviour, are what is costing them the night. {{product.name}} &#128150; total comfort, all day long &#8211; only at the oodie &#128150; ready to feel ridiculously cosy? whether you&#8217;re lounging, sleeping, or binge-watching your fave show&#8212;the oodie has you covered from head to toe &#128588; &#10024; why 4+ million customers love us: &#9989; ultra-soft fabrics that feel like a warm hug &#9989; cosy essentials for every season and mood &#9989; from wearable blankets to pyjamas, robes, sleep tees &amp; more &#9989; licensed collabs with your f">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/TheOodie_969215192572044.webp" alt="The Poor Sleeper Blaming Their Setup" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>92</b>d</span></div>
@@ -5593,9 +5377,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-potterybarn">
 <header class="bh"><h3>Pottery Barn</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">115<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">85<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">12&#8202;&#8594;&#8202;6</dd></div>
-<div><dt>Video / static</dt><dd class="num">9<small>/</small>3</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the poor sleeper blaming their setup believes the room and the bedding, not their behaviour, are what is costing them the night. pottery barn stop by for bedding, decor, dinnerware, and more. plus, get free styling tips from our design crew.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/PotteryBarn_1337636918417872.webp" alt="The Poor Sleeper Blaming Their Setup" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>115</b>d</span></div>
@@ -5648,9 +5430,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-sutera">
 <header class="bh"><h3>Sutera</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">70<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">35<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">12&#8202;&#8594;&#8202;4</dd></div>
-<div><dt>Video / static</dt><dd class="num">7<small>/</small>5</dd></div>
+<div><dt>Ads shown</dt><dd class="num">4</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the poor sleeper blaming their setup believes the room and the bedding, not their behaviour, are what is costing them the night. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/Sutera_1341858391370578.webp" alt="The Poor Sleeper Blaming Their Setup" width="620" height="775" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>70</b>d</span></div>
@@ -5687,9 +5467,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-dozebedding">
 <header class="bh"><h3>Doze Bedding</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">182<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">125<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">18&#8202;&#8594;&#8202;5</dd></div>
-<div><dt>Video / static</dt><dd class="num">7<small>/</small>11</dd></div>
+<div><dt>Ads shown</dt><dd class="num">5</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="auto" data-s="the poor sleeper blaming their setup believes the room and the bedding, not their behaviour, are what is costing them the night. duvet the right way between work, family, errands, and everything else we do in a day, i don&#8217;t have the energy for household battles, especially not with my duvet cover. that&#8217;s why i&#8217;m obsessed with this one from doze. instead of wrestling and shaking and swearing under my breath, i just zip three sides, snap the corners, and it&#8217;s done. two minutes, tops. but here&#8217;s what surprised me: it doesn&#8217;t just save me time, it feels amazing. it&#8217;s">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/DozeBedding_2099476594187874.webp" alt="The Poor Sleeper Blaming Their Setup" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>182</b>d</span></div>
@@ -5736,9 +5514,7 @@ html,body{max-width:100%;overflow-x:hidden}
 <section class="brand" id="b-thenorthface">
 <header class="bh"><h3>The North Face</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">78<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">62<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">21&#8202;&#8594;&#8202;20</dd></div>
-<div><dt>Video / static</dt><dd class="num">4<small>/</small>17</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. the north face (@thenorthface) &#8226; instagram photos and videos clear your mind. catch your breath. keep going.">
 <div class="shot" style="aspect-ratio:620/827"><img src="img/TheNorthFace_4378042542483678.webp" alt="Unread &#8212; needs a human pass" width="620" height="827" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>78</b>d</span></div>
@@ -5791,9 +5567,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-blackdiamond">
 <header class="bh"><h3>Black Diamond</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">181<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">156<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">13&#8202;&#8594;&#8202;11</dd></div>
-<div><dt>Video / static</dt><dd class="num">2<small>/</small>11</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} the gear in your pack and the shirt on your back. black diamond makes equipment you can trust.">
 <div class="shot" style="aspect-ratio:620/620"><img src="img/BlackDiamond_1598086181527990.webp" alt="Unread &#8212; needs a human pass" width="620" height="620" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>181</b>d</span></div>
@@ -5846,9 +5620,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-teva">
 <header class="bh"><h3>Teva</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">65<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">57<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">12&#8202;&#8594;&#8202;8</dd></div>
-<div><dt>Video / static</dt><dd class="num">0<small>/</small>12</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} we&#8217;re here for you (and your feet). free standard shipping on all orders!">
 <div class="shot" style="aspect-ratio:500/500"><img src="img/Teva_1001221666097433.webp" alt="Unread &#8212; needs a human pass" width="500" height="500" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>65</b>d</span></div>
@@ -5901,9 +5673,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-honeystinger">
 <header class="bh"><h3>Honey Stinger</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">132<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">115<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">44&#8202;&#8594;&#8202;7</dd></div>
-<div><dt>Video / static</dt><dd class="num">17<small>/</small>27</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="auto" data-s="the flavour-led sku picker already sold on the category and choosing between variants; the decision is appetite, not argument. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/HoneyStinger_26683413331275301.webp" alt="The Flavour-Led SKU Picker" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>132</b>d</span></div>
@@ -5956,9 +5726,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-skratchlabs">
 <header class="bh"><h3>Skratch Labs</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">76<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">41<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">80&#8202;&#8594;&#8202;15</dd></div>
-<div><dt>Video / static</dt><dd class="num">32<small>/</small>48</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image.  skratch labs is a sports nutrition company based in boulder, colorado. our mission is simple. make sports nutrition that tastes great, helps athletes perform better, and does not make you sick. the idea started when exercise physiologist dr. allen lim saw professional cyclists getting sick from sports drinks that were too sweet, too artificial, and too hard on the gut. so he started from scratch in his kitchen, mixin">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/SkratchLabs_1696625208271490.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>76</b>d</span></div>
@@ -6011,9 +5779,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-keen">
 <header class="bh"><h3>KEEN</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">108<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">93<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">21&#8202;&#8594;&#8202;13</dd></div>
-<div><dt>Video / static</dt><dd class="num">4<small>/</small>17</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/775"><img src="img/KEEN_849655061515748.webp" alt="Unread &#8212; needs a human pass" width="620" height="775" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>108</b>d</span></div>
@@ -6066,9 +5832,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-chaco">
 <header class="bh"><h3>Chaco</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">126<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">58<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">26&#8202;&#8594;&#8202;26</dd></div>
-<div><dt>Video / static</dt><dd class="num">3<small>/</small>23</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="static" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/Chaco_1018325850525454.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt static">STATIC</span><span class="run"><b>126</b>d</span></div>
@@ -6121,9 +5885,7 @@ html,body{max-width:100%;overflow-x:hidden}
 </div></article></div></section><section class="brand" id="b-camelbak">
 <header class="bh"><h3>CamelBak</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">121<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">79<small>d</small></dd></div>
-<div><dt>Creatives &#8594; concepts</dt><dd class="num">22&#8202;&#8594;&#8202;13</dd></div>
-<div><dt>Video / static</dt><dd class="num">17<small>/</small>5</dd></div>
+<div><dt>Ads shown</dt><dd class="num">6</dd></div>
 </dl></header>
 <div class="grid"><article class="ad" data-kind="video" data-read="none" data-s="unread &#8212; needs a human pass no hand-written read yet. the rules could not place this one, which usually means the copy is pure dco tokens and the persona is carried entirely by the image. {{product.name}} ">
 <div class="shot" style="aspect-ratio:620/1102"><img src="img/CamelBak_1924331128231021.webp" alt="Unread &#8212; needs a human pass" width="620" height="1102" loading="lazy" decoding="async"><span class="fmt video">&#9654; VIDEO</span><span class="run"><b>121</b>d</span></div>

@@ -35,6 +35,17 @@ table. Never quote it as if it were ROAS.
 5. **Stills** are downloaded, resized to 620px webp and committed, named `<brand>_<adId>.webp`
    so the set is stable and git only churns on genuinely new creative.
 
+### What this method does NOT measure
+
+The ladder stops as soon as it has enough long runners, and a session can be rate-limited
+part-way through a brand. So `uniq` and `concepts` in `data/harvest.json` describe **how far the
+scan got**, not how much an advertiser is running — 102 of 120 brands stopped early on the last
+full harvest. They are kept in the raw data because the picker needs them; they are deliberately
+**not published** on the site, and no finding should be built on them.
+
+What survives the method is each ad and the date it started. That is read directly off the record
+and does not depend on scan depth.
+
 ## How personas survive a refresh
 
 `annotations/personas.json` holds hand-written reads keyed by **both** ad id and concept key.

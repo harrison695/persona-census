@@ -58,9 +58,7 @@ ${body ? `<p class="copy">${e(body)}</p>` : ''}
 const brandBlock = b => `<section class="brand" id="b-${b.k.toLowerCase()}">
 <header class="bh"><h3>${e(b.n)}</h3><dl class="stats">
 <div><dt>Longest run</dt><dd class="num">${b.h.max}<small>d</small></dd></div>
-<div><dt>Median</dt><dd class="num">${b.h.med}<small>d</small></dd></div>
-<div${b.h.concepts <= 3 ? ' class="tight"' : ''}><dt>Creatives &#8594; concepts</dt><dd class="num">${b.h.uniq}&#8202;&#8594;&#8202;${b.h.concepts}</dd></div>
-<div><dt>Video / static</dt><dd class="num">${b.h.vid}<small>/</small>${b.h.stat}</dd></div>
+<div><dt>Ads shown</dt><dd class="num">${b.ads.length}</dd></div>
 </dl></header>
 <div class="grid">${b.ads.map(card).join('')}</div></section>`;
 
@@ -100,8 +98,7 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <dl class="tally">
 <div><dt>Brands</dt><dd>${brands.length}</dd></div>
 <div><dt>Ads profiled</dt><dd>${totalAds}</dd></div>
-<div><dt>Creatives scanned</dt><dd>${totalUniq.toLocaleString('en-US')}</dd></div>
-<div><dt>Distinct concepts</dt><dd>${totalConc.toLocaleString('en-US')}</dd></div>
+<div><dt>Hand-read</dt><dd>${nHand}</dd></div>
 <div><dt>Longest runner</dt><dd>${maxDays}<small>d</small></dd></div>
 </dl></div></header>
 
@@ -109,6 +106,9 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <div><h3>How this is built</h3>
 <p>Meta's Ad Library pagination query is replayed for each advertiser, filtered to ads whose <em>start date</em> precedes a descending ladder of cutoffs. Everything surviving a restrictive cutoff is by definition that brand's set of longest runners &#8212; so the picks are <strong>provably the oldest</strong>, not a sample.</p>
 <p>Creatives are deduplicated on CDN content id, then clustered by <strong>concept</strong> (landing path + copy fingerprint), so each brand's cards are different <em>arguments</em> rather than re-uploads of one.</p></div>
+<div class="flag"><h3>Why there are no volume figures</h3>
+<p>The ladder stops as soon as it has enough long runners, and a session can be rate-limited part-way through a brand. Any count of &ldquo;creatives scanned&rdquo; is therefore a measure of <strong>how far the scan got</strong>, not of how much that advertiser is running &#8212; 102 of these 120 brands stopped early.</p>
+<p>So this report deliberately publishes <strong>no creative counts, no concept ratios and no video/static splits</strong>. What survives the method is each ad and the date it started, which is measured directly and does not depend on scan depth.</p></div>
 <div class="flag"><h3>What days-running is not</h3>
 <p>The Ad Library exposes <strong>no impressions and no spend</strong> for US commercial ads, so nothing here is a performance ranking. Days-running measures <strong>competitor conviction</strong> &#8212; how long a team has kept paying for something &#8212; which is a survival proxy, not a return.</p>
 <p>Cadence differs by more than 25&#215; across these advertisers, so longevity is only comparable <strong>within</strong> a brand, never across the table.</p></div>
@@ -144,6 +144,7 @@ fs.writeFileSync(path.join(ROOT, 'public/.nojekyll'), '');
 // machine-readable twin so the data is reusable without scraping the page
 fs.writeFileSync(path.join(ROOT, 'public/census.json'), JSON.stringify({
   harvestedAt: H.harvestedAt, brands: brands.length, ads: totalAds,
+  note: 'Per-ad days are measured directly. No creative-volume counts are published: the harvest ladder stops early, so any such count reflects scan depth, not advertiser volume.',
   rows: brands.flatMap(b => b.ads.map(a => ({
     brand: b.n, lane: b.l, adId: a.id, days: a.days, kind: a.kind,
     title: a.title, persona: a.persona, psychographic: a.psycho, readBy: a.by,
