@@ -7,6 +7,8 @@ const H = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/harvest.json'), 'utf8
 const ANN = fs.existsSync(path.join(ROOT, 'annotations/personas.json'))
   ? JSON.parse(fs.readFileSync(path.join(ROOT, 'annotations/personas.json'), 'utf8')) : { byAd: {}, byConcept: {} };
 const FIND = JSON.parse(fs.readFileSync(path.join(ROOT, 'annotations/findings.json'), 'utf8'));
+const DIMS = fs.existsSync(path.join(ROOT, 'data/imgdims.json'))
+  ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/imgdims.json'), 'utf8')) : {};
 
 const e = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const ascii = s => [...s].map(c => c.codePointAt(0) < 128 ? c : `&#${c.codePointAt(0)};`).join('');
@@ -22,7 +24,9 @@ for (const b of roster.brands) {
     const rec = ANN.byAd[`${b.k}_${a.id}`] || ANN.byConcept[c] || autotag(a);
     if (rec.by === 'hand') nHand++; else if (rec.by === 'auto') nAuto++; else nNone++;
     const imgFile = `img/${b.k}_${a.id}.webp`;
-    return { ...a, ...rec, concept: c, img: fs.existsSync(path.join(ROOT, 'public', imgFile)) ? imgFile : null };
+    const d = DIMS[`${b.k}_${a.id}`];
+    return { ...a, ...rec, concept: c, w: d?.[0] || 620, h: d?.[1] || 775,
+             img: fs.existsSync(path.join(ROOT, 'public', imgFile)) ? imgFile : null };
   }).filter(a => a.img);
   if (ads.length) brands.push({ ...b, h, ads });
 }
@@ -41,7 +45,7 @@ const card = a => {
   const readCls = a.by === 'hand' ? 'hand' : (a.by === 'auto' ? 'auto' : 'none');
   const readLbl = a.by === 'hand' ? 'read' : (a.by === 'auto' ? 'auto' : 'unread');
   return `<article class="ad" data-kind="${kind}" data-read="${readCls}" data-s="${e((a.persona + ' ' + a.psycho + ' ' + (a.title || '') + ' ' + body).toLowerCase())}">
-<div class="shot"><img src="${a.img}" alt="${e(a.persona)}" loading="lazy" decoding="async"><span class="fmt ${kind}">${kind === 'video' ? '&#9654; VIDEO' : 'STATIC'}</span><span class="run"><b>${a.days}</b>d</span></div>
+<div class="shot" style="aspect-ratio:${a.w}/${a.h}"><img src="${a.img}" alt="${e(a.persona)}" width="${a.w}" height="${a.h}" loading="lazy" decoding="async"><span class="fmt ${kind}">${kind === 'video' ? '&#9654; VIDEO' : 'STATIC'}</span><span class="run"><b>${a.days}</b>d</span></div>
 <div class="meat">
 <h4${tok ? ' class="tok"' : ''}>${tok ? '&#8212; dynamic (DCO) &#8212;' : e(a.title)}</h4>
 <div class="field"><span class="lab">Persona<i class="rd ${readCls}" title="${readCls === 'hand' ? 'hand-read from the creative' : readCls === 'auto' ? 'provisional keyword tag &#8212; not yet read' : 'no read yet'}">${readLbl}</i></span><p class="persona">${e(a.persona)}</p></div>

@@ -4,6 +4,7 @@
  --ink:#16181C; --body:#3B3F46; --muted:#71757E; --rule:#D2D1C7;
  --indigo:#31409A; --indigo-soft:#E7E9F6; --ochre:#8F6614; --ochre-soft:#F3EAD5;
  --brick:#9C3A26;
+ --stage:#E1E0D8;
  --sh:0 1px 2px rgba(20,22,28,.05),0 6px 18px -10px rgba(20,22,28,.16);
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
@@ -11,6 +12,7 @@
  --ink:#ECEDEF; --body:#B9BDC5; --muted:#868B95; --rule:#2A2E36;
  --indigo:#93A2F0; --indigo-soft:#1D2340; --ochre:#D9AE59; --ochre-soft:#2B2417;
  --brick:#E08065;
+ --stage:#0E1014;
  --sh:0 1px 2px rgba(0,0,0,.4),0 8px 22px -12px rgba(0,0,0,.6);
 }}
 :root[data-theme="dark"]{
@@ -18,6 +20,7 @@
  --ink:#ECEDEF; --body:#B9BDC5; --muted:#868B95; --rule:#2A2E36;
  --indigo:#93A2F0; --indigo-soft:#1D2340; --ochre:#D9AE59; --ochre-soft:#2B2417;
  --brick:#E08065;
+ --stage:#0E1014;
  --sh:0 1px 2px rgba(0,0,0,.4),0 8px 22px -12px rgba(0,0,0,.6);
 }
 *{box-sizing:border-box}
@@ -100,11 +103,16 @@ h1{font:700 clamp(46px,8vw,84px)/0.94 Fraunces,Georgia,serif;letter-spacing:-.02
 .stats .tight dd{color:var(--brick)}
 .stats .tight dt{color:var(--brick)}
 
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(258px,1fr))}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));align-items:start}
 .ad{background:var(--surface);border:1px solid var(--rule);border-radius:11px;overflow:hidden;
  display:flex;flex-direction:column;box-shadow:var(--sh)}
-.shot{position:relative;background:var(--sunk);aspect-ratio:4/5;overflow:hidden}
-.shot img{width:100%;height:100%;object-fit:cover;display:block}
+/* Never crop a creative: this is a swipe file, so the whole ad has to be readable.
+   The still is CONTAINED in a fixed 4:5 stage, letterboxed against a neutral ground. */
+/* Never crop a creative: this is a swipe file, so the whole ad has to be readable.
+   Each stage takes its own creative's aspect ratio (68% of these are 9:16, 20% square),
+   so nothing is cropped AND nothing is shrunk into letterbox bars. */
+.shot{position:relative;background:var(--stage);overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:contain;display:block}
 .fmt{position:absolute;top:9px;left:9px;font:600 9.5px/1 "IBM Plex Mono",monospace;letter-spacing:.09em;
  padding:5px 8px;border-radius:4px;background:rgba(16,18,22,.82);color:#fff;backdrop-filter:blur(3px)}
 .fmt.video{background:rgba(49,64,154,.9)}

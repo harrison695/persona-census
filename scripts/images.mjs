@@ -41,6 +41,14 @@ await Promise.all(Array.from({ length: LIM }, async () => { while (i < jobs.leng
 let pruned = 0;
 for (const f of fs.readdirSync(OUT)) if (f.endsWith('.webp') && !keep.has(f)) { fs.unlinkSync(path.join(OUT, f)); pruned++; }
 
+// record natural dimensions so each card's stage can match its creative exactly
+const dims = {};
+for (const f of fs.readdirSync(OUT)) {
+  if (!f.endsWith('.webp')) continue;
+  try { const m = await sharp(path.join(OUT, f)).metadata(); dims[f.replace('.webp', '')] = [m.width, m.height]; } catch {}
+}
+fs.writeFileSync(path.join(ROOT, 'data/imgdims.json'), JSON.stringify(dims));
+
 const bytes = fs.readdirSync(OUT).reduce((s, f) => s + fs.statSync(path.join(OUT, f)).size, 0);
 console.log(`images: ${fetched} fetched, ${skipped} cached, ${failed} failed, ${pruned} pruned — ${(bytes / 1048576).toFixed(1)} MB total`);
 if (failed > jobs.length * 0.25) { console.error('FATAL: >25% of images failed'); process.exit(3); }
