@@ -102,6 +102,19 @@ Install the weekly schedule (once):
 ```bash
 sed "s#__REPO__#$PWD#g" scripts/com.modern.persona-census.plist > ~/Library/LaunchAgents/com.modern.persona-census.plist
 launchctl load ~/Library/LaunchAgents/com.modern.persona-census.plist
+launchctl kickstart -k gui/$UID/com.modern.persona-census   # run once now to check it
+```
+
+**The repo must not live under `~/Downloads`, `~/Documents` or `~/Desktop.`** Those are
+TCC-protected on macOS, and launchd cannot execute a script inside them — the agent dies with
+`Operation not permitted` and exit code 126 while `launchctl kickstart` still reports success.
+This repo lives at `~/Developer/persona-census` for that reason. Check `data/launchd.err.log`
+if a scheduled run seems not to have happened.
+
+Remove the schedule with:
+
+```bash
+launchctl bootout gui/$UID/com.modern.persona-census
 ```
 
 Harvest a subset while iterating:
