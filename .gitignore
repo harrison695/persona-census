@@ -4,3 +4,5 @@ data/harvest.log
 *.log
 data/harvest.backup.json
 data/resume.log
+data/sheets/
+data/sheet_index.tsv
