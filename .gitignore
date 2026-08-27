@@ -1,0 +1,6 @@
+node_modules/
+data/harvest.log
+.DS_Store
+*.log
+data/harvest.backup.json
+data/resume.log

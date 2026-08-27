@@ -1,0 +1,81 @@
+name: Weekly refresh
+
+on:
+  schedule:
+    # 06:20 UTC every Monday = 01:20 America/New_York, ahead of the 9am rollup
+    - cron: '20 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Comma-separated brand keys to harvest (blank = all)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'npm' }
+
+      - run: npm ci --omit=optional || npm install
+      - run: npx playwright install --with-deps chromium
+
+      - name: Harvest Ad Library
+        id: harvest
+        env:
+          ONLY: ${{ github.event.inputs.only }}
+          PICKS: '6'
+        run: node scripts/harvest.mjs
+
+      - name: Fetch creative stills
+        run: node scripts/images.mjs
+
+      - name: Build site
+        run: node scripts/build.mjs
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "persona-census-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A data public annotations
+          if git diff --staged --quiet; then
+            echo "no changes this week"
+          else
+            git commit -m "refresh: $(date -u +%Y-%m-%d) census"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: public }
+      - id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Persona Census refresh" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          node -e "
+            const h=require('./data/harvest.json');
+            const B=Object.values(h.brands);
+            const ok=B.filter(b=>(b.picks||[]).length);
+            console.log('- harvested **'+ok.length+'/'+B.length+'** brands, **'+ok.reduce((s,b)=>s+b.picks.length,0)+'** ads');
+            const gated=B.filter(b=>!(b.picks||[]).length&&b.gatedNoMedia>0).map(b=>b.name);
+            if(gated.length) console.log('- media withheld: '+gated.join(', '));
+            const dead=B.filter(b=>!(b.picks||[]).length&&!b.gatedNoMedia).map(b=>b.name);
+            if(dead.length) console.log('- no live US ads: '+dead.join(', '));
+          " >> $GITHUB_STEP_SUMMARY || true

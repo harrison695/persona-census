@@ -1,0 +1,853 @@
+{
+ "generated": "2026-08-26",
+ "note": "Meta page_ids sourced from competitor brand-page asset paths. Lanes are DTC product categories.",
+ "lanes": [
+  {
+   "id": "nutrition",
+   "name": "Functional Nutrition & GLP-1",
+   "sub": "Protein, meal replacement & GLP-1 companions"
+  },
+  {
+   "id": "hormone",
+   "name": "Women's Hormone & Intimate Health",
+   "sub": "Cycle, menopause & intimate health"
+  },
+  {
+   "id": "hairremoval",
+   "name": "Hair Removal & Personal Care",
+   "sub": "IPL, razors & body grooming"
+  },
+  {
+   "id": "coffee",
+   "name": "Functional Coffee & Nootropics",
+   "sub": "Mushroom coffee, matcha & nootropics"
+  },
+  {
+   "id": "haircare",
+   "name": "Haircare & Grooming",
+   "sub": "Salon, scalp & men's styling"
+  },
+  {
+   "id": "mens",
+   "name": "Men's Performance, Scent & Skin",
+   "sub": "Testosterone, scent & acne"
+  },
+  {
+   "id": "skincare",
+   "name": "Skincare & Beauty",
+   "sub": "Serums, actives & clean beauty"
+  },
+  {
+   "id": "fragrance",
+   "name": "Fragrance",
+   "sub": "Designer, dupe & niche scent"
+  },
+  {
+   "id": "sleep",
+   "name": "Sleep & Home",
+   "sub": "Bedding, mattresses & sleep aids"
+  },
+  {
+   "id": "outdoor",
+   "name": "Outdoor & Performance",
+   "sub": "Trail, hydration & performance gear"
+  }
+ ],
+ "brands": [
+  {
+   "k": "Huel",
+   "n": "Huel",
+   "p": "2281559212068421",
+   "l": "nutrition",
+   "v": true
+  },
+  {
+   "k": "Gruns",
+   "n": "Grüns",
+   "p": "107585658730958",
+   "l": "nutrition",
+   "v": true
+  },
+  {
+   "k": "AG1",
+   "n": "AG1",
+   "p": "183869772601",
+   "l": "nutrition",
+   "v": true
+  },
+  {
+   "k": "DavidProtein",
+   "n": "David Protein",
+   "p": "357167600818818",
+   "l": "nutrition",
+   "v": true
+  },
+  {
+   "k": "MagicSpoon",
+   "n": "Magic Spoon",
+   "p": "1978160732305312",
+   "l": "nutrition",
+   "v": true
+  },
+  {
+   "k": "Lineage",
+   "n": "Lineage Provisions",
+   "p": "122103497600009012",
+   "l": "nutrition",
+   "v": true
+  },
+  {
+   "k": "ConsciousBar",
+   "n": "The Conscious Bar",
+   "p": "101255102109707",
+   "l": "nutrition",
+   "v": true
+  },
+  {
+   "k": "Paleovalley",
+   "n": "Paleovalley",
+   "p": "590393174322587",
+   "l": "nutrition",
+   "v": true
+  },
+  {
+   "k": "Chomps",
+   "n": "Chomps",
+   "p": "495075217208815",
+   "l": "nutrition",
+   "v": true
+  },
+  {
+   "k": "PrimeBites",
+   "n": "Prime Bites",
+   "p": "104570322274145",
+   "l": "nutrition"
+  },
+  {
+   "k": "BUILT",
+   "n": "BUILT",
+   "p": "421169111685570",
+   "l": "nutrition"
+  },
+  {
+   "k": "QuestNutrition",
+   "n": "Quest Nutrition",
+   "p": "109793645727352",
+   "l": "nutrition"
+  },
+  {
+   "k": "RXBAR",
+   "n": "RXBAR",
+   "p": "320396954740959",
+   "l": "nutrition"
+  },
+  {
+   "k": "GoMacro",
+   "n": "GoMacro",
+   "p": "31601963617",
+   "l": "nutrition"
+  },
+  {
+   "k": "CLIFBar",
+   "n": "CLIF Bar",
+   "p": "118271677096",
+   "l": "nutrition"
+  },
+  {
+   "k": "MuchoBars",
+   "n": "Mucho Bars",
+   "p": "113513855188338",
+   "l": "nutrition"
+  },
+  {
+   "k": "Jacob",
+   "n": "Jacob",
+   "p": "130384210150365",
+   "l": "nutrition"
+  },
+  {
+   "k": "Eatmancereal",
+   "n": "Eat Man Cereal",
+   "p": "670073809528053",
+   "l": "nutrition"
+  },
+  {
+   "k": "ICONICProtein",
+   "n": "ICONIC Protein",
+   "p": "248211231932479",
+   "l": "nutrition"
+  },
+  {
+   "k": "CleanSimpleEats",
+   "n": "Clean Simple Eats",
+   "p": "687161278012626",
+   "l": "nutrition"
+  },
+  {
+   "k": "Primals",
+   "n": "Primals",
+   "p": "562250666982023",
+   "l": "nutrition"
+  },
+  {
+   "k": "IM8Health",
+   "n": "IM8 Health",
+   "p": "345914995276546",
+   "l": "nutrition"
+  },
+  {
+   "k": "JoinZOE",
+   "n": "Join ZOE",
+   "p": "465000924275405",
+   "l": "nutrition"
+  },
+  {
+   "k": "Ritual",
+   "n": "Ritual",
+   "p": "706979406105651",
+   "l": "nutrition"
+  },
+  {
+   "k": "Lemme",
+   "n": "Lemme",
+   "p": "104409665708196",
+   "l": "nutrition"
+  },
+  {
+   "k": "LlamaNaturals",
+   "n": "Llama Naturals",
+   "p": "973830766133906",
+   "l": "nutrition"
+  },
+  {
+   "k": "GoldenChild",
+   "n": "Golden Child",
+   "p": "614453448427125",
+   "l": "nutrition"
+  },
+  {
+   "k": "GFUEL",
+   "n": "G FUEL",
+   "p": "536344866387339",
+   "l": "nutrition"
+  },
+  {
+   "k": "HexClad",
+   "n": "HexClad",
+   "p": "306050696452078",
+   "l": "nutrition"
+  },
+  {
+   "k": "PrimalQueen",
+   "n": "Primal Queen",
+   "p": "125572610639402",
+   "l": "hormone",
+   "v": true
+  },
+  {
+   "k": "HappyMammoth",
+   "n": "Happy Mammoth",
+   "p": "1343771369029582",
+   "l": "hormone",
+   "v": true
+  },
+  {
+   "k": "OPositiv",
+   "n": "O Positiv",
+   "p": "103675775287114",
+   "l": "hormone",
+   "v": true
+  },
+  {
+   "k": "HappyMammothUS",
+   "n": "Happy Mammoth US",
+   "p": "106190960961818",
+   "l": "hormone"
+  },
+  {
+   "k": "SpoiledChild",
+   "n": "SpoiledChild",
+   "p": "103345698622969",
+   "l": "hormone"
+  },
+  {
+   "k": "YourHeights",
+   "n": "Your Heights",
+   "p": "114211629977239",
+   "l": "hormone"
+  },
+  {
+   "k": "Flamingo",
+   "n": "Flamingo",
+   "p": "203619540206883",
+   "l": "hairremoval",
+   "v": true
+  },
+  {
+   "k": "Nood",
+   "n": "Nood",
+   "p": "102481578340318",
+   "l": "hairremoval",
+   "v": true
+  },
+  {
+   "k": "Bushbalm",
+   "n": "Bushbalm",
+   "p": "507028032816583",
+   "l": "hairremoval",
+   "v": true
+  },
+  {
+   "k": "Ulike",
+   "n": "Ulike",
+   "p": "105384415588890",
+   "l": "hairremoval",
+   "v": true
+  },
+  {
+   "k": "DollarShaveClub",
+   "n": "Dollar Shave Club",
+   "p": "214066708638063",
+   "l": "hairremoval",
+   "v": true
+  },
+  {
+   "k": "Carpe",
+   "n": "Carpe",
+   "p": "315614678610514",
+   "l": "hairremoval",
+   "v": true
+  },
+  {
+   "k": "Hismile",
+   "n": "Hismile",
+   "p": "1573441899601646",
+   "l": "hairremoval",
+   "v": true
+  },
+  {
+   "k": "MANSCAPED",
+   "n": "MANSCAPED",
+   "p": "1545577295743703",
+   "l": "hairremoval"
+  },
+  {
+   "k": "Billie",
+   "n": "Billie",
+   "p": "1942253219380826",
+   "l": "hairremoval"
+  },
+  {
+   "k": "RoseSkinCo",
+   "n": "Rose Skin Co",
+   "p": "271075813777557",
+   "l": "hairremoval"
+  },
+  {
+   "k": "Fur",
+   "n": "Fur",
+   "p": "576497585824772",
+   "l": "hairremoval"
+  },
+  {
+   "k": "Sugardoh",
+   "n": "Sugardoh",
+   "p": "116698703491342",
+   "l": "hairremoval"
+  },
+  {
+   "k": "OYOSkincare",
+   "n": "OYO Skincare",
+   "p": "101827215400729",
+   "l": "hairremoval"
+  },
+  {
+   "k": "touchland",
+   "n": "touchland",
+   "p": "136211343063603",
+   "l": "hairremoval"
+  },
+  {
+   "k": "PAUME",
+   "n": "PAUME",
+   "p": "107241037747009",
+   "l": "hairremoval"
+  },
+  {
+   "k": "RYZE",
+   "n": "RYZE Superfoods",
+   "p": "107940537227344",
+   "l": "coffee",
+   "v": true
+  },
+  {
+   "k": "EverydayDose",
+   "n": "Everyday Dose",
+   "p": "102454544917397",
+   "l": "coffee",
+   "v": true
+  },
+  {
+   "k": "Javvy",
+   "n": "Javvy",
+   "p": "109899597504831",
+   "l": "coffee",
+   "v": true
+  },
+  {
+   "k": "MUDWTR",
+   "n": "MUD\\WTR",
+   "p": "172538983355501",
+   "l": "coffee",
+   "v": true
+  },
+  {
+   "k": "Thesis",
+   "n": "Thesis",
+   "p": "102825878274846",
+   "l": "coffee",
+   "v": true
+  },
+  {
+   "k": "Resilia",
+   "n": "Resilia",
+   "p": "102485889216797",
+   "l": "coffee",
+   "v": true
+  },
+  {
+   "k": "MatchaFuel",
+   "n": "Matcha Fuel",
+   "p": "265825880749917",
+   "l": "coffee"
+  },
+  {
+   "k": "Manukora",
+   "n": "Manukora",
+   "p": "147597135592716",
+   "l": "coffee"
+  },
+  {
+   "k": "Neutonic",
+   "n": "Neutonic",
+   "p": "103252326155042",
+   "l": "coffee"
+  },
+  {
+   "k": "CELSIUS",
+   "n": "CELSIUS",
+   "p": "124286870931916",
+   "l": "coffee"
+  },
+  {
+   "k": "OYL",
+   "n": "OYL Mushroom Coffee",
+   "p": "102487545455947",
+   "l": "coffee"
+  },
+  {
+   "k": "POCA",
+   "n": "POCA",
+   "p": "835496492982165",
+   "l": "coffee"
+  },
+  {
+   "k": "HarmlessHarvest",
+   "n": "Harmless Harvest",
+   "p": "120863314631475",
+   "l": "coffee"
+  },
+  {
+   "k": "MellowSleep",
+   "n": "Mellow Sleep",
+   "p": "583724811498012",
+   "l": "coffee"
+  },
+  {
+   "k": "Olaplex",
+   "n": "Olaplex",
+   "p": "347578558683494",
+   "l": "haircare",
+   "v": true
+  },
+  {
+   "k": "Prose",
+   "n": "Prose",
+   "p": "114651839249783",
+   "l": "haircare",
+   "v": true
+  },
+  {
+   "k": "HighlandHaircare",
+   "n": "Highland Haircare",
+   "p": "105974188313463",
+   "l": "haircare",
+   "v": true
+  },
+  {
+   "k": "ROZ",
+   "n": "RŌZ",
+   "p": "101307418863062",
+   "l": "haircare",
+   "v": true
+  },
+  {
+   "k": "ColorWow",
+   "n": "Color Wow",
+   "p": "437062992999580",
+   "l": "haircare"
+  },
+  {
+   "k": "amika",
+   "n": "amika",
+   "p": "118855184808520",
+   "l": "haircare"
+  },
+  {
+   "k": "Verb",
+   "n": "Verb Products",
+   "p": "112563218814050",
+   "l": "haircare"
+  },
+  {
+   "k": "Oribe",
+   "n": "Oribe",
+   "p": "114878301909097",
+   "l": "haircare"
+  },
+  {
+   "k": "RandCo",
+   "n": "R+Co",
+   "p": "211998045660614",
+   "l": "haircare"
+  },
+  {
+   "k": "Hairstory",
+   "n": "Hairstory",
+   "p": "1195132727170046",
+   "l": "haircare"
+  },
+  {
+   "k": "UppercutDeluxe",
+   "n": "Uppercut Deluxe",
+   "p": "143012335719358",
+   "l": "haircare"
+  },
+  {
+   "k": "GoodDyeYoung",
+   "n": "Good Dye Young",
+   "p": "544781168991320",
+   "l": "haircare"
+  },
+  {
+   "k": "Kitsch",
+   "n": "Kitsch",
+   "p": "362556690454305",
+   "l": "haircare"
+  },
+  {
+   "k": "Nello",
+   "n": "Nello",
+   "p": "110065725067832",
+   "l": "haircare"
+  },
+  {
+   "k": "MarsMen",
+   "n": "Mars Men",
+   "p": "184711951390377",
+   "l": "mens",
+   "v": true
+  },
+  {
+   "k": "PrimalViking",
+   "n": "Primal Viking",
+   "p": "765890836605406",
+   "l": "mens",
+   "v": true
+  },
+  {
+   "k": "PenroseSkin",
+   "n": "Penrose Skin",
+   "p": "702276042973341",
+   "l": "mens",
+   "v": true
+  },
+  {
+   "k": "NorseOrganics",
+   "n": "Norse Organics",
+   "p": "125701703959711",
+   "l": "mens",
+   "v": true
+  },
+  {
+   "k": "MARO",
+   "n": "MARO Natural Clothing",
+   "p": "176914858842207",
+   "l": "mens"
+  },
+  {
+   "k": "HollowSocks",
+   "n": "Hollow Alpaca Socks",
+   "p": "111034490269087",
+   "l": "mens"
+  },
+  {
+   "k": "NeroClothing",
+   "n": "Nero Clothing",
+   "p": "485758931295958",
+   "l": "mens"
+  },
+  {
+   "k": "StarsHoney",
+   "n": "Stars + Honey",
+   "p": "104932575863053",
+   "l": "mens"
+  },
+  {
+   "k": "IndustryOfAllNations",
+   "n": "Industry of All Nations",
+   "p": "109776685707491",
+   "l": "mens"
+  },
+  {
+   "k": "MotherFFoods",
+   "n": "MotherF Foods",
+   "p": "735780162954397",
+   "l": "mens"
+  },
+  {
+   "k": "rhode",
+   "n": "rhode",
+   "p": "109162541773169",
+   "l": "skincare"
+  },
+  {
+   "k": "TheOrdinary",
+   "n": "The Ordinary",
+   "p": "285365931564403",
+   "l": "skincare"
+  },
+  {
+   "k": "Glossier",
+   "n": "Glossier",
+   "p": "1392545734334646",
+   "l": "skincare"
+  },
+  {
+   "k": "GlowRecipe",
+   "n": "Glow Recipe",
+   "p": "312391605595029",
+   "l": "skincare"
+  },
+  {
+   "k": "Naturium",
+   "n": "Naturium",
+   "p": "109081823790439",
+   "l": "skincare"
+  },
+  {
+   "k": "PrimallyPure",
+   "n": "Primally Pure",
+   "p": "1619550891609579",
+   "l": "skincare"
+  },
+  {
+   "k": "WonderValley",
+   "n": "Wonder Valley",
+   "p": "107081858038559",
+   "l": "skincare"
+  },
+  {
+   "k": "FurtunaSkin",
+   "n": "Furtuna Skin",
+   "p": "341745209855395",
+   "l": "skincare"
+  },
+  {
+   "k": "KylieCosmetics",
+   "n": "Kylie Cosmetics",
+   "p": "559929417490965",
+   "l": "skincare"
+  },
+  {
+   "k": "SleepGlow",
+   "n": "Sleep&Glow",
+   "p": "356381255147355",
+   "l": "skincare"
+  },
+  {
+   "k": "ALTFragrances",
+   "n": "ALT. Fragrances",
+   "p": "2360230710658873",
+   "l": "fragrance"
+  },
+  {
+   "k": "Dossier",
+   "n": "Dossier",
+   "p": "275377623085144",
+   "l": "fragrance"
+  },
+  {
+   "k": "PHLUR",
+   "n": "PHLUR",
+   "p": "1696701637228164",
+   "l": "fragrance"
+  },
+  {
+   "k": "LeLabo",
+   "n": "Le Labo",
+   "p": "671967876202678",
+   "l": "fragrance"
+  },
+  {
+   "k": "DSDurga",
+   "n": "D.S. & DURGA",
+   "p": "181835565162603",
+   "l": "fragrance"
+  },
+  {
+   "k": "Aroma360",
+   "n": "Aroma360",
+   "p": "938501912844088",
+   "l": "fragrance"
+  },
+  {
+   "k": "Aesop",
+   "n": "Aesop",
+   "p": "100139035049081",
+   "l": "fragrance"
+  },
+  {
+   "k": "CHANEL",
+   "n": "CHANEL",
+   "p": "10109514234",
+   "l": "fragrance"
+  },
+  {
+   "k": "Gucci",
+   "n": "Gucci",
+   "p": "44596321012",
+   "l": "fragrance"
+  },
+  {
+   "k": "Brooklinen",
+   "n": "Brooklinen",
+   "p": "588785404473852",
+   "l": "sleep"
+  },
+  {
+   "k": "BollBranch",
+   "n": "Boll & Branch",
+   "p": "354593521329931",
+   "l": "sleep"
+  },
+  {
+   "k": "Casper",
+   "n": "Casper",
+   "p": "224110981099062",
+   "l": "sleep"
+  },
+  {
+   "k": "Saatva",
+   "n": "Saatva",
+   "p": "143170325693090",
+   "l": "sleep"
+  },
+  {
+   "k": "TheOodie",
+   "n": "The Oodie",
+   "p": "601495866852901",
+   "l": "sleep"
+  },
+  {
+   "k": "TheSleepCompany",
+   "n": "The Sleep Company",
+   "p": "324603558250502",
+   "l": "sleep"
+  },
+  {
+   "k": "SleepyCat",
+   "n": "SleepyCat",
+   "p": "202904163541379",
+   "l": "sleep"
+  },
+  {
+   "k": "PotteryBarn",
+   "n": "Pottery Barn",
+   "p": "61334055239",
+   "l": "sleep"
+  },
+  {
+   "k": "Sutera",
+   "n": "Sutera",
+   "p": "132449249956012",
+   "l": "sleep"
+  },
+  {
+   "k": "DozeBedding",
+   "n": "Doze Bedding",
+   "p": "104420198862385",
+   "l": "sleep"
+  },
+  {
+   "k": "TheNorthFace",
+   "n": "The North Face",
+   "p": "6550003123",
+   "l": "outdoor"
+  },
+  {
+   "k": "BlackDiamond",
+   "n": "Black Diamond",
+   "p": "153989481604",
+   "l": "outdoor"
+  },
+  {
+   "k": "Teva",
+   "n": "Teva",
+   "p": "40078814890",
+   "l": "outdoor"
+  },
+  {
+   "k": "HoneyStinger",
+   "n": "Honey Stinger",
+   "p": "36535919660",
+   "l": "outdoor"
+  },
+  {
+   "k": "SkratchLabs",
+   "n": "Skratch Labs",
+   "p": "160483117394134",
+   "l": "outdoor"
+  },
+  {
+   "k": "STIHL",
+   "n": "STIHL",
+   "p": "1485884448290593",
+   "l": "outdoor"
+  },
+  {
+   "k": "KEEN",
+   "n": "KEEN",
+   "p": "22886096083",
+   "l": "outdoor"
+  },
+  {
+   "k": "Chaco",
+   "n": "Chaco",
+   "p": "14086934601",
+   "l": "outdoor"
+  },
+  {
+   "k": "CamelBak",
+   "n": "CamelBak",
+   "p": "100064773659",
+   "l": "outdoor"
+  },
+  {
+   "k": "Columbia",
+   "n": "Columbia Sportswear",
+   "p": "1464140170517510",
+   "l": "outdoor"
+  }
+ ]
+}
