@@ -39,10 +39,13 @@ jobs:
           MAX_PASSES: '4'
         run: node scripts/harvest.mjs
 
+      # The main harvest already retries four times. This is a single extra sweep for
+      # brands the throttle ate; escalating retries here only burn minutes on pages that
+      # are permanently dead (no live US ads), so it is capped at one pass.
       - name: Fill gaps left by rate limiting
         env:
           RESUME: '1'
-          MAX_PASSES: '3'
+          MAX_PASSES: '1'
         run: node scripts/harvest.mjs
 
       - name: Fetch creative stills
