@@ -146,10 +146,16 @@ const PAGE_FN = async ({ pageId, picks, budgetMs, lsd, docId }) => {
 
   const list = roster.brands.filter(b => !ONLY || ONLY.has(b.k));
   const out = {};
-  if (process.env.RESUME === '1' && fs.existsSync(path.join(ROOT, 'data/harvest.json'))) {
-    const prev = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/harvest.json'), 'utf8'));
-    for (const [k, v] of Object.entries(prev.brands || {})) if ((v.picks || []).length) out[k] = v;
-    console.log(`resume: ${Object.keys(out).length} brands already have data, harvesting the rest`);
+  /* Merge into whatever is already on disk when resuming OR when harvesting a subset —
+     a targeted ONLY= run must never truncate the full dataset. */
+  const prevPath = path.join(ROOT, 'data/harvest.json');
+  if ((process.env.RESUME === '1' || ONLY) && fs.existsSync(prevPath)) {
+    const prev = JSON.parse(fs.readFileSync(prevPath, 'utf8'));
+    for (const [k, v] of Object.entries(prev.brands || {})) {
+      if (ONLY && ONLY.has(k)) continue;          // subset run: re-harvest these, keep the rest
+      if ((v.picks || []).length || ONLY) out[k] = v;
+    }
+    console.log(`${ONLY ? 'subset' : 'resume'}: carrying ${Object.keys(out).length} existing brands forward`);
   }
   let blanks = 0;
 
@@ -208,5 +214,6 @@ const PAGE_FN = async ({ pageId, picks, budgetMs, lsd, docId }) => {
   fs.mkdirSync(path.join(ROOT, 'data'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'data/harvest.json'), JSON.stringify({ harvestedAt: stamp, picks: PICKS, cooldowns: COOLDOWNS, brands: out }, null, 1));
   console.log(`\nharvested ${ok} brands with data, ${empty} empty/failed -> data/harvest.json`);
-  if (ok < Math.floor(list.length * 0.5)) { console.error(`FATAL: only ${ok}/${list.length} brands returned data — refusing to publish a degraded harvest`); process.exit(3); }
+  const floor = ONLY ? 1 : Math.floor(roster.brands.length * 0.6);
+  if (ok < floor) { console.error(`FATAL: only ${ok} brands have data (floor ${floor}) — refusing to write a degraded harvest`); process.exit(3); }
 })();
