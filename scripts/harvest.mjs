@@ -159,10 +159,12 @@ const PAGE_FN = async ({ pageId, picks, budgetMs, lsd, docId }) => {
   }
   let blanks = 0;
 
+  const fresh = new Set();   // brands that returned live data during THIS run
   async function doBrand(b, tag) {
     try {
       const r = await page.evaluate(PAGE_FN, { pageId: b.p, picks: PICKS, budgetMs: PER_BRAND_MS, lsd: tok.lsd, docId: tok.docId });
       out[b.k] = { ...r, key: b.k, name: b.n, lane: b.l, pageId: b.p };
+      if ((r.picks || []).length) fresh.add(b.k);
       const note = r.picks.length ? '' : (r.gatedNoMedia ? `   (gated - ${r.gatedNoMedia} ads, media withheld)` : (r.scanned === 0 ? '   (NO EDGES)' : '   (no long runners)'));
       console.log(`${tag} ${b.k.padEnd(22)} ${String(r.concepts).padStart(3)}c / ${String(r.uniq).padStart(3)}u / ${String(r.max ?? '-').padStart(4)}d${note}`);
       return r;
@@ -210,10 +212,20 @@ const PAGE_FN = async ({ pageId, picks, budgetMs, lsd, docId }) => {
   const ok = Object.values(out).filter(o => (o.picks || []).length).length;
   const empty = Object.keys(out).length - ok;
 
+  /* Judge THIS run, not the file it inherited, and decide BEFORE writing. A resumed or
+     subset run that harvests nothing must fail loudly rather than re-stamping yesterday's
+     data with today's date — that is exactly how a silently blocked scraper republishes
+     stale numbers as fresh. */
+  const floor = Math.max(1, Math.ceil(todo.length * 0.5));
+  if (fresh.size < floor) {
+    console.error(`FATAL: only ${fresh.size} of ${todo.length} attempted brands returned live data ` +
+      `(floor ${floor}). Every brand coming back with zero edges means the session is blocked, ` +
+      `not that the advertisers stopped running ads. Nothing written; last good harvest kept.`);
+    process.exit(3);
+  }
+
   const stamp = new Date().toISOString();
   fs.mkdirSync(path.join(ROOT, 'data'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'data/harvest.json'), JSON.stringify({ harvestedAt: stamp, picks: PICKS, cooldowns: COOLDOWNS, brands: out }, null, 1));
-  console.log(`\nharvested ${ok} brands with data, ${empty} empty/failed -> data/harvest.json`);
-  const floor = ONLY ? 1 : Math.floor(roster.brands.length * 0.6);
-  if (ok < floor) { console.error(`FATAL: only ${ok} brands have data (floor ${floor}) — refusing to write a degraded harvest`); process.exit(3); }
+  console.log(`\nharvested ${ok} brands with data (${fresh.size}/${todo.length} fresh this run), ${empty} empty -> data/harvest.json`);
 })();

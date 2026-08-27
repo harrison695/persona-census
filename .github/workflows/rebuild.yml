@@ -1,0 +1,36 @@
+name: Rebuild site
+
+# NOTE: the harvest deliberately does NOT run here. Meta serves GitHub's datacenter IPs the
+# Ad Library page and a valid lsd/doc_id, but returns ZERO EDGES for every GraphQL query, so a
+# CI harvest silently produces nothing. Harvesting runs on a residential connection instead
+# (scripts/weekly.sh, scheduled locally) and pushes; deploy.yml then publishes.
+# This workflow only re-renders the site from data already committed — use it after changing
+# the generator, stylesheet or annotations without re-scraping.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '22', cache: 'npm' }
+      # sharp ships its native binaries as OPTIONAL deps -- omitting them breaks it on linux-x64
+      - run: npm ci --include=optional
+      - run: node scripts/build.mjs
+      - name: Commit rebuilt site
+        run: |
+          git config user.name  "persona-census-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A public
+          if git diff --staged --quiet; then echo "no change"; else
+            git commit -m "rebuild: $(date -u +%Y-%m-%d)"; git push; fi

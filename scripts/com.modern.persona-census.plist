@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.modern.persona-census</string>
+  <key>ProgramArguments</key>
+  <array><string>__REPO__/scripts/weekly.sh</string></array>
+  <key>StartCalendarInterval</key>
+  <dict><key>Weekday</key><integer>1</integer><key>Hour</key><integer>6</integer><key>Minute</key><integer>30</integer></dict>
+  <!-- if the Mac was asleep at the scheduled time, launchd runs it on next wake -->
+  <key>RunAtLoad</key><false/>
+  <key>StandardOutPath</key><string>__REPO__/data/launchd.out.log</string>
+  <key>StandardErrorPath</key><string>__REPO__/data/launchd.err.log</string>
+</dict>
+</plist>

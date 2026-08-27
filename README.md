@@ -6,7 +6,8 @@ The longest-running live Meta ads from ~127 DTC brands across ten categories, ea
 Live site: **https://harrison695.github.io/persona-census/**
 Machine-readable twin: `public/census.json`
 
-Rebuilds itself every Monday 06:20 UTC via GitHub Actions.
+Refreshes every Monday morning from a scheduled local run, which pushes to `main`; a GitHub
+Action then publishes. **The harvest cannot run in CI** — see below.
 
 ---
 
@@ -51,6 +52,26 @@ properly means looking at the creative — a keyword rule only puts a marker dow
 not blank. **To promote an auto tag**, add the read to `annotations/personas.json` under both
 `byAd` and `byConcept`; it then sticks through every future refresh.
 
+## Why the harvest does not run in GitHub Actions
+
+Meta serves GitHub's datacenter IPs the Ad Library page and a perfectly valid `lsd` token and
+`doc_id` — and then returns **zero edges for every GraphQL query**. It does not error; it just
+returns nothing. A CI run therefore *looks* successful while harvesting nothing at all.
+
+This was verified with a live `workflow_dispatch` run: every brand, every pass, zero edges, while
+the identical code on a residential connection returned 120 brands. So:
+
+| job | where | what it does |
+|---|---|---|
+| `scripts/weekly.sh` | local, Mondays | harvest -> images -> build -> commit -> push |
+| `.github/workflows/deploy.yml` | CI, on push | publishes `public/` to Pages |
+| `.github/workflows/rebuild.yml` | CI, manual | re-renders the site from committed data (no harvest) |
+
+**The harvester refuses to write when a run comes back empty.** If fewer than half the attempted
+brands return live data, it exits non-zero and leaves the last good `harvest.json` untouched,
+rather than re-stamping yesterday's data with today's date. A blocked scraper that silently
+republishes stale numbers as fresh is worse than one that fails.
+
 ## Known gaps
 
 - **Regulated health advertisers** (hims, Hers, Ro, and similar) return ads with empty media
@@ -70,10 +91,17 @@ another advertiser's compliance review. The layout mechanics travel; the copy do
 ## Local run
 
 ```bash
-npm install
+npm install                       # NOT --omit=optional: sharp's binaries are optional deps
 npx playwright install chromium   # only if the cached browser version has drifted
 npm run all                       # harvest -> images -> build
 python3 -m http.server 8080 --directory public
+```
+
+Install the weekly schedule (once):
+
+```bash
+sed "s#__REPO__#$PWD#g" scripts/com.modern.persona-census.plist > ~/Library/LaunchAgents/com.modern.persona-census.plist
+launchctl load ~/Library/LaunchAgents/com.modern.persona-census.plist
 ```
 
 Harvest a subset while iterating:
@@ -90,7 +118,9 @@ scripts/harvest.mjs       Playwright ladder harvest -> data/harvest.json
 scripts/images.mjs        signed-URL fetch + webp resize -> public/img
 scripts/build.mjs         roster + harvest + annotations -> public/index.html
 scripts/autotag.mjs       provisional keyword persona rules
+scripts/weekly.sh         the Monday job: harvest, build, commit, push
 annotations/personas.json hand-written reads (survives refreshes)
 annotations/findings.json cross-brand patterns shown above the fold
-.github/workflows/refresh.yml   Monday cron
+.github/workflows/deploy.yml    publishes public/ on push
+.github/workflows/rebuild.yml   manual re-render from committed data
 ```
