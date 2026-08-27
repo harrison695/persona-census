@@ -48,7 +48,7 @@ const card = a => {
 <div class="shot" style="aspect-ratio:${a.w}/${a.h}"><img src="${a.img}" alt="${e(a.persona)}" width="${a.w}" height="${a.h}" loading="lazy" decoding="async"><span class="fmt ${kind}">${kind === 'video' ? '&#9654; VIDEO' : 'STATIC'}</span><span class="run"><b>${a.days}</b>d</span></div>
 <div class="meat">
 <h4${tok ? ' class="tok"' : ''}>${tok ? '&#8212; dynamic (DCO) &#8212;' : e(a.title)}</h4>
-<div class="field"><span class="lab">Persona<i class="rd ${readCls}" title="${readCls === 'hand' ? 'hand-read from the creative' : readCls === 'auto' ? 'provisional keyword tag &#8212; not yet read' : 'no read yet'}">${readLbl}</i></span><p class="persona">${e(a.persona)}</p></div>
+<div class="field"><span class="lab">Persona${a.by === 'hand' ? '' : `<i class="rd ${readCls}" title="${readCls === 'auto' ? 'provisional keyword tag &#8212; not yet read' : 'no read yet'}">${readLbl}</i>`}</span><p class="persona">${e(a.persona)}</p></div>
 <div class="field"><span class="lab">Psychographic</span><p class="psycho">${e(a.psycho)}</p></div>
 ${body ? `<p class="copy">${e(body)}</p>` : ''}
 <div class="foot"><span class="cta">${e(a.cta || '&#8212;')}</span><span class="lp" title="${e(a.link)}">${e(pathOf(a.link))}</span><a class="src" href="https://www.facebook.com/ads/library/?id=${a.id}" target="_blank" rel="noopener">Library &#8599;</a></div>
@@ -113,7 +113,10 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <p>The Ad Library exposes <strong>no impressions and no spend</strong> for US commercial ads, so nothing here is a performance ranking. Days-running measures <strong>competitor conviction</strong> &#8212; how long a team has kept paying for something &#8212; which is a survival proxy, not a return.</p>
 <p>Cadence differs by more than 25&#215; across these advertisers, so longevity is only comparable <strong>within</strong> a brand, never across the table.</p></div>
 <div><h3>Coverage &amp; gaps</h3>
-<p><strong>${nHand}</strong> ads carry a hand-written read; <strong>${nAuto}</strong> carry a provisional keyword tag and <strong>${nNone}</strong> are unread. Filter to <em>Hand-read</em> below to see only the reviewed set.</p>
+<p>${nHand === totalAds
+  ? `<strong>Every one of these ${totalAds} ads has been looked at and read individually.</strong> No card carries a guessed or keyword-derived persona.`
+  : `<strong>${nHand}</strong> ads carry a hand-written read; <strong>${nAuto}</strong> carry a provisional keyword tag and <strong>${nNone}</strong> are unread. Filter to <em>Hand-read</em> below to see only the reviewed set.`}</p>
+<p>Reads are stored against both the ad id and its concept, so they survive the weekly refresh. Genuinely new creative arrives badged <em>auto</em> or <em>unread</em> until it has been read too.</p>
 ${gated.length ? `<p><strong>Media withheld:</strong> ${e(gated.slice(0, 6).join(', '))}${gated.length > 6 ? ` +${gated.length - 6} more` : ''} &#8212; Meta hides creative for regulated-health advertisers on logged-out sessions.</p>` : ''}
 ${noads.length ? `<p><strong>No live US ads:</strong> ${e(noads.slice(0, 6).join(', '))}${noads.length > 6 ? ` +${noads.length - 6} more` : ''}.</p>` : ''}
 <p class="flag" style="border-left-width:2px;margin-top:12px"><strong>Port structure, never claim language.</strong> Several brands here run claims that would not clear another advertiser's compliance review. The mechanics travel; the copy does not.</p></div>
@@ -126,7 +129,7 @@ ${noads.length ? `<p><strong>No live US ads:</strong> ${e(noads.slice(0, 6).join
 <div class="bar"><div class="wrap">
 <button class="chip" data-lane="*" aria-pressed="true">All lanes</button>${chips}
 <div class="seg" role="group" aria-label="Media type"><button data-kind="*" aria-pressed="true">All</button><button data-kind="video" aria-pressed="false">Video</button><button data-kind="static" aria-pressed="false">Static</button></div>
-<div class="seg" role="group" aria-label="Annotation state"><button data-read="*" aria-pressed="true">Any read</button><button data-read="hand" aria-pressed="false">Hand-read</button></div>
+${nHand < totalAds ? '<div class="seg" role="group" aria-label="Annotation state"><button data-read="*" aria-pressed="true">Any read</button><button data-read="hand" aria-pressed="false">Hand-read</button></div>' : ''}
 <input class="q" id="q" type="search" placeholder="Search persona or belief &#8212; try &ldquo;GLP-1&rdquo;, &ldquo;cortisol&rdquo;, &ldquo;doctor&rdquo;">
 <span class="count" id="count"></span></div></div>
 
