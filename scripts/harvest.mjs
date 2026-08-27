@@ -149,6 +149,8 @@ const PAGE_FN = async ({ pageId, picks, budgetMs, lsd, docId }) => {
   /* Merge into whatever is already on disk when resuming OR when harvesting a subset —
      a targeted ONLY= run must never truncate the full dataset. */
   const prevPath = path.join(ROOT, 'data/harvest.json');
+  const prevSnapshot = fs.existsSync(prevPath)
+    ? (JSON.parse(fs.readFileSync(prevPath, 'utf8')).brands || {}) : {};
   if ((process.env.RESUME === '1' || ONLY) && fs.existsSync(prevPath)) {
     const prev = JSON.parse(fs.readFileSync(prevPath, 'utf8'));
     for (const [k, v] of Object.entries(prev.brands || {})) {
@@ -160,11 +162,16 @@ const PAGE_FN = async ({ pageId, picks, budgetMs, lsd, docId }) => {
   let blanks = 0;
 
   const fresh = new Set();   // brands that returned live data during THIS run
+  const degraded = [];       // brands whose live set shrank sharply vs the last harvest
   async function doBrand(b, tag) {
     try {
       const r = await page.evaluate(PAGE_FN, { pageId: b.p, picks: PICKS, budgetMs: PER_BRAND_MS, lsd: tok.lsd, docId: tok.docId });
       out[b.k] = { ...r, key: b.k, name: b.n, lane: b.l, pageId: b.p };
       if ((r.picks || []).length) fresh.add(b.k);
+      // throttling can only ever reduce what a brand shows, so a big drop is worth flagging:
+      // it looks identical to an advertiser genuinely cutting back, and it is not.
+      const was = prevSnapshot[b.k]?.uniq;
+      if (was && r.uniq && r.uniq < was * 0.5) degraded.push(`${b.k} ${was}->${r.uniq}u`);
       const note = r.picks.length ? '' : (r.gatedNoMedia ? `   (gated - ${r.gatedNoMedia} ads, media withheld)` : (r.scanned === 0 ? '   (NO EDGES)' : '   (no long runners)'));
       console.log(`${tag} ${b.k.padEnd(22)} ${String(r.concepts).padStart(3)}c / ${String(r.uniq).padStart(3)}u / ${String(r.max ?? '-').padStart(4)}d${note}`);
       return r;
@@ -228,4 +235,5 @@ const PAGE_FN = async ({ pageId, picks, budgetMs, lsd, docId }) => {
   fs.mkdirSync(path.join(ROOT, 'data'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'data/harvest.json'), JSON.stringify({ harvestedAt: stamp, picks: PICKS, cooldowns: COOLDOWNS, brands: out }, null, 1));
   console.log(`\nharvested ${ok} brands with data (${fresh.size}/${todo.length} fresh this run), ${empty} empty -> data/harvest.json`);
+  if (degraded.length) console.log(`note: ${degraded.length} brand(s) returned a much smaller live set than last time (possible mid-run throttling): ${degraded.slice(0, 8).join(', ')}`);
 })();
