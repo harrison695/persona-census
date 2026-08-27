@@ -13,8 +13,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
   group: refresh
@@ -38,6 +36,13 @@ jobs:
         env:
           ONLY: ${{ github.event.inputs.only }}
           PICKS: '6'
+          MAX_PASSES: '4'
+        run: node scripts/harvest.mjs
+
+      - name: Fill gaps left by rate limiting
+        env:
+          RESUME: '1'
+          MAX_PASSES: '3'
         run: node scripts/harvest.mjs
 
       - name: Fetch creative stills
@@ -57,12 +62,6 @@ jobs:
             git commit -m "refresh: $(date -u +%Y-%m-%d) census"
             git push
           fi
-
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with: { path: public }
-      - id: deploy
-        uses: actions/deploy-pages@v4
 
       - name: Summary
         if: always()
