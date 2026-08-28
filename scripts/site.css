@@ -129,3 +129,12 @@ footer b{color:var(--body)}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media(max-width:720px){.wrap{padding:0 20px}.method .wrap,.sig .wrap,.bar .wrap,footer .wrap{padding-left:20px;padding-right:20px}
  .mast .wrap{padding-top:40px}.stats{gap:14px}.grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
+
+/* structured index chips + facets */
+.tags{display:flex;flex-wrap:wrap;gap:5px}
+.tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.05em;padding:3px 7px;border-radius:4px;line-height:1.35}
+.tag.job{background:rgba(178,79,255,.14);color:var(--magl);border:1px solid rgba(178,79,255,.3)}
+.tag.mech{background:rgba(64,25,204,.22);color:#A9B4FF;border:1px solid rgba(64,25,204,.45)}
+.fac{font:500 12.5px/1 'DM Sans',sans-serif;background:var(--surf);border:1px solid var(--bd);
+ border-radius:100px;padding:8px 12px;color:var(--body);cursor:pointer;max-width:210px}
+.fac:hover{border-color:var(--mag)}

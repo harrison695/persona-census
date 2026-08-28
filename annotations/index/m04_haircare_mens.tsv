@@ -1,0 +1,138 @@
+The Artist-Collaboration Buyer	seen-owning-it	identity-display	product-only
+The Aspirational-Dressing Watcher	seen-owning-it	identity-display	peer-to-camera
+The Authenticity-Signalling Buyer	seen-owning-it	origin-transparency	graphic
+The Awards-Badge Deferrer	cant-evaluate-it	borrowed-authority	product-only
+The Bangs Regretter	body-changed-overnight	peer-proof	peer-to-camera
+The Barbershop-Culture Buyer	seen-owning-it	identity-display	graphic
+The Big-Colour Committer	first-time-in-category	spectacle-demo	peer-to-camera
+The Bold-Colour Client	choosing-a-variant	absence-screening	peer-to-camera
+The Buildup-Obsessed Scalp Watcher	unsayable-symptom	spectacle-demo	product-only
+The Category Sceptic Holding The Bottle	first-time-in-category	peer-proof	peer-to-camera
+The Clean-Beauty Shelf Curator	seen-owning-it	identity-display	product-only
+The Cleansing-Without-Stripping Convert	quitting-an-incumbent	absence-screening	peer-to-camera
+The Club-Store Bulk Buyer	restocking	value-arithmetic	product-only
+The Coastal-Life Aspirant	seen-owning-it	identity-display	peer-to-camera
+The Colour-Name Shopper	choosing-a-variant	identity-display	product-only
+The Colour-Treated Protector	restocking	absence-screening	product-only
+The Costco Aisle Convert	restocking	retail-verification	product-only
+The Curl-Type Matcher	choosing-a-variant	peer-proof	peer-to-camera
+The Curly-Hair Colour Sceptic	expects-it-to-be-unpleasant	peer-proof	peer-to-camera
+The Curly-Hair Time Economist	named-hour	quantified-outcome	product-only
+The Damage-Repair Loyalist	restocking	borrowed-authority	product-only
+The Deadpan Reviewer's Audience	cant-evaluate-it	peer-proof	peer-to-camera
+The Drop-Watching Colour Fan	seen-owning-it	scarcity-or-apology	product-only
+The Editor-Approved Shopper	cant-evaluate-it	borrowed-authority	product-only
+The Effortless-Texture Aspirant	seen-owning-it	identity-display	peer-to-camera
+The Fine-Hair Volume Seeker	body-changed-overnight	spectacle-demo	product-only
+The Frizz-Fighter Who Nearly Quit	rules-stopped-working	peer-proof	peer-to-camera
+The Full-Range Displayer	restocking	identity-display	product-only
+The Gadget-Curious Beauty Buyer	optimising-a-stack	spectacle-demo	peer-to-camera
+The Get-The-Look Copier	seen-owning-it	peer-proof	peer-to-camera
+The Glass-Hair Aspirant	seen-owning-it	spectacle-demo	peer-to-camera
+The Hair-Damage-Avoiding Sleeper	unsayable-symptom	absence-screening	product-only
+The Lately-I've-Been-Using Storyteller	cant-evaluate-it	peer-proof	peer-to-camera
+The Low-Maintenance Man	named-hour	quantified-outcome	peer-to-camera
+The Man Who Just Started Caring About His Hair	first-time-in-category	naming-the-shame	product-only
+The Mirror-Check Styler	routine-as-content	spectacle-demo	peer-to-camera
+The No-Makeup-Makeup Translator	seen-owning-it	identity-display	product-only
+The Oily-Roots-Dry-Ends Sufferer	unsayable-symptom	spectacle-demo	peer-to-camera
+The One-Product Simplifier	optimising-a-stack	quantified-outcome	peer-to-camera
+The Order-Of-Operations Asker	choosing-a-variant	ritual-construction	graphic
+The Partner-Recommended Discoverer	cant-evaluate-it	peer-proof	peer-to-camera
+The Pomade Traditionalist	seen-owning-it	identity-display	product-only
+The Product-In-Hand Explainer	cant-evaluate-it	peer-proof	peer-to-camera
+The Quiet-Luxury Shelf Buyer	seen-owning-it	identity-display	product-only
+The Refill-Pouch Buyer	restocking	value-arithmetic	product-only
+The Regimen Buyer	optimising-a-stack	ritual-construction	product-only
+The Retail-Aisle Discoverer	restocking	retail-verification	peer-to-camera
+The Reviewed-and-Discounted Buyer	waiting-for-the-price	peer-proof,value-arithmetic	product-only
+The Rice-Water Trend Follower	seen-owning-it	peer-proof	peer-to-camera
+The Rugged-Grooming Adopter	seen-owning-it	identity-display	peer-to-camera
+The Sale-Waiting Stockpiler	waiting-for-the-price	value-arithmetic	graphic
+The Salon-Technique Watcher	cant-evaluate-it	spectacle-demo	product-only
+The Second-Day Hair Manager	named-hour	quantified-outcome	peer-to-camera
+The Sephora Cross-Shopper	restocking	retail-verification	peer-to-camera
+The Serum Spec-Reader	vetting-ingredients	quantified-outcome	product-only
+The Shedding-Panicked Washer	body-changed-overnight	naming-the-shame	peer-to-camera
+The Shine-Metric Shopper	choosing-a-variant	quantified-outcome	product-only
+The Silky-Result Reviewer	cant-evaluate-it	peer-proof	product-only
+The Sleek-Finish Chaser	seen-owning-it	spectacle-demo	peer-to-camera
+The Spectacle-Demo Watcher	expects-it-to-be-unpleasant	spectacle-demo	peer-to-camera
+The Street-Poster Discoverer	first-time-in-category	identity-display	graphic
+The Stylist Reselling In-Chair	buying-for-someone-else	value-arithmetic	graphic
+The Stylist-Validated Convert	cant-evaluate-it	borrowed-authority	graphic
+The Surfer-Look Aspirant	seen-owning-it	identity-display	product-only
+The System Buyer	optimising-a-stack	ritual-construction	product-only
+The Texture-Curious Butter Buyer	expects-it-to-be-unpleasant	spectacle-demo	product-only
+The Tin-Brand Loyalist	restocking	identity-display	product-only
+The Travel-Size Sampler	first-time-in-category	risk-reversal	product-only
+The Travel-Size Trialist	first-time-in-category	risk-reversal	product-only
+The Try-Before-You-Buy Convert	first-time-in-category	risk-reversal	graphic
+The Two-Flavour Variety Buyer	choosing-a-variant	value-arithmetic	product-only
+The Volume-That-Lasts Sceptic	rules-stopped-working	quantified-outcome	product-only
+The Waitlist Believer	cant-evaluate-it	scarcity-or-apology	product-only
+The Walmart Basket Filler	restocking	retail-verification	product-only
+The Wash-Day Documenter	routine-as-content	ritual-construction	peer-to-camera
+The Will-It-Work-For-My-Hair Doubter	rules-stopped-working	risk-reversal	graphic
+The Woman Talking Straight To Camera	cant-evaluate-it	peer-proof	peer-to-camera
+The Woman With Irish Curls	choosing-a-variant	peer-proof	peer-to-camera
+The Zero-Risk Trialist	first-time-in-category	risk-reversal	graphic
+The Bar-Discovery Storyteller	first-time-in-category	peer-proof	peer-to-camera
+The Barefoot-Shoe Adjacent Buyer	seen-owning-it	origin-transparency	graphic
+The Capsule-Wardrobe Builder	seen-owning-it	identity-display	product-only
+The Car-Seat Confessor	cant-evaluate-it	peer-proof	peer-to-camera
+The Coconut-Bite Comparator	expects-it-to-be-unpleasant	spectacle-demo	product-only
+The Cold-Footed Sleeper	unsayable-symptom	quantified-outcome	product-only
+The Commuter With Tired Legs	named-hour	quantified-outcome	peer-to-camera
+The Converted Sceptic	rules-stopped-working	peer-proof	stranger
+The Cyber-Monday Stacker	waiting-for-the-price	value-arithmetic	graphic
+The Day-Count Documenter	routine-as-content	quantified-outcome	peer-to-camera
+The Designer-Dupe Fluent Shopper	quitting-an-incumbent	value-arithmetic	product-only
+The Dessert-Flavour Skimmer	choosing-a-variant	identity-display	product-only
+The Dip-Count Detail Reader	vetting-ingredients	origin-transparency	product-only
+The Fabric-Label Checker	vetting-ingredients	absence-screening	peer-to-camera
+The Fifty-Something Man With A Number	body-changed-overnight	quantified-outcome	graphic
+The Foot-Function Believer	vetting-ingredients	origin-transparency	product-only
+The Free-Pair Threshold Buyer	waiting-for-the-price	value-arithmetic,scarcity-or-apology	graphic
+The Guarantee-Anchored Buyer	first-time-in-category	risk-reversal	graphic
+The Joint-Pain Sufferer Who Wants to See Inside	rules-stopped-working	spectacle-demo	graphic
+The Kitchen-Island Explainer	cant-evaluate-it	peer-proof	peer-to-camera
+The Label-Reading Sceptic On Camera	vetting-ingredients	absence-screening	peer-to-camera
+The Last-Chance Stacker	waiting-for-the-price	scarcity-or-apology	product-only
+The Limited-Flavour Completist	seen-owning-it	scarcity-or-apology	product-only
+The Long-Term Acne Sufferer Drawing It Herself	rules-stopped-working	peer-proof	graphic
+The Macro-Checking Flavour Buyer	choosing-a-variant	quantified-outcome	product-only
+The Man Deciding Between Natural and TRT	on-a-protocol	blame-relocation	peer-to-camera
+The Man Measuring Performance in Minutes	unsayable-symptom	quantified-outcome	graphic
+The Man Reading His Body As Symptoms	body-changed-overnight	blame-relocation	graphic
+The Man Who Blames Cortisol, Not Beer	body-changed-overnight	blame-relocation	graphic
+The Man Who Wants to Be Asked What He's Wearing	seen-owning-it	peer-proof	product-only
+The Man Whose Doctor Ran Out of Options	rules-stopped-working	borrowed-authority	graphic
+The Man With Moobs and a Summer Deadline	body-changed-overnight	naming-the-shame	graphic
+The Man With Swamp Foot At Work	unsayable-symptom	naming-the-shame	graphic
+The Material-Science Curious Runner	vetting-ingredients	origin-transparency	athlete
+The Minimal-Brand Trustor	seen-owning-it	identity-display	product-only
+The Mother of a Teenage Boy	buying-for-someone-else	peer-proof	graphic
+The Multi-Symptom Acne Sufferer	unsayable-symptom	quantified-outcome	graphic
+The Natural-Dye Aesthete	vetting-ingredients	origin-transparency	product-only
+The Natural-Remedy Seeker	vetting-ingredients	absence-screening	product-only
+The New-Flavour Announcement Follower	restocking	scarcity-or-apology	product-only
+The Non-Toxic Activewear Convert	vetting-ingredients	absence-screening	graphic
+The Older Endurance Athlete	seen-owning-it	peer-proof	athlete
+The Older Male Authority	cant-evaluate-it	borrowed-authority	peer-to-camera
+The Overstock Opportunist	waiting-for-the-price	scarcity-or-apology	graphic
+The Podcast-Pilled Man	cant-evaluate-it	peer-proof	peer-to-camera
+The Polyester Objector	vetting-ingredients	absence-screening	graphic
+The Price-Objection Preempter	waiting-for-the-price	value-arithmetic	graphic
+The Process-Watching Buyer	vetting-ingredients	origin-transparency	graphic
+The Provenance-Led Apparel Buyer	vetting-ingredients	origin-transparency	product-only
+The Rack-Comparison Shopper	quitting-an-incumbent	spectacle-demo	product-only
+The Restaurant-Standard Taster	expects-it-to-be-unpleasant	peer-proof	product-only
+The Self-Diagnosing Leg-Ache Sufferer	unsayable-symptom	quantified-outcome	peer-to-camera
+The Shade-Depth Chooser	choosing-a-variant	origin-transparency	product-only
+The Side-By-Side Dupe Verifier	quitting-an-incumbent	spectacle-demo	product-only
+The Sold-Out Bandwagon Joiner	waiting-for-the-price	scarcity-or-apology	graphic
+The Sweat-Prone Sock Wearer	unsayable-symptom	absence-screening	product-only
+The Toe-Sock Curious	first-time-in-category	spectacle-demo	product-only
+The Twelve-Year Acne Veteran	rules-stopped-working	quantified-outcome	graphic
+The Viral-Product Latecomer	cant-evaluate-it	peer-proof	graphic

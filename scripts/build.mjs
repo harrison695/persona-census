@@ -1,5 +1,6 @@
 import fs from 'node:fs'; import path from 'node:path';
 import { ckey } from './ckey.mjs'; import { autotag } from './autotag.mjs';
+import { indexAd, TAXONOMY } from './indexer.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const roster = JSON.parse(fs.readFileSync(path.join(ROOT, 'roster.json'), 'utf8'));
@@ -25,8 +26,9 @@ for (const b of roster.brands) {
     if (rec.by === 'hand') nHand++; else if (rec.by === 'auto') nAuto++; else nNone++;
     const imgFile = `img/${b.k}_${a.id}.webp`;
     const d = DIMS[`${b.k}_${a.id}`];
-    return { ...a, ...rec, concept: c, w: d?.[0] || 620, h: d?.[1] || 775,
+    const base = { ...a, ...rec, concept: c, w: d?.[0] || 620, h: d?.[1] || 775,
              img: fs.existsSync(path.join(ROOT, 'public', imgFile)) ? imgFile : null };
+    return { ...base, ...indexAd({ ...base, psychographic: base.psycho }) };
   }).filter(a => a.img);
   if (ads.length) brands.push({ ...b, h, ads });
 }
@@ -44,12 +46,13 @@ const card = a => {
   const body = (a.text || '').startsWith('{{') ? '' : a.text;
   const readCls = a.by === 'hand' ? 'hand' : (a.by === 'auto' ? 'auto' : 'none');
   const readLbl = a.by === 'hand' ? 'read' : (a.by === 'auto' ? 'auto' : 'unread');
-  return `<article class="ad" data-kind="${kind}" data-read="${readCls}" data-s="${e((a.persona + ' ' + a.psycho + ' ' + (a.title || '') + ' ' + body).toLowerCase())}">
+  return `<article class="ad" data-kind="${kind}" data-read="${readCls}" data-job="${e(a.job||'')}" data-mech="${e((a.mechanisms||[]).join(' '))}" data-cast="${e(a.casting||'')}" data-s="${e((a.persona + ' ' + a.psycho + ' ' + (a.jobName||'') + ' ' + (a.mechanismNames||[]).join(' ') + ' ' + (a.title || '') + ' ' + body).toLowerCase())}">
 <div class="shot" style="aspect-ratio:${a.w}/${a.h}"><img src="${a.img}" alt="${e(a.persona)}" width="${a.w}" height="${a.h}" loading="lazy" decoding="async"><span class="fmt ${kind}">${kind === 'video' ? '&#9654; VIDEO' : 'STATIC'}</span><span class="run"><b>${a.days}</b>d</span></div>
 <div class="meat">
 <h4${tok ? ' class="tok"' : ''}>${tok ? '&#8212; dynamic (DCO) &#8212;' : e(a.title)}</h4>
 <div class="field"><span class="lab">Persona${a.by === 'hand' ? '' : `<i class="rd ${readCls}" title="${readCls === 'auto' ? 'provisional keyword tag &#8212; not yet read' : 'no read yet'}">${readLbl}</i>`}</span><p class="persona">${e(a.persona)}</p></div>
 <div class="field"><span class="lab">Psychographic</span><p class="psycho">${e(a.psycho)}</p></div>
+<div class="tags">${a.jobName ? `<span class="tag job" title="Job">${e(a.jobName)}</span>` : ''}${(a.mechanismNames||[]).map(m=>`<span class="tag mech" title="Mechanism">${e(m)}</span>`).join('')}</div>
 ${body ? `<p class="copy">${e(body.length > 165 ? body.slice(0,165).replace(/\s+\S*$/,'') + '\u2026' : body)}</p>` : ''}
 <div class="foot"><span class="cta">${e(a.cta || '&#8212;')}</span><span class="lp" title="${e(a.link)}">${e(pathOf(a.link))}</span><a class="src" href="https://www.facebook.com/ads/library/?id=${a.id}" target="_blank" rel="noopener">Library &#8599;</a></div>
 </div></article>`;
@@ -108,6 +111,10 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <p>Ladder Meta's Ad Library by <b>start date</b>, oldest cutoff first. Whatever survives is that brand's longest runner &#8212; provably, not sampled.</p>
 <p>Dedupe on CDN content id, then cluster by concept, so each brand's cards are different <em>arguments</em>.</p></div>
 
+<div class="mcard"><h3>The index</h3>
+<p>Every ad carries a <b>job</b> (the moment, ${TAXONOMY.jobs.length} values) and its <b>mechanisms</b> (the belief levers, ${TAXONOMY.mechanisms.length} values). Both hand-assigned, both closed lists.</p>
+<p>Filter by them to cut across brands: every blame-relocation ad, every unsayable symptom, every ad working a named hour of the day.</p></div>
+
 <div class="mcard flag"><h3>Days running is not performance</h3>
 <p>The Ad Library exposes <b>no spend and no impressions</b> for US commercial ads. This measures how long a team kept paying &#8212; conviction, not return.</p>
 <p>Cadence differs 25&#215; here. Compare <b>within</b> a brand, never across the table.</p></div>
@@ -125,7 +132,9 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <button class="chip" data-lane="*" aria-pressed="true">All lanes</button>${chips}
 <div class="seg" role="group" aria-label="Media type"><button data-kind="*" aria-pressed="true">All</button><button data-kind="video" aria-pressed="false">Video</button><button data-kind="static" aria-pressed="false">Static</button></div>
 ${nHand < totalAds ? '<div class="seg" role="group" aria-label="Annotation state"><button data-read="*" aria-pressed="true">Any read</button><button data-read="hand" aria-pressed="false">Hand-read</button></div>' : ''}
-<input class="q" id="q" type="search" placeholder="Search persona or belief &#8212; try &ldquo;GLP-1&rdquo;, &ldquo;cortisol&rdquo;, &ldquo;doctor&rdquo;">
+<select class="fac" id="fjob" aria-label="Filter by job"><option value="*">Any job</option>${TAXONOMY.jobs.map(j=>`<option value="${e(j.id)}">${e(j.name)}</option>`).join('')}</select>
+<select class="fac" id="fmech" aria-label="Filter by mechanism"><option value="*">Any mechanism</option>${TAXONOMY.mechanisms.map(m=>`<option value="${e(m.id)}">${e(m.name)}</option>`).join('')}</select>
+<input class="q" id="q" type="search" placeholder="Search&#8230;">
 <span class="count" id="count"></span></div></div>
 
 <main class="wrap">${lanes}<p class="empty" id="empty" hidden>No ads match that filter.</p></main>
@@ -145,7 +154,8 @@ fs.writeFileSync(path.join(ROOT, 'public/census.json'), JSON.stringify({
   note: 'Per-ad days are measured directly. No creative-volume counts are published: the harvest ladder stops early, so any such count reflects scan depth, not advertiser volume.',
   rows: brands.flatMap(b => b.ads.map(a => ({
     brand: b.n, lane: b.l, adId: a.id, days: a.days, kind: a.kind,
-    title: a.title, persona: a.persona, psychographic: a.psycho, readBy: a.by,
+    title: a.title, persona: a.persona, psychographic: a.psycho,
+    job: a.job, mechanisms: a.mechanisms, casting: a.casting, indexedBy: a.by,
     landing: a.link, adLibrary: `https://www.facebook.com/ads/library/?id=${a.id}` }))),
 }, null, 1));
 console.log(`built: ${brands.length} brands, ${totalAds} ads (${nHand} hand / ${nAuto} auto / ${nNone} unread) -> public/index.html`);
