@@ -1,7 +1,34 @@
 [
-{"t":"Hormones are the villain. Both sexes.","d":"Cortisol, testosterone, peri-menopause. Same job in six brands: move the cause of a body you dislike from your <em>behaviour</em> to your <em>biology</em>. Happy Mammoth, Primal Queen and Mars Men are one psychographic in three costumes. <b>It isn't my fault, and the mechanism has a name.</b>"},
-{"t":"GLP-1 makes personas, not demand.","d":"The patient whose appetite vanished. The one with constipation. The man refusing injections. Huel, Gr&#252;ns, Primal Queen and Mars Men each serve <em>one</em> of them. Three buyers, one drug. Treat it as a single audience and you leave two unserved."},
-{"t":"Doctors nobody employs.","d":"Lab coats at Primal Queen and Resilia. <em>Doctor reacts</em> at Ulike. <em>A real cancer researcher.</em> <em>Yale-educated scientists.</em> Not one of them works for the advertiser. The buyer distrusts their own doctor and trusts a credentialed dissenter."},
-{"t":"Sorry is an offer.","d":"<em>We made too much.</em> <em>We really fcked up this time.</em> <em>Apologies to last week's buyers.</em> Frame the discount as a mistake and the price drops without the product being worth less."},
-{"t":"Premium stopped discounting.","d":"R&#332;Z's longest runner is a checkout screen reading <em>Due Today $0.00</em>. Norse Organics makes its returns policy the efficacy claim: <em>acne will never return</em>. Where price is the objection, <b>don't pay yet</b> beats <b>pay less</b>."}
+{
+"t": "The same buyer, four aisles apart.",
+"d": "<b>The Microplastic Auditor</b> is sold a toothbrush by Primals, a frying pan by HexClad, gym shorts by Nero and dishwasher tablets by Blueland &#8212; all on the same lever: <em>this ordinary object has been poisoning you</em>. Nothing in the product connects them. The <b>anxiety</b> does."
+},
+{
+"t": "Blame relocation is the highest-yield lever on the page.",
+"d": "<b>The Self-Blamer Let Off The Hook</b> shows up in eleven brands across hormones, focus, testosterone, skincare and socks. Every one of them says a version of <em>it was never your discipline</em>. It is the most reliably long-running argument in this corpus."
+},
+{
+"t": "Proof is a genre, not a claim.",
+"d": "<b>The Sceptic Who Wants A Diagram</b> spans fourteen brands and nine categories &#8212; a lab coat at Ulike, a Venn diagram at Blueland, an exploded outsole at The North Face, a stainless-steel Q&amp;A at Caraway. The buyer does not want the benefit. They want to be shown the <b>mechanism</b>."
+},
+{
+"t": "Hormones are the villain. Both sexes.",
+"d": "Cortisol, testosterone, peri-menopause. Same job in six brands: move the cause of a body you dislike from your <em>behaviour</em> to your <em>biology</em>. Happy Mammoth, Primal Queen and Mars Men are one psychographic in three costumes. <b>It isn't my fault, and the mechanism has a name.</b>"
+},
+{
+"t": "GLP-1 makes personas, not demand.",
+"d": "The patient whose appetite vanished. The one with constipation. The man refusing injections. Huel, Gr&#252;ns, Primal Queen and Mars Men each serve <em>one</em> of them. Three buyers, one drug. Treat it as a single audience and you leave two unserved."
+},
+{
+"t": "Doctors nobody employs.",
+"d": "Lab coats at Primal Queen and Resilia. <em>Doctor reacts</em> at Ulike. <em>A real cancer researcher.</em> <em>Yale-educated scientists.</em> Not one of them works for the advertiser. The buyer distrusts their own doctor and trusts a credentialed dissenter."
+},
+{
+"t": "Sorry is an offer.",
+"d": "<em>We made too much.</em> <em>We really fcked up this time.</em> <em>Apologies to last week's buyers.</em> Frame the discount as a mistake and the price drops without the product being worth less."
+},
+{
+"t": "Premium stopped discounting.",
+"d": "R&#332;Z's longest runner is a checkout screen reading <em>Due Today $0.00</em>. Norse Organics makes its returns policy the efficacy claim: <em>acne will never return</em>. Where price is the objection, <b>don't pay yet</b> beats <b>pay less</b>."
+}
 ]

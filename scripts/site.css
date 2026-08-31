@@ -117,6 +117,10 @@ h1{font-weight:700;font-size:clamp(38px,7vw,76px);line-height:.98;letter-spacing
 .rd{font-style:normal;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;
  padding:2px 5px;border-radius:3px;margin-left:7px;cursor:help;background:var(--surf2);color:var(--mut)}
 .rd.auto{background:#2B1B3D;color:var(--magl)}
+/* how many of the brands on this page cast the same person */
+.xb{font-style:normal;font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.06em;
+ padding:2px 5px;border-radius:3px;margin-left:auto;cursor:help;
+ background:rgba(214,90,168,.14);color:var(--magl);border:1px solid rgba(214,90,168,.28)}
 
 .ad[hidden],.brand[hidden],.lane[hidden]{display:none}
 .empty{padding:70px 0;text-align:center;color:var(--lbl);font-size:15px}

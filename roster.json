@@ -51,6 +51,26 @@
    "id": "outdoor",
    "name": "Outdoor & Performance",
    "sub": "Trail, hydration & performance gear"
+  },
+  {
+   "id": "beverage",
+   "name": "Beverage & Soda",
+   "sub": "Prebiotic, canned water & energy"
+  },
+  {
+   "id": "home",
+   "name": "Cookware & Home",
+   "sub": "Pans, refills & non-toxic swaps"
+  },
+  {
+   "id": "carry",
+   "name": "Accessories & Everyday Carry",
+   "sub": "Wallets, eyewear & what you pocket"
+  },
+  {
+   "id": "pets",
+   "name": "Pets",
+   "sub": "Fresh food & subscription feeding"
   }
  ],
  "brands": [
@@ -956,6 +976,78 @@
    "n": "Joinmochi",
    "p": "105611155408317",
    "l": "hormone"
+  },
+  {
+   "k": "LumeDeodorant",
+   "n": "Lume Deodorant",
+   "p": "1968343433393769",
+   "l": "hairremoval"
+  },
+  {
+   "k": "Olipop",
+   "n": "Olipop",
+   "p": "162352551085006",
+   "l": "beverage"
+  },
+  {
+   "k": "Poppi",
+   "n": "Poppi",
+   "p": "101077004856501",
+   "l": "beverage"
+  },
+  {
+   "k": "LiquidDeath",
+   "n": "Liquid Death",
+   "p": "2012750189007245",
+   "l": "beverage"
+  },
+  {
+   "k": "Caraway",
+   "n": "Caraway",
+   "p": "2290435917939387",
+   "l": "home"
+  },
+  {
+   "k": "Blueland",
+   "n": "Blueland",
+   "p": "277005566267077",
+   "l": "home"
+  },
+  {
+   "k": "WarbyParker",
+   "n": "Warby Parker",
+   "p": "308998183837",
+   "l": "carry"
+  },
+  {
+   "k": "TheRidge",
+   "n": "The Ridge",
+   "p": "176366735873065",
+   "l": "carry"
+  },
+  {
+   "k": "ThreadWallets",
+   "n": "Thread Wallets",
+   "p": "1557105941178762",
+   "l": "carry"
+  },
+  {
+   "k": "ProofWallets",
+   "n": "Proof Wallets",
+   "p": "321060521082703",
+   "l": "carry"
+  },
+  {
+   "k": "FarmersDog",
+   "n": "The Farmer's Dog",
+   "p": "634050770016568",
+   "l": "pets"
+  },
+  {
+   "k": "Curology",
+   "n": "Curology",
+   "p": "246043868861319",
+   "l": "skincare"
   }
  ]
 }

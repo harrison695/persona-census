@@ -26,7 +26,7 @@ for (const b of roster.brands) {
     if (rec.by === 'hand') nHand++; else if (rec.by === 'auto') nAuto++; else nNone++;
     const imgFile = `img/${b.k}_${a.id}.webp`;
     const d = DIMS[`${b.k}_${a.id}`];
-    const base = { ...a, ...rec, concept: c, w: d?.[0] || 620, h: d?.[1] || 775,
+    const base = { ...a, ...rec, key: `${b.k}_${a.id}`, concept: c, w: d?.[0] || 620, h: d?.[1] || 775,
              img: fs.existsSync(path.join(ROOT, 'public', imgFile)) ? imgFile : null };
     return { ...base, ...indexAd({ ...base, psychographic: base.psycho }) };
   }).filter(a => a.img);
@@ -37,6 +37,25 @@ const totalAds = brands.reduce((s, b) => s + b.ads.length, 0);
 const totalUniq = brands.reduce((s, b) => s + (b.h.uniq || 0), 0);
 const totalConc = brands.reduce((s, b) => s + (b.h.concepts || 0), 0);
 const maxDays = Math.max(...brands.map(b => b.h.max || 0));
+// A brand's ladder stops as soon as it has enough long runners. Anything whose last rung
+// is not the 0-day floor was cut short by design, which is why no volume figure is published.
+const nEarly = brands.filter(b => {
+  const l = b.h.ladder || []; const last = l[l.length - 1] || '';
+  return !/^0d=/.test(last);
+}).length;
+// Persona recurrence, computed rather than asserted.
+const pCount = {}, pBrands = {}, pLanes = {};
+for (const b of brands) for (const a of b.ads) {
+  pCount[a.persona] = (pCount[a.persona] || 0) + 1;
+  (pBrands[a.persona] ??= new Set()).add(b.k);
+  (pLanes[a.persona] ??= new Set()).add(b.l);
+}
+const nPersonas = Object.keys(pCount).length;
+const nRecur = Object.values(pCount).filter(v => v > 1).length;
+const nCrossLane = Object.keys(pLanes).filter(k => pLanes[k].size > 1).length;
+const topPersonas = Object.keys(pCount)
+  .filter(k => pBrands[k].size > 2)
+  .sort((x, y) => pBrands[y].size - pBrands[x].size || pCount[y] - pCount[x]);
 const gated = Object.values(H.brands).filter(b => !(b.picks || []).length && b.gatedNoMedia > 0).map(b => b.name);
 const noads = Object.values(H.brands).filter(b => !(b.picks || []).length && !b.gatedNoMedia && !b.err).map(b => b.name);
 
@@ -46,11 +65,11 @@ const card = a => {
   const body = (a.text || '').startsWith('{{') ? '' : a.text;
   const readCls = a.by === 'hand' ? 'hand' : (a.by === 'auto' ? 'auto' : 'none');
   const readLbl = a.by === 'hand' ? 'read' : (a.by === 'auto' ? 'auto' : 'unread');
-  return `<article class="ad" data-kind="${kind}" data-read="${readCls}" data-job="${e(a.job||'')}" data-mech="${e((a.mechanisms||[]).join(' '))}" data-cast="${e(a.casting||'')}" data-s="${e((a.persona + ' ' + a.psycho + ' ' + (a.jobName||'') + ' ' + (a.mechanismNames||[]).join(' ') + ' ' + (a.title || '') + ' ' + body).toLowerCase())}">
+  return `<article class="ad" data-kind="${kind}" data-read="${readCls}" data-job="${e(a.job||'')}" data-mech="${e((a.mechanisms||[]).join(' '))}" data-cast="${e(a.casting||'')}" data-pers="${e(a.persona)}" data-s="${e((a.persona + ' ' + a.psycho + ' ' + (a.jobName||'') + ' ' + (a.mechanismNames||[]).join(' ') + ' ' + (a.title || '') + ' ' + body).toLowerCase())}">
 <div class="shot" style="aspect-ratio:${a.w}/${a.h}"><img src="${a.img}" alt="${e(a.persona)}" width="${a.w}" height="${a.h}" loading="lazy" decoding="async"><span class="fmt ${kind}">${kind === 'video' ? '&#9654; VIDEO' : 'STATIC'}</span><span class="run"><b>${a.days}</b>d</span></div>
 <div class="meat">
 <h4${tok ? ' class="tok"' : ''}>${tok ? '&#8212; dynamic (DCO) &#8212;' : e(a.title)}</h4>
-<div class="field"><span class="lab">Persona${a.by === 'hand' ? '' : `<i class="rd ${readCls}" title="${readCls === 'auto' ? 'provisional keyword tag &#8212; not yet read' : 'no read yet'}">${readLbl}</i>`}</span><p class="persona">${e(a.persona)}</p></div>
+<div class="field"><span class="lab">Persona${pBrands[a.persona] && pBrands[a.persona].size > 1 ? `<i class="xb" title="This persona is cast by ${pBrands[a.persona].size} of the brands here, across ${pLanes[a.persona].size} categor${pLanes[a.persona].size === 1 ? 'y' : 'ies'}">&#215;${pBrands[a.persona].size}</i>` : ''}${a.by === 'hand' ? '' : `<i class="rd ${readCls}" title="${readCls === 'auto' ? 'provisional keyword tag &#8212; not yet read' : 'no read yet'}">${readLbl}</i>`}</span><p class="persona">${e(a.persona)}</p></div>
 <div class="field"><span class="lab">Psychographic</span><p class="psycho">${e(a.psycho)}</p></div>
 <div class="tags">${a.jobName ? `<span class="tag job" title="Job">${e(a.jobName)}</span>` : ''}${(a.mechanismNames||[]).map(m=>`<span class="tag mech" title="Mechanism">${e(m)}</span>`).join('')}</div>
 ${body ? `<p class="copy">${e(body.length > 165 ? body.slice(0,165).replace(/\s+\S*$/,'') + '\u2026' : body)}</p>` : ''}
@@ -102,7 +121,8 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <dl class="tally">
 <div><dt>Brands</dt><dd>${brands.length}</dd></div>
 <div><dt>Ads profiled</dt><dd>${totalAds}</dd></div>
-<div><dt>Hand-read</dt><dd>${nHand}</dd></div>
+<div><dt>Personas</dt><dd>${nPersonas}</dd></div>
+<div><dt>Cross-category</dt><dd>${nCrossLane}</dd></div>
 <div><dt>Longest runner</dt><dd>${maxDays}<small>d</small></dd></div>
 </dl></div></header>
 
@@ -120,7 +140,7 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <p>Cadence differs 25&#215; here. Compare <b>within</b> a brand, never across the table.</p></div>
 
 <div class="mcard flag"><h3>No volume figures</h3>
-<p>The scan stops once it has the long runners; 102 of 120 brands stopped early. Any creative count would measure <b>the scrape</b>, not the advertiser.</p>
+<p>The scan stops once it has the long runners; ${nEarly} of ${brands.length} brands stopped early. Any creative count would measure <b>the scrape</b>, not the advertiser.</p>
 <p>${nHand === totalAds ? `All ${totalAds} personas are hand-read. Nothing here is keyword-guessed.` : `${nHand} hand-read, ${nAuto} auto-tagged, ${nNone} unread.`}</p></div>
 </div></section>
 
@@ -134,6 +154,7 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 ${nHand < totalAds ? '<div class="seg" role="group" aria-label="Annotation state"><button data-read="*" aria-pressed="true">Any read</button><button data-read="hand" aria-pressed="false">Hand-read</button></div>' : ''}
 <select class="fac" id="fjob" aria-label="Filter by job"><option value="*">Any job</option>${TAXONOMY.jobs.map(j=>`<option value="${e(j.id)}">${e(j.name)}</option>`).join('')}</select>
 <select class="fac" id="fmech" aria-label="Filter by mechanism"><option value="*">Any mechanism</option>${TAXONOMY.mechanisms.map(m=>`<option value="${e(m.id)}">${e(m.name)}</option>`).join('')}</select>
+<select class="fac" id="fpers" aria-label="Filter by persona"><option value="*">Any persona</option>${topPersonas.map(p=>`<option value="${e(p)}">${e(p)} &#183; ${pBrands[p].size} brands</option>`).join('')}</select>
 <input class="q" id="q" type="search" placeholder="Search&#8230;">
 <span class="count" id="count"></span></div></div>
 

@@ -1,8 +1,9 @@
-node_modules/
-data/harvest.log
-.DS_Store
 *.log
+.DS_Store
+.claude/
 data/harvest.backup.json
+data/harvest.log
 data/resume.log
-data/sheets/
 data/sheet_index.tsv
+data/sheets/
+node_modules/

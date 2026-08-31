@@ -612,3 +612,148 @@ The Water-Ready Walker	choosing-a-variant	spectacle-demo	product-only
 The Waterproof-Boot Buyer	choosing-a-variant	identity-display	product-only
 The Western-Collab Follower	seen-owning-it	identity-display	celebrity
 The Wide-Fit Sufferer	unsayable-symptom	spectacle-demo	product-only
+The Aisle-Side Comparison Shopper	quitting-an-incumbent	retail-verification,absence-screening	peer-to-camera
+The Armchair Expeditioner	seen-owning-it	identity-display	athlete
+The At-Home Cafe Recreator	named-hour	ritual-construction	product-only
+The At-Home Laser Convert	first-time-in-category	spectacle-demo	peer-to-camera
+The Bar-On-Black Minimalist	choosing-a-variant	identity-display	product-only
+The Trade-Pro Recommended Buyer	choosing-a-variant	identity-display	product-only
+The Bathroom Haul Watcher	choosing-a-variant	spectacle-demo	peer-to-camera
+The Bathroom-Shelf Displayer	seen-owning-it	identity-display	product-only
+The Beach-Hair Chaser	choosing-a-variant	identity-display	stranger
+The Beauty-Routine Delegator	optimising-a-stack	identity-display	stranger
+The Bedroom-As-Sanctuary Decorator	seen-owning-it	identity-display	stranger
+The Bedtime Sequence Builder	named-hour	naming-the-shame	product-only
+The Bikini-Line Perfectionist	unsayable-symptom	spectacle-demo,naming-the-shame	product-only
+The Boot-Of-The-Car Snacker	named-hour	ritual-construction	peer-to-camera
+The Buy-More-Save-More Restocker	restocking	value-arithmetic	product-only
+The Calorie-Cutter Missing Something	rules-stopped-working	borrowed-authority	graphic
+The Candy-Bar Benchmarker	expects-it-to-be-unpleasant	quantified-outcome	product-only
+The Capsule Sceptic	cant-evaluate-it	origin-transparency,peer-proof	peer-to-camera
+The Cart-Screenshot Convert	waiting-for-the-price	value-arithmetic,spectacle-demo	graphic
+The Category Defector	quitting-an-incumbent	identity-display,naming-the-shame	peer-to-camera
+The Celebrity-Brand Follower	seen-owning-it	borrowed-authority,identity-display	celebrity
+The Chalky-Shake Defector	expects-it-to-be-unpleasant	naming-the-shame,borrowed-authority	celebrity
+The Clean-Label Bar Scanner	vetting-ingredients	absence-screening,origin-transparency	product-only
+The Coffee-Dependent Riser	named-hour	spectacle-demo	graphic
+The Contest-Entering Parent	seen-owning-it	scarcity-or-apology,peer-proof	graphic
+The Cost-Per-Day Calculator	waiting-for-the-price	value-arithmetic,ritual-construction	product-only
+The Counterfeit-Wary Direct Buyer	cant-evaluate-it	risk-reversal,origin-transparency	product-only
+The Creatine-Curious Morning Stacker	optimising-a-stack	quantified-outcome	product-only
+The Custom-Formula Believer	choosing-a-variant	identity-display	peer-to-camera
+The Damage-Repair Seeker	rules-stopped-working	spectacle-demo,quantified-outcome	product-only
+The Day-Parted Routine Buyer	choosing-a-variant	retail-verification,ritual-construction	graphic
+The Depleted Mother	named-hour	naming-the-shame	peer-to-camera
+The Desk-Bound Chocolate Rationaliser	named-hour	absence-screening	peer-to-camera
+The Device Sceptic Who Wants A Diagram	cant-evaluate-it	borrowed-authority	clinician-figure
+The Dieter Who Refuses To Give Up Dessert	expects-it-to-be-unpleasant	identity-display	product-only
+The Dieter Whose Old Tricks Stopped Working	rules-stopped-working	quantified-outcome,blame-relocation	product-only
+The Dog-Years Extender	buying-for-someone-else	quantified-outcome	product-only
+The Dose-Checking Adaptogen Buyer	vetting-ingredients	origin-transparency	product-only
+The Editor-Endorsement Follower	cant-evaluate-it	borrowed-authority,peer-proof	product-only
+The Embarrassed Beginner Runner	rules-stopped-working	peer-proof,naming-the-shame	athlete
+The Everyday-Carry Curator	routine-as-content	identity-display	product-only
+The Fandom Collector	seen-owning-it	identity-display,scarcity-or-apology	graphic
+The Fifteen-For-Ten Stacker	waiting-for-the-price	value-arithmetic	product-only
+The Fifty-Five-Year-Old Reporting Back	body-changed-overnight	peer-proof,quantified-outcome	peer-to-camera
+The First-Open Unboxer	cant-evaluate-it	spectacle-demo	product-only
+The First-Taste Reactor	expects-it-to-be-unpleasant	spectacle-demo,peer-proof	peer-to-camera
+The Food-Porn Comparator	expects-it-to-be-unpleasant	spectacle-demo	product-only
+The Foot-Shape Convert	quitting-an-incumbent	spectacle-demo	product-only
+The Four-Benefit Consolidator	optimising-a-stack	quantified-outcome,value-arithmetic	product-only
+The Free-Gift Threshold Buyer	waiting-for-the-price	value-arithmetic,scarcity-or-apology	peer-to-camera
+The Fridge-Stocked Convert	restocking	identity-display,ritual-construction	peer-to-camera
+The GLP-1 Muscle Preserver	on-a-protocol	borrowed-authority,quantified-outcome	product-only
+The GLP-1 Patient Who Wants It Ready-Made	on-a-protocol	retail-verification,quantified-outcome	product-only
+The Get-Ready-With-Me Follower	named-hour	ritual-construction	peer-to-camera
+The Glute-Program Beginner	first-time-in-category	scarcity-or-apology,peer-proof	product-only
+The Grooming-Routine Voyeur	routine-as-content	identity-display	peer-to-camera
+The Group-Chat Roast Participant	seen-owning-it	naming-the-shame	peer-to-camera
+The Gut-Anxious Scroller	unsayable-symptom	naming-the-shame,spectacle-demo	graphic
+The Gym-Bag Packer	routine-as-content	identity-display	product-only
+The Hair-Transformation Watcher	routine-as-content	identity-display	peer-to-camera
+The Head-Shaving Convert	cant-evaluate-it	spectacle-demo	peer-to-camera
+The Home Colour Experimenter	cant-evaluate-it	peer-proof,spectacle-demo	peer-to-camera
+The Hormone-Habit Builder	on-a-protocol	ritual-construction,borrowed-authority	graphic
+The In-Store Demonstrator	restocking	retail-verification,peer-proof	peer-to-camera
+The Ingredient Walkthrough Watcher	cant-evaluate-it	peer-proof,origin-transparency	peer-to-camera
+The Injectables Alternative Seeker	routine-as-content	identity-display	peer-to-camera
+The Intimate-Symptom Confessor	unsayable-symptom	peer-proof,naming-the-shame	product-only
+The Kit-Over-Components Buyer	first-time-in-category	ritual-construction,origin-transparency	graphic
+The Kitchen-Counter Demonstrator	routine-as-content	peer-proof	peer-to-camera
+The Kitchen-Kit Completer	choosing-a-variant	spectacle-demo,identity-display	product-only
+The Life-Stage Sorter	choosing-a-variant	borrowed-authority	graphic
+The Longevity Optimiser	on-a-protocol	identity-display	stranger
+The Low-T Suspecting Man	on-a-protocol	peer-proof,risk-reversal	peer-to-camera
+The Man Explaining It In A Driveway	cant-evaluate-it	peer-proof	peer-to-camera
+The Man Watching Another Man's Routine	cant-evaluate-it	borrowed-authority,ritual-construction	celebrity
+The Microplastic Auditor	quitting-an-incumbent	quantified-outcome,absence-screening	product-only
+The Mirror-Check Progress Poster	on-a-protocol	identity-display,peer-proof	peer-to-camera
+The Morning-Ritual Filmer	routine-as-content	ritual-construction	peer-to-camera
+The New Mother Building A Routine	routine-as-content	peer-proof	peer-to-camera
+The New-Format Watcher	choosing-a-variant	scarcity-or-apology	product-only
+The New-Line Tryer	choosing-a-variant	scarcity-or-apology	peer-to-camera
+The New-Mattress Unboxer	routine-as-content	ritual-construction	product-only
+The Newly Pregnant Re-Stacker	life-event	peer-proof	product-only
+The Nostalgia-Format Remixer	expects-it-to-be-unpleasant	spectacle-demo	peer-to-camera
+The Nurse-Explained Sceptic	cant-evaluate-it	borrowed-authority,spectacle-demo	clinician-figure
+The Object-As-Statement Buyer	seen-owning-it	identity-display	product-only
+The Once-A-Week Sufferer	unsayable-symptom	naming-the-shame,spectacle-demo	graphic
+The One Who Got Complimented	seen-owning-it	peer-proof,identity-display	peer-to-camera
+The One-More-Input Optimiser	optimising-a-stack	borrowed-authority,peer-proof	peer-to-camera
+The Overwhelmed Ingredient Shopper	cant-evaluate-it	peer-proof	product-only
+The Panel-Reading GLP-1 Patient	on-a-protocol	quantified-outcome,absence-screening	peer-to-camera
+The Parent Auditing The Gummy Panel	vetting-ingredients	naming-the-shame,origin-transparency	peer-to-camera
+The Pet-Proof Household Buyer	choosing-a-variant	identity-display	product-only
+The Pickle-Jar Escapee	quitting-an-incumbent	naming-the-shame	graphic
+The Pizza-Steel Convert	seen-owning-it	peer-proof,spectacle-demo	graphic
+The Poolside Snacker	life-event	identity-display	peer-to-camera
+The Pregnancy Skin-Change Adapter	life-event	peer-proof	peer-to-camera
+The Price-Objection Reader	waiting-for-the-price	value-arithmetic,origin-transparency	product-only
+The Product-Feed Browser	choosing-a-variant	identity-display	product-only
+The Protein-Target Tracker	on-a-protocol	quantified-outcome,ritual-construction	peer-to-camera
+The Provenance-Priced Buyer	vetting-ingredients	origin-transparency,value-arithmetic	product-only
+The Recipe-Hack Follower	routine-as-content	ritual-construction,spectacle-demo	graphic
+The Refund-Risk Calculator	cant-evaluate-it	risk-reversal,peer-proof	founder
+The Regularity Confessor	unsayable-symptom	naming-the-shame	product-only
+The Retail-Price Refuser	waiting-for-the-price	value-arithmetic,scarcity-or-apology	graphic
+The Routine-Extension Adopter	first-time-in-category	ritual-construction	peer-to-camera
+The Salon-Result-At-Home Chaser	restocking	peer-proof	peer-to-camera
+The Saturday-Cartoon Rememberer	seen-owning-it	identity-display	product-only
+The Scalp-First Convert	cant-evaluate-it	identity-display	stranger
+The Scarcity-Cued Buyer	waiting-for-the-price	scarcity-or-apology,value-arithmetic	product-only
+The Scented-Home Curator	choosing-a-variant	identity-display	product-only
+The Search-Bar Confessor	unsayable-symptom	peer-proof,naming-the-shame	peer-to-camera
+The Seasonal Room Refresher	choosing-a-variant	identity-display	graphic
+The Seasonal-Drop Chaser	choosing-a-variant	scarcity-or-apology	product-only
+The Self-Blamer Let Off The Hook	rules-stopped-working	blame-relocation	graphic
+The Shade-Matcher	choosing-a-variant	spectacle-demo	graphic
+The Skate-Shoe Loyalist	seen-owning-it	identity-display	product-only
+The Slow-Ritual Aspirant	routine-as-content	ritual-construction	stranger
+The Smooth-Skin Shortcut Taker	routine-as-content	spectacle-demo	peer-to-camera
+The Sober-Curious Substituter	quitting-an-incumbent	peer-proof,borrowed-authority	product-only
+The Softness Sceptic	cant-evaluate-it	identity-display	product-only
+The Store-Visit Follower	cant-evaluate-it	retail-verification,peer-proof	peer-to-camera
+The Straight-Talking Operator	cant-evaluate-it	peer-proof	peer-to-camera
+The Street-Sampled Stranger	cant-evaluate-it	peer-proof	stranger
+The Supply-Chain Reader	cant-evaluate-it	origin-transparency,spectacle-demo	product-only
+The Team-Issued Fuel Buyer	cant-evaluate-it	borrowed-authority,peer-proof	athlete
+The Texture-Proof Watcher	cant-evaluate-it	spectacle-demo	product-only
+The Themed Gift Shopper	buying-for-someone-else	identity-display	product-only
+The Toddler-Transition Parent	life-event	peer-proof	peer-to-camera
+The Trade Account Holder	buying-for-someone-else	risk-reversal,identity-display	product-only
+The Trades Boot Wearer	choosing-a-variant	identity-display	product-only
+The Trailhead Energy Rationer	named-hour	identity-display	product-only
+The Travel-Size Packer	choosing-a-variant	identity-display	product-only
+The Variety-Pack Household Buyer	choosing-a-variant	risk-reversal	product-only
+The Warehouse-Scale Believer	cant-evaluate-it	spectacle-demo	graphic
+The Warm-Weather Uniform Buyer	seen-owning-it	identity-display	product-only
+The Woman Buying For Her Man	buying-for-someone-else	peer-proof	peer-to-camera
+The Woman In A New Phase Of Life	body-changed-overnight	quantified-outcome	product-only
+The Woman Whose Hands Gave Her Age Away	body-changed-overnight	peer-proof	product-only
+The Entertained Bystander	cant-evaluate-it	spectacle-demo	stranger
+The Eyewear-As-Signature Wearer	routine-as-content	identity-display	stranger
+The Frame-Try-On Browser	choosing-a-variant	spectacle-demo	peer-to-camera
+The Sceptic Who Wants A Diagram	expects-it-to-be-unpleasant	peer-proof,blame-relocation	product-only
+The Sweepstakes Entrant	waiting-for-the-price	scarcity-or-apology	graphic
+The Veteran-Owned Preferrer	choosing-a-variant	origin-transparency,identity-display	product-only

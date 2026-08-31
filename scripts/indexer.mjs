@@ -5,7 +5,11 @@
  * were wrong (a glovebox stocker classified as an unsayable symptom), because a bag of words
  * fires on incidental vocabulary. The regexes in taxonomy.json survive ONLY as a suggestion
  * for personas that have no hand mapping yet -- new creative from a refresh -- and anything
- * resolved that way is flagged `suggested` rather than presented as indexed. */
+ * resolved that way is flagged `suggested` rather than presented as indexed.
+ *
+ * annotations/index_ads.tsv overrides the persona map for a single ad. A persona names a
+ * person, not a moment -- the same buyer shows up in different circumstances across ads, so
+ * an ad-level read wins over the persona-level default wherever one exists. */
 import fs from 'node:fs'; import path from 'node:path';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const T = JSON.parse(fs.readFileSync(path.join(ROOT, 'annotations/taxonomy.json'), 'utf8'));
@@ -18,6 +22,16 @@ for (const line of fs.readFileSync(path.join(ROOT, 'annotations/index_map.tsv'),
   MAP[persona.trim()] = { job: job.trim(), mechanisms: (mechs || '').split(',').map(s => s.trim()).filter(Boolean), casting: (casting || '').trim() };
 }
 
+const AD = {};
+const adFile = path.join(ROOT, 'annotations/index_ads.tsv');
+if (fs.existsSync(adFile)) {
+  for (const line of fs.readFileSync(adFile, 'utf8').split('\n')) {
+    const [id, job, mechs, casting] = line.split('\t');
+    if (!id || !job) continue;
+    AD[id.trim()] = { job: job.trim(), mechanisms: (mechs || '').split(',').map(s => s.trim()).filter(Boolean), casting: (casting || '').trim() };
+  }
+}
+
 function suggest(ad) {
   const hay = `${ad.persona || ''} ${ad.psychographic || ad.psycho || ''} ${ad.title || ''} ${ad.text || ''}`;
   const best = (list) => { let b = null, bs = 0;
@@ -27,7 +41,7 @@ function suggest(ad) {
 }
 
 export function indexAd(ad) {
-  const hit = MAP[ad.persona];
+  const hit = AD[ad.key] || MAP[ad.persona];
   const r = hit ? { ...hit, indexBy: 'hand' } : suggest(ad);
   return { ...r,
     jobName: NAME[r.job] || null,

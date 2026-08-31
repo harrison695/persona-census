@@ -1,0 +1,39 @@
+5.1	The Clean-Label Bar Scanner	vetting-ingredients	absence-screening,origin-transparency	product-only	Reads the arrows before the flavour; organic and non-GMO are a gate the bar has to pass before taste is even a question.
+5.2	The Clean-Label Bar Scanner	vetting-ingredients	absence-screening,origin-transparency	product-only	Wants the ingredient list annotated onto the photo so she never has to turn the pack over.
+5.3	The Clean-Label Bar Scanner	vetting-ingredients	absence-screening	product-only	The bite mark proves it is food; the callouts prove it is allowed.
+5.4	The Clean-Label Bar Scanner	restocking	absence-screening,value-arithmetic	product-only	Buying the box rather than the bar; the screening is already done, this is the reorder.
+5.5	The Clean-Label Bar Scanner	vetting-ingredients	absence-screening,origin-transparency	product-only	Chocolate chips styled like a bake, credentials stacked around them; indulgence needs a permission slip.
+5.6	The Trailhead Energy Rationer	named-hour	identity-display	product-only	Buys fuel for a specific hour of exertion; the mountain does the segmenting, not the macros.
+5.7	The Aisle-Side Comparison Shopper	quitting-an-incumbent	retail-verification,absence-screening	peer-to-camera	Stands in front of the shelf he is defecting from; naming the incumbents by sight is the argument.
+5.8	The Food-Porn Comparator	expects-it-to-be-unpleasant	spectacle-demo	peer-to-camera	Benchmarked against pizza and cereal rather than other bars; the comparison set is the whole claim.
+5.9	The Glute-Program Beginner	first-time-in-category	scarcity-or-apology,peer-proof	product-only	If I was just starting out is advice framing; she is being told what she would have bought sooner.
+5.10	The Mirror-Check Progress Poster	on-a-protocol	identity-display,peer-proof	peer-to-camera	I tried is the whole caption; the mirror is the measuring instrument and the receipt.
+6.1	The Aisle-Side Comparison Shopper	waiting-for-the-price	value-arithmetic,retail-verification	peer-to-camera	He is doing your maths out loud in the aisle; what the other guy spends is the hook.
+6.2	The Seed-Oil Avoider	vetting-ingredients	absence-screening	product-only	No seed oils is not a feature to him, it is the entry requirement; everything else is styling.
+6.3	The Everyday-Carry Curator	routine-as-content	identity-display	product-only	Photographed beside the watch, the wallet and the keys; the bar is being admitted to a carry, not a diet.
+6.4	The Seed-Oil Avoider	vetting-ingredients	origin-transparency	product-only	One bar, four lines of spec, no persuasion; restraint is what he reads as honesty.
+6.5	The Seed-Oil Avoider	vetting-ingredients	absence-screening	product-only	Cleanest is a superlative he will check; the four-line panel exists so he can.
+6.6	The Chalky-Shake Defector	expects-it-to-be-unpleasant	naming-the-shame,borrowed-authority	celebrity	The meme does the rejecting for him; choking down is the word he already uses privately.
+6.7	The Chalky-Shake Defector	expects-it-to-be-unpleasant	quantified-outcome,value-arithmetic	product-only	Cardboard is the benchmark being beaten; the discount stack closes what the taste line opened.
+6.8	The Creatine-Curious Morning Stacker	optimising-a-stack	identity-display,absence-screening	athlete	Wants the creatine already inside breakfast; the torso is the outcome standing next to the bowl.
+6.9	The Woman Buying For Her Man	buying-for-someone-else	peer-proof	peer-to-camera	She is the buyer for a product named for him; the endorsement works because she is not the user.
+6.10	The Creatine-Curious Morning Stacker	optimising-a-stack	ritual-construction	product-only	Two tubs framed as a pairing rather than a purchase; plus-one turns an upsell into a routine.
+7.1	The Variety-Pack Household Buyer	choosing-a-variant	risk-reversal	product-only	Build your own removes the risk of committing to one flavour she might not like.
+7.2	The Buy-More-Save-More Restocker	restocking	value-arithmetic	product-only	Already sold on the product; the only open question is how many, and the tiers answer it.
+7.3	The Kitchen-Counter Demonstrator	routine-as-content	ritual-construction,spectacle-demo	peer-to-camera	The blender bottle is the co-star; she is showing a sequence, not making a claim.
+7.4	The GLP-1 Muscle Preserver	on-a-protocol	borrowed-authority,quantified-outcome	product-only	On the drug and now afraid of what she is losing; lean muscle mass is the fear being addressed.
+7.5	The Microplastic Auditor	vetting-ingredients	absence-screening	product-only	Screens objects the way others screen ingredients; BPA, phthalates and PFAS are read as a single category.
+7.6	The Microplastic Auditor	quitting-an-incumbent	quantified-outcome,absence-screening	product-only	88,000 versus zero is the entire ad; the number makes an invisible exposure countable.
+7.7	The Microplastic Auditor	quitting-an-incumbent	quantified-outcome,absence-screening	product-only	The same two brushes and the same number, running long enough to be the control.
+7.8	The Seed-Oil Avoider	optimising-a-stack	identity-display,absence-screening	stranger	Addressed by a habit he already has; if you avoid seed oils is a password, not a benefit.
+7.9	The Morning-Ritual Filmer	routine-as-content	ritual-construction	peer-to-camera	Films the walk to the kitchen because the routine is the product; the bottle is a prop in a day.
+7.10	The Morning-Ritual Filmer	routine-as-content	peer-proof	peer-to-camera	Boxes on the counter, mid-sentence; the domestic clutter is what makes it read as hers.
+8.1	The First-Open Unboxer	first-time-in-category	spectacle-demo	peer-to-camera	First-time trying is the format; he is buying the right to have an opinion, not the outcome yet.
+8.2	The Ingredient Walkthrough Watcher	cant-evaluate-it	peer-proof,origin-transparency	peer-to-camera	Holds the sachets up one at a time; she needs someone to open it before she will.
+8.3	The Longevity Optimiser	on-a-protocol	identity-display	stranger	Right choices is doing the segmenting; the gym is where the identity is proved, not the product.
+8.5	The Life-Stage Sorter	choosing-a-variant	borrowed-authority	graphic	Four boxes, four ages; the grid tells her which square she is standing in before it sells anything.
+8.6	The Regularity Confessor	unsayable-symptom	naming-the-shame	product-only	The word she would not type is set in the brand typeface; saying it plainly is the entire creative.
+8.7	The Capsule Sceptic	cant-evaluate-it	origin-transparency,peer-proof	peer-to-camera	The capsule opened on a fingernail is the proof; she does not trust a claim she cannot see inside.
+8.8	The Woman In A New Phase Of Life	body-changed-overnight	blame-relocation,borrowed-authority	product-only	Told the decline is hormonal and scheduled, not a failure of effort; the word does the absolving.
+8.9	The Capsule Sceptic	cant-evaluate-it	origin-transparency	peer-to-camera	Can you trust your vitamins is the anxiety, not the offer; the answer is manufacturing, not benefit.
+8.10	The Regularity Confessor	unsayable-symptom	naming-the-shame	graphic	Poop set in editorial serif on brand yellow; the taboo is being underwritten by the design.
