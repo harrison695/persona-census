@@ -23,12 +23,12 @@ function suggest(ad) {
   const best = (list) => { let b = null, bs = 0;
     for (const x of list) { const n = (hay.match(new RegExp(x.match, 'gi')) || []).length; if (n > bs) { bs = n; b = x.id; } }
     return b; };
-  return { job: best(T.jobs), mechanisms: [best(T.mechanisms)].filter(Boolean), casting: best(T.casting), by: 'suggested' };
+  return { job: best(T.jobs), mechanisms: [best(T.mechanisms)].filter(Boolean), casting: best(T.casting), indexBy: 'suggested' };
 }
 
 export function indexAd(ad) {
   const hit = MAP[ad.persona];
-  const r = hit ? { ...hit, by: 'hand' } : suggest(ad);
+  const r = hit ? { ...hit, indexBy: 'hand' } : suggest(ad);
   return { ...r,
     jobName: NAME[r.job] || null,
     mechanismNames: (r.mechanisms || []).map(m => NAME[m]).filter(Boolean),

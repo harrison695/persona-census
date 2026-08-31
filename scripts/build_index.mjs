@@ -16,5 +16,6 @@ const show = (title, t, defs) => {
 show('JOB (one per ad)', tally('job'), T.jobs);
 show('MECHANISM (multi-label)', tally('mechanisms'), T.mechanisms);
 show('CASTING (one per ad)', tally('casting'), T.casting);
-show('SOURCE', tally('by'));
+show('INDEX SOURCE', tally('indexBy'));
+show('READ SOURCE', tally('readBy'));
 fs.writeFileSync(path.join(ROOT, 'data/indexed.json'), JSON.stringify(out, null, 1));

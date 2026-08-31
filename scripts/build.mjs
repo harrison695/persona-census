@@ -155,7 +155,8 @@ fs.writeFileSync(path.join(ROOT, 'public/census.json'), JSON.stringify({
   rows: brands.flatMap(b => b.ads.map(a => ({
     brand: b.n, lane: b.l, adId: a.id, days: a.days, kind: a.kind,
     title: a.title, persona: a.persona, psychographic: a.psycho,
-    job: a.job, mechanisms: a.mechanisms, casting: a.casting, indexedBy: a.by,
+    job: a.job, mechanisms: a.mechanisms, casting: a.casting,
+    readBy: a.by, indexBy: a.indexBy,
     landing: a.link, adLibrary: `https://www.facebook.com/ads/library/?id=${a.id}` }))),
 }, null, 1));
 console.log(`built: ${brands.length} brands, ${totalAds} ads (${nHand} hand / ${nAuto} auto / ${nNone} unread) -> public/index.html`);
