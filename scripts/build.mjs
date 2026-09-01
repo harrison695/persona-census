@@ -43,11 +43,15 @@ const nEarly = brands.filter(b => {
   const l = b.h.ladder || []; const last = l[l.length - 1] || '';
   return !/^0d=/.test(last);
 }).length;
-// Persona recurrence, computed rather than asserted.
+// Persona recurrence, computed rather than asserted. Serving units (catalogue tiles, logo
+// burns — `cat` in personas.json) address nobody and sit outside every persona figure.
+// Advertisers running two Ad Library pages (b.adv) count once toward cross-brand spread.
 const pCount = {}, pBrands = {}, pLanes = {};
+let nCat = 0;
 for (const b of brands) for (const a of b.ads) {
+  if (a.cat) { nCat++; continue; }
   pCount[a.persona] = (pCount[a.persona] || 0) + 1;
-  (pBrands[a.persona] ??= new Set()).add(b.k);
+  (pBrands[a.persona] ??= new Set()).add(b.adv || b.k);
   (pLanes[a.persona] ??= new Set()).add(b.l);
 }
 const nPersonas = Object.keys(pCount).length;
@@ -65,12 +69,12 @@ const card = a => {
   const body = (a.text || '').startsWith('{{') ? '' : a.text;
   const readCls = a.by === 'hand' ? 'hand' : (a.by === 'auto' ? 'auto' : 'none');
   const readLbl = a.by === 'hand' ? 'read' : (a.by === 'auto' ? 'auto' : 'unread');
-  return `<article class="ad" data-kind="${kind}" data-read="${readCls}" data-job="${e(a.job||'')}" data-mech="${e((a.mechanisms||[]).join(' '))}" data-cast="${e(a.casting||'')}" data-pers="${e(a.persona)}" data-s="${e((a.persona + ' ' + a.psycho + ' ' + (a.jobName||'') + ' ' + (a.mechanismNames||[]).join(' ') + ' ' + (a.title || '') + ' ' + body).toLowerCase())}">
+  return `<article class="ad" data-kind="${kind}" data-read="${readCls}" data-job="${e(a.job||'')}" data-mech="${e((a.mechanisms||[]).join(' '))}" data-cast="${e(a.casting||'')}" data-pers="${a.cat ? '' : e(a.persona)}" data-s="${e(((a.cat ? '' : a.persona) + ' ' + a.psycho + ' ' + (a.jobName||'') + ' ' + (a.mechanismNames||[]).join(' ') + ' ' + (a.title || '') + ' ' + body).toLowerCase())}">
 <div class="shot" style="aspect-ratio:${a.w}/${a.h}"><img src="${a.img}" alt="${e(a.persona)}" width="${a.w}" height="${a.h}" loading="lazy" decoding="async"><span class="fmt ${kind}">${kind === 'video' ? '&#9654; VIDEO' : 'STATIC'}</span><span class="run"><b>${a.days}</b>d</span></div>
 <div class="meat">
 <h4${tok ? ' class="tok"' : ''}>${tok ? '&#8212; dynamic (DCO) &#8212;' : e(a.title)}</h4>
-<div class="field"><span class="lab">Persona${pBrands[a.persona] && pBrands[a.persona].size > 1 ? `<i class="xb" title="This persona is cast by ${pBrands[a.persona].size} of the brands here, across ${pLanes[a.persona].size} categor${pLanes[a.persona].size === 1 ? 'y' : 'ies'}">&#215;${pBrands[a.persona].size}</i>` : ''}${a.by === 'hand' ? '' : `<i class="rd ${readCls}" title="${readCls === 'auto' ? 'provisional keyword tag &#8212; not yet read' : 'no read yet'}">${readLbl}</i>`}</span><p class="persona">${e(a.persona)}</p></div>
-<div class="field"><span class="lab">Psychographic</span><p class="psycho">${e(a.psycho)}</p></div>
+<div class="field"><span class="lab">Persona${!a.cat && pBrands[a.persona] && pBrands[a.persona].size > 1 ? `<i class="xb" title="This persona is cast by ${pBrands[a.persona].size} of the advertisers here, across ${pLanes[a.persona].size} categor${pLanes[a.persona].size === 1 ? 'y' : 'ies'}">&#215;${pBrands[a.persona].size}</i>` : ''}${a.by === 'hand' ? '' : `<i class="rd ${readCls}" title="${readCls === 'auto' ? 'provisional keyword tag &#8212; not yet read' : 'no read yet'}">${readLbl}</i>`}</span><p class="persona${a.cat ? ' unit' : ''}">${a.cat ? '&#8212; serving unit: no addressed persona &#8212;' : e(a.persona)}</p></div>
+<div class="field"><span class="lab">${a.cat ? 'Note' : 'Psychographic'}</span><p class="psycho">${e(a.psycho)}</p></div>
 <div class="tags">${a.jobName ? `<span class="tag job" title="Job">${e(a.jobName)}</span>` : ''}${(a.mechanismNames||[]).map(m=>`<span class="tag mech" title="Mechanism">${e(m)}</span>`).join('')}</div>
 ${body ? `<p class="copy">${e(body.length > 165 ? body.slice(0,165).replace(/\s+\S*$/,'') + '\u2026' : body)}</p>` : ''}
 <div class="foot"><span class="cta">${e(a.cta || '&#8212;')}</span><span class="lp" title="${e(a.link)}">${e(pathOf(a.link))}</span><a class="src" href="https://www.facebook.com/ads/library/?id=${a.id}" target="_blank" rel="noopener">Library &#8599;</a></div>
@@ -137,7 +141,8 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 
 <div class="mcard flag"><h3>Days running is not performance</h3>
 <p>The Ad Library exposes <b>no spend and no impressions</b> for US commercial ads. This measures how long a team kept paying &#8212; conviction, not return.</p>
-<p>Cadence differs 25&#215; here. Compare <b>within</b> a brand, never across the table.</p></div>
+<p>Cadence differs 25&#215; here. Compare <b>within</b> a brand, never across the table.</p>
+${nCat ? `<p>${nCat} of the ${totalAds} ads are always-on <b>serving units</b> &#8212; catalogue tiles and logo burns that run long by default, addressing nobody. They are marked on their cards and excluded from every persona figure.</p>` : ''}</div>
 
 <div class="mcard flag"><h3>No volume figures</h3>
 <p>The scan stops once it has the long runners; ${nEarly} of ${brands.length} brands stopped early. Any creative count would measure <b>the scrape</b>, not the advertiser.</p>
@@ -177,7 +182,7 @@ fs.writeFileSync(path.join(ROOT, 'public/census.json'), JSON.stringify({
     brand: b.n, lane: b.l, adId: a.id, days: a.days, kind: a.kind,
     title: a.title, persona: a.persona, psychographic: a.psycho,
     job: a.job, mechanisms: a.mechanisms, casting: a.casting,
-    readBy: a.by, indexBy: a.indexBy,
+    readBy: a.by, indexBy: a.indexBy, ...(a.cat ? { servingUnit: true } : {}),
     landing: a.link, adLibrary: `https://www.facebook.com/ads/library/?id=${a.id}` }))),
 }, null, 1));
 console.log(`built: ${brands.length} brands, ${totalAds} ads (${nHand} hand / ${nAuto} auto / ${nNone} unread) -> public/index.html`);

@@ -9,7 +9,9 @@
  *
  * annotations/index_ads.tsv overrides the persona map for a single ad. A persona names a
  * person, not a moment -- the same buyer shows up in different circumstances across ads, so
- * an ad-level read wins over the persona-level default wherever one exists. */
+ * an ad-level read wins over the persona-level default wherever one exists. The two tiers
+ * publish distinct labels (`hand-ad` vs `hand-persona`): an inherited default carries a
+ * persona-wide blast radius when its map row is wrong, so it must stay distinguishable. */
 import fs from 'node:fs'; import path from 'node:path';
 const ROOT = path.resolve(import.meta.dirname, '..');
 const T = JSON.parse(fs.readFileSync(path.join(ROOT, 'annotations/taxonomy.json'), 'utf8'));
@@ -41,8 +43,10 @@ function suggest(ad) {
 }
 
 export function indexAd(ad) {
-  const hit = AD[ad.key] || MAP[ad.persona];
-  const r = hit ? { ...hit, indexBy: 'hand' } : suggest(ad);
+  const adHit = AD[ad.key], mapHit = MAP[ad.persona];
+  const r = adHit ? { ...adHit, indexBy: 'hand-ad' }
+    : mapHit ? { ...mapHit, indexBy: 'hand-persona' }
+    : suggest(ad);
   return { ...r,
     jobName: NAME[r.job] || null,
     mechanismNames: (r.mechanisms || []).map(m => NAME[m]).filter(Boolean),

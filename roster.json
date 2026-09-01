@@ -269,7 +269,8 @@
    "n": "Happy Mammoth",
    "p": "1343771369029582",
    "l": "hormone",
-   "v": true
+   "v": true,
+   "adv": "HappyMammoth"
   },
   {
    "k": "OPositiv",
@@ -282,7 +283,8 @@
    "k": "HappyMammothUS",
    "n": "Happy Mammoth US",
    "p": "106190960961818",
-   "l": "hormone"
+   "l": "hormone",
+   "adv": "HappyMammoth"
   },
   {
    "k": "SpoiledChild",
@@ -412,7 +414,8 @@
    "n": "Javvy",
    "p": "109899597504831",
    "l": "coffee",
-   "v": true
+   "v": true,
+   "adv": "Javvy"
   },
   {
    "k": "MUDWTR",
@@ -885,7 +888,8 @@
    "k": "JavvyProtein",
    "n": "Javvy Protein Coffee",
    "p": "114697891619524",
-   "l": "coffee"
+   "l": "coffee",
+   "adv": "Javvy"
   },
   {
    "k": "ALOHA",

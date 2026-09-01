@@ -13,7 +13,7 @@
    "at": "2026-08-26"
   },
   "Huel_890685750337801": {
-   "persona": "The 80-Pounds-Down Proof Seeker",
+   "persona": "The Review-Wall Reader",
    "psycho": "Believes results are only real when a named stranger with a Trustpilot badge posts them; wants the receipt before the promise.",
    "by": "hand",
    "at": "2026-08-26"
@@ -3397,7 +3397,7 @@
    "at": "2026-08-27"
   },
   "Casper_4456780087928471": {
-   "persona": "The Four-Out-Of-Five Reassured",
+   "persona": "The Review-Wall Reader",
    "psycho": "Wants a majority statistic plus a risk-free trial; the warranty and the hundred nights are what close it.",
    "by": "hand",
    "at": "2026-08-27"
@@ -3700,13 +3700,15 @@
    "persona": "The Product-Feed Browser",
    "psycho": "Being shown only a logo; the ad is buying recognition, not consideration.",
    "by": "hand",
-   "at": "2026-08-27"
+   "at": "2026-08-27",
+   "cat": true
   },
   "HoneyStinger_3943633542437031": {
    "persona": "The Product-Feed Browser",
    "psycho": "Being shown only a logo; the ad is buying recognition, not consideration.",
    "by": "hand",
-   "at": "2026-08-27"
+   "at": "2026-08-27",
+   "cat": true
   },
   "HoneyStinger_1337042871809511": {
    "persona": "The Team-Issued Fuel Buyer",
@@ -3718,13 +3720,15 @@
    "persona": "The Product-Feed Browser",
    "psycho": "Being shown only a logo; the ad is buying recognition, not consideration.",
    "by": "hand",
-   "at": "2026-08-27"
+   "at": "2026-08-27",
+   "cat": true
   },
   "HoneyStinger_1294107115511359": {
    "persona": "The Product-Feed Browser",
    "psycho": "Being shown only a logo; the ad is buying recognition, not consideration.",
    "by": "hand",
-   "at": "2026-08-27"
+   "at": "2026-08-27",
+   "cat": true
   },
   "SkratchLabs_1696625208271490": {
    "persona": "The Founder-Explained Sceptic",
@@ -3943,7 +3947,7 @@
    "at": "2026-08-31"
   },
   "DavidProtein_1474054674372377": {
-   "persona": "The Man Explaining It In A Driveway",
+   "persona": "The Straight-Talking Operator",
    "psycho": "Trusts a bloke talking at normal speed in an ordinary place over anything shot on a set.",
    "by": "hand",
    "at": "2026-08-31"
@@ -4075,7 +4079,7 @@
    "at": "2026-08-31"
   },
   "QuestNutrition_2871924189854633": {
-   "persona": "The In-Store Demonstrator",
+   "persona": "The Aisle-Side Comparison Shopper",
    "psycho": "Filmed in the aisle where she buys it; the shelf behind her is the availability proof.",
    "by": "hand",
    "at": "2026-08-31"
@@ -5884,7 +5888,8 @@
    "persona": "The Product-Feed Browser",
    "psycho": "A single shoe on white with no copy at all; this is a catalogue tile doing retargeting work.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "TheNorthFace_2243493376400113": {
    "persona": "The Product-Feed Browser",
@@ -5896,25 +5901,29 @@
    "persona": "The Product-Feed Browser",
    "psycho": "The same mule again in the same frame; the feed is being filled rather than the argument being made.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "TheNorthFace_1490236779070422": {
    "persona": "The Product-Feed Browser",
    "psycho": "Identical to the last, running the same window; variation here is a serving artefact, not a creative decision.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "TheNorthFace_920683967727161": {
    "persona": "The Product-Feed Browser",
    "psycho": "A white slide on white; colour is the only variable being tested.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "TheNorthFace_1634936314243976": {
    "persona": "The Product-Feed Browser",
    "psycho": "One more angle of the same shoe; he has already seen this product and is being followed around.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "BlackDiamond_956008330271603": {
    "persona": "The Kit-Over-Components Buyer",
@@ -5950,7 +5959,8 @@
    "persona": "The Product-Feed Browser",
    "psycho": "Sandal on a colour field; the palette is the only thing being communicated.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "HoneyStinger_26614087094939370": {
    "persona": "The Team-Issued Fuel Buyer",
@@ -6382,7 +6392,8 @@
    "persona": "The Product-Feed Browser",
    "psycho": "White linen on white with no copy; the tile exists to sit in a feed, not to argue.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "SFERRA_2090660921486972": {
    "persona": "The Product-Feed Browser",
@@ -6412,19 +6423,22 @@
    "persona": "The Product-Feed Browser",
    "psycho": "One pillowcase, one colour; the catalogue is being served rather than a story told.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "SFERRA_2850198438694256": {
    "persona": "The Product-Feed Browser",
    "psycho": "A bath mat on white; the tile is doing coverage work inside a large product feed.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "SFERRA_950839124708529": {
    "persona": "The Product-Feed Browser",
    "psycho": "The same duvet in the same frame weeks later; nothing about the creative is being iterated.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "SFERRA_1516173703536387": {
    "persona": "The Product-Feed Browser",
@@ -6736,7 +6750,8 @@
    "persona": "The Product-Feed Browser",
    "psycho": "The same set again weeks later; the tile is doing catalogue duty rather than making a case.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "Poppi_1550525563443940": {
    "persona": "The Aisle-Side Comparison Shopper",
@@ -6778,13 +6793,15 @@
    "persona": "The Product-Feed Browser",
    "psycho": "A single pan in a different colourway; the feed is being covered rather than an argument made.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "Caraway_934232366355651": {
    "persona": "The Product-Feed Browser",
    "psycho": "Navy this time; three near-identical tiles running the same week is a colour test, not a campaign.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "Caraway_1508300947763056": {
    "persona": "The Sceptic Who Wants A Diagram",
@@ -6916,7 +6933,8 @@
    "persona": "The Product-Feed Browser",
    "psycho": "A patterned metal plate on white; the finish is the only thing distinguishing it from the last tile.",
    "by": "hand",
-   "at": "2026-08-31"
+   "at": "2026-08-31",
+   "cat": true
   },
   "TheRidge_1092730413084317": {
    "persona": "The Everyday-Carry Curator",
@@ -7155,7 +7173,7 @@
    "at": "2026-08-26"
   },
   "huel.com/products/huel-black-edition||||": {
-   "persona": "The 80-Pounds-Down Proof Seeker",
+   "persona": "The Review-Wall Reader",
    "psycho": "Believes results are only real when a named stranger with a Trustpilot badge posts them; wants the receipt before the promise.",
    "by": "hand",
    "at": "2026-08-26"
@@ -10539,7 +10557,7 @@
    "at": "2026-08-27"
   },
   "casper.com/collections/mattresses||||": {
-   "persona": "The Four-Out-Of-Five Reassured",
+   "persona": "The Review-Wall Reader",
    "psycho": "Wants a majority statistic plus a risk-free trial; the warranty and the hundred nights are what close it.",
    "by": "hand",
    "at": "2026-08-27"
