@@ -1,114 +1,132 @@
 {
  "version": 1,
- "note": "Three closed dimensions replacing free-text personas. JOB names a moment (circumstance + struggle), never a person. MECHANISM is the belief lever the ad pulls. CASTING is who is on screen, demoted to a readout. Derived by clustering 639 hand-read ads.",
+ "note": "Three closed dimensions replacing free-text personas. JOB names a moment (circumstance + struggle), never a person. MECHANISM is the belief lever the ad pulls. CASTING is who is on screen, demoted to a readout. Derived by clustering 639 hand-read ads. Each job also carries a FAMILY rollup: life moments argue a reader into the category, shopping moments work the purchase itself (which one, is it real, what price), social display sells being seen with it.",
  "jobs": [
   {
    "id": "unsayable-symptom",
    "name": "I have a symptom I can't say out loud",
    "def": "A private, embarrassing or socially costly body problem the buyer has never named to anyone.",
-   "match": "embarrass|shame|private|tells no one|nobody|never named|admit|quietly|confess|down there|discreet|itch|odor|odour|sweat|smell|ingrown|acne|pimple|swamp|chin hair|peach fuzz|pcos|uti|urinary|vaginal|stain|distress|bloat|leak"
+   "match": "embarrass|shame|private|tells no one|nobody|never named|admit|quietly|confess|down there|discreet|itch|odor|odour|sweat|smell|ingrown|acne|pimple|swamp|chin hair|peach fuzz|pcos|uti|urinary|vaginal|stain|distress|bloat|leak",
+   "family": "life"
   },
   {
    "id": "rules-stopped-working",
    "name": "I followed the rules and it got worse",
    "def": "Has done what they were told, seen it fail, and now distrusts the advice itself.",
-   "match": "tried everything|given up|nearly quit|got worse|ran out of options|expects failure|let down|hopeless|doing everything right|resign|disillusion|stopped working|sceptic|skeptic|suspicious|distrust|doubt|been burned|prior|assumes.*(bad|won't|will not)|refuses|unwilling|objection|convinced otherwise"
+   "match": "tried everything|given up|nearly quit|got worse|ran out of options|expects failure|let down|hopeless|doing everything right|resign|disillusion|stopped working|sceptic|skeptic|suspicious|distrust|doubt|been burned|prior|assumes.*(bad|won't|will not)|refuses|unwilling|objection|convinced otherwise",
+   "family": "life"
   },
   {
    "id": "body-changed-overnight",
    "name": "My body changed and nobody warned me",
    "def": "A sudden, unrequested change in shape, hair, skin or capacity read as betrayal rather than ageing.",
-   "match": "changed|overnight|suddenly|early lines|thinning|age spot|forties|fifties|at 26|betray|ageing|younger|creases|menopaus|perimenopause|menobelly|cortisol|hormon|shed|loss|wrinkle|fold|crease|grey|receding|sagg|firmness|collagen|decline"
+   "match": "changed|overnight|suddenly|early lines|thinning|age spot|forties|fifties|at 26|betray|ageing|younger|creases|menopaus|perimenopause|menobelly|cortisol|hormon|shed|loss|wrinkle|fold|crease|grey|receding|sagg|firmness|collagen|decline",
+   "family": "life"
   },
   {
    "id": "named-hour",
    "name": "There is one hour of the day I lose",
    "def": "A recurring, clock-anchored failure point: the crash, the craving, the empty evening, the rushed morning.",
-   "match": "\\b\\d ?(am|pm)\\b|morning|evening|afternoon|bedtime|night|breakfast|crash|craving|3pm|drop-off|commute|post-shower|sunday|hour|daily|every day|routine moment|first meeting|school run|wake|before bed|mid-|lunch|2pm|8pm|9am"
+   "match": "\\b\\d ?(am|pm)\\b|morning|evening|afternoon|bedtime|night|breakfast|crash|craving|3pm|drop-off|commute|post-shower|sunday|hour|daily|every day|routine moment|first meeting|school run|wake|before bed|mid-|lunch|2pm|8pm|9am",
+   "family": "life"
   },
   {
    "id": "on-a-protocol",
    "name": "I'm on a drug or protocol and it left a gap",
    "def": "Already taking something (GLP-1, TRT, stimulants) and shopping for what it broke or what it left unmet.",
-   "match": "glp-?1|ozempic|injection|trt|testosterone|adderall|prescription|protocol|semaglutide|drug"
+   "match": "glp-?1|ozempic|injection|trt|testosterone|adderall|prescription|protocol|semaglutide|drug",
+   "family": "life"
   },
   {
    "id": "restocking",
    "name": "I'm restocking something I already use",
    "def": "Converted. The decision is quantity, price per unit or format, not whether.",
-   "match": "restock|already (a )?(user|convert|own|sold)|reorder|replacement|refill|bulk|case|stock up|completist|range-completing|already (convinced|sold|inside|a customer)|existing (owner|user|customer)|converted|loyal|repurchase|another|top.?up|more of"
+   "match": "restock|already (a )?(user|convert|own|sold)|reorder|replacement|refill|bulk|case|stock up|completist|range-completing|already (convinced|sold|inside|a customer)|existing (owner|user|customer)|converted|loyal|repurchase|another|top.?up|more of",
+   "family": "shopping"
   },
   {
    "id": "choosing-a-variant",
    "name": "I've decided on the brand, now which one",
    "def": "Sold on the category and paralysed between flavours, shades, firmnesses or colourways.",
-   "match": "choos|which one|variant|colourway|shade|flavour|deciding between|deliberat|comparer|picker|between|paralys|narrow|shortlist|final step|decided on the (model|brand|category)|palette|silhouette|firmness|strength|grade|tier"
+   "match": "choos|which one|variant|colourway|shade|flavour|deciding between|deliberat|comparer|picker|between|paralys|narrow|shortlist|final step|decided on the (model|brand|category)|palette|silhouette|firmness|strength|grade|tier",
+   "family": "shopping"
   },
   {
    "id": "buying-for-someone-else",
    "name": "I'm buying this for someone else",
    "def": "Purchase decided by a third party's needs or reaction: a child, a partner, a pet, a gift recipient, a client.",
-   "match": "gift|child|kid|son|daughter|baby|parent|mother|partner|dog|pet|someone else|lunchbox|client|household|family|whole family|hand (it|them)|share|for her|for him|recipient|toddler|teenage"
+   "match": "gift|child|kid|son|daughter|baby|parent|mother|partner|dog|pet|someone else|lunchbox|client|household|family|whole family|hand (it|them)|share|for her|for him|recipient|toddler|teenage",
+   "family": "shopping"
   },
   {
    "id": "life-event",
    "name": "An event has forced this purchase",
    "def": "A move, a trip, a holiday, a date, a season with a date on it.",
-   "match": "move-?in|travel|trip|holiday|vacation|date night|season|guest|packing|college|christmas|summer|deadline|occasion|event|wedding|festival|game|calendar|dated|by april|black friday|cyber|new year|back to school"
+   "match": "move-?in|travel|trip|holiday|vacation|date night|season|guest|packing|college|christmas|summer|deadline|occasion|event|wedding|festival|game|calendar|dated|by april|black friday|cyber|new year|back to school",
+   "family": "life"
   },
   {
    "id": "first-time-in-category",
    "name": "I've never bought this category before",
    "def": "Cold. The offer, not the product, is doing the persuading.",
-   "match": "first (order|time|box)|trial|toe-dip|sampler|never bought|new to|starter|try before|discovery set|cold|has not|never|unfamiliar|entry point|low commitment|audition|blind|risk of being first|prospect not a customer"
+   "match": "first (order|time|box)|trial|toe-dip|sampler|never bought|new to|starter|try before|discovery set|cold|has not|never|unfamiliar|entry point|low commitment|audition|blind|risk of being first|prospect not a customer",
+   "family": "shopping"
   },
   {
    "id": "quitting-an-incumbent",
    "name": "I'm trying to quit something I already buy",
    "def": "Defecting from an existing habit, brand, or spend: soda, creamer, the clinic, the drugstore, the convenience store.",
-   "match": "replace|swap|defect|quit|switch|instead of|escape|refuser|alternative|ditch|stop (buying|using)|incumbent|current|old pair|rival|competitor|drugstore|chain|store-bought|conventional|ordinary|regular"
+   "match": "replace|swap|defect|quit|switch|instead of|escape|refuser|alternative|ditch|stop (buying|using)|incumbent|current|old pair|rival|competitor|drugstore|chain|store-bought|conventional|ordinary|regular",
+   "family": "life"
   },
   {
    "id": "routine-as-content",
    "name": "My routine is something I perform",
    "def": "Buys what will survive being filmed or displayed; the product is a prop in a life being shown.",
-   "match": "document|publish|content|film|post|shelfie|flat-lay|curat|perform|shown|display|photograph|aesthet|shelfie|styled|scene|prop|look right|worth posting|documentar|series|haul"
+   "match": "document|publish|content|film|post|shelfie|flat-lay|curat|perform|shown|display|photograph|aesthet|shelfie|styled|scene|prop|look right|worth posting|documentar|series|haul",
+   "family": "social"
   },
   {
    "id": "cant-evaluate-it",
    "name": "I can't judge this myself, so tell me who did",
    "def": "Lacks the expertise or patience to evaluate the product and outsources the decision to a credential, a crowd or a famous name.",
-   "match": "outsource|cannot evaluate|can't evaluate|defer|judgement|who did|credential|reassur|validated|approved|trusted by|vouch|badge|award|editor|expert|authority|endorse|celebrit|famous|popular|most people|crowd|bestsell|waitlist|ranking"
+   "match": "outsource|cannot evaluate|can't evaluate|defer|judgement|who did|credential|reassur|validated|approved|trusted by|vouch|badge|award|editor|expert|authority|endorse|celebrit|famous|popular|most people|crowd|bestsell|waitlist|ranking",
+   "family": "shopping"
   },
   {
    "id": "vetting-ingredients",
    "name": "I need to know what's actually in it",
    "def": "Reads the label before the claim. Screening for what has been removed, hidden or misnamed.",
-   "match": "label|ingredient|list|reads? the|check|audit|investigat|scrutin|what is in|verif|transparen|disclos|hidden|filler|additive|proprietary|first ingredient|panel|screen"
+   "match": "label|ingredient|list|reads? the|check|audit|investigat|scrutin|what is in|verif|transparen|disclos|hidden|filler|additive|proprietary|first ingredient|panel|screen",
+   "family": "life"
   },
   {
    "id": "expects-it-to-be-unpleasant",
    "name": "I assume this will taste or feel bad",
    "def": "Carries a prior that the healthy or functional version is punishment, and that prior is the only obstacle.",
-   "match": "assum|prior|punish|taste|flavou?r|texture|mouthfeel|chalky|gritty|bitter|sludge|wallpaper|actually delicious|surprise|disbelief|won't taste|bad"
+   "match": "assum|prior|punish|taste|flavou?r|texture|mouthfeel|chalky|gritty|bitter|sludge|wallpaper|actually delicious|surprise|disbelief|won't taste|bad",
+   "family": "life"
   },
   {
    "id": "optimising-a-stack",
    "name": "I already run a system and I'm upgrading it",
    "def": "Self-quantifier or committed user tuning an existing regimen rather than starting one.",
-   "match": "optimis|optimiz|upgrad|stack|dial|tune|marginal|already (trains|tracks|runs)|wearable|score|readiness|protocol|regimen|self-optimis|biohack|max"
+   "match": "optimis|optimiz|upgrad|stack|dial|tune|marginal|already (trains|tracks|runs)|wearable|score|readiness|protocol|regimen|self-optimis|biohack|max",
+   "family": "life"
   },
   {
    "id": "seen-owning-it",
    "name": "I want to be seen as someone who owns this",
    "def": "A social job: the purchase is a membership signal. Doctrine-legitimate as a social lane, never judged on evergreen DR.",
-   "match": "seen|signal|status|tribe|belong|membership|identity|allegiance|collab|licence|license|logo|monogram|merch|fandom|franchise|collector|drop|self-expression|taste"
+   "match": "seen|signal|status|tribe|belong|membership|identity|allegiance|collab|licence|license|logo|monogram|merch|fandom|franchise|collector|drop|self-expression|taste",
+   "family": "social"
   },
   {
    "id": "waiting-for-the-price",
    "name": "I'm waiting for the price to be right",
    "def": "Wants the product, refuses the price, and is timing the purchase to a discount, a bundle or a free add-on.",
-   "match": "waiting|times? (purchases|the)|never buys? at full|threshold|deal|discount|sale|coupon|code|free (gift|shaker|pair|spoon)|bundle|cheaper|price point|arbitrage|value"
+   "match": "waiting|times? (purchases|the)|never buys? at full|threshold|deal|discount|sale|coupon|code|free (gift|shaker|pair|spoon)|bundle|cheaper|price point|arbitrage|value",
+   "family": "shopping"
   }
  ],
  "mechanisms": [

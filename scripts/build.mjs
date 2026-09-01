@@ -11,6 +11,8 @@ const FIND = JSON.parse(fs.readFileSync(path.join(ROOT, 'annotations/findings.js
 const DIMS = fs.existsSync(path.join(ROOT, 'data/imgdims.json'))
   ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/imgdims.json'), 'utf8')) : {};
 
+const FAM = Object.fromEntries(TAXONOMY.jobs.map(j => [j.id, j.family]));
+const FAMNAME = { life: 'Life moments', shopping: 'Shopping moments', social: 'Social display' };
 const e = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const ascii = s => [...s].map(c => c.codePointAt(0) < 128 ? c : `&#${c.codePointAt(0)};`).join('');
 const pathOf = u => { try { const p = '/' + u.split('//')[1].split('/').slice(1).join('/'); return p.length > 46 ? p.slice(0, 46) + '…' : p; } catch { return '/'; } };
@@ -69,7 +71,7 @@ const card = a => {
   const body = (a.text || '').startsWith('{{') ? '' : a.text;
   const readCls = a.by === 'hand' ? 'hand' : (a.by === 'auto' ? 'auto' : 'none');
   const readLbl = a.by === 'hand' ? 'read' : (a.by === 'auto' ? 'auto' : 'unread');
-  return `<article class="ad" data-kind="${kind}" data-read="${readCls}" data-job="${e(a.job||'')}" data-mech="${e((a.mechanisms||[]).join(' '))}" data-cast="${e(a.casting||'')}" data-pers="${a.cat ? '' : e(a.persona)}" data-s="${e(((a.cat ? '' : a.persona) + ' ' + a.psycho + ' ' + (a.jobName||'') + ' ' + (a.mechanismNames||[]).join(' ') + ' ' + (a.title || '') + ' ' + body).toLowerCase())}">
+  return `<article class="ad" data-kind="${kind}" data-read="${readCls}" data-job="${e(a.job||'')}" data-fam="${e(FAM[a.job]||'')}" data-mech="${e((a.mechanisms||[]).join(' '))}" data-cast="${e(a.casting||'')}" data-pers="${a.cat ? '' : e(a.persona)}" data-s="${e(((a.cat ? '' : a.persona) + ' ' + a.psycho + ' ' + (a.jobName||'') + ' ' + (a.mechanismNames||[]).join(' ') + ' ' + (a.title || '') + ' ' + body).toLowerCase())}">
 <div class="shot" style="aspect-ratio:${a.w}/${a.h}"><img src="${a.img}" alt="${e(a.persona)}" width="${a.w}" height="${a.h}" loading="lazy" decoding="async"><span class="fmt ${kind}">${kind === 'video' ? '&#9654; VIDEO' : 'STATIC'}</span><span class="run"><b>${a.days}</b>d</span></div>
 <div class="meat">
 <h4${tok ? ' class="tok"' : ''}>${tok ? '&#8212; dynamic (DCO) &#8212;' : e(a.title)}</h4>
@@ -137,7 +139,8 @@ const DOC = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 
 <div class="mcard"><h3>The index</h3>
 <p>Every ad carries a <b>job</b> (the moment, ${TAXONOMY.jobs.length} values) and its <b>mechanisms</b> (the belief levers, ${TAXONOMY.mechanisms.length} values). Both hand-assigned, both closed lists.</p>
-<p>Filter by them to cut across brands: every blame-relocation ad, every unsayable symptom, every ad working a named hour of the day.</p></div>
+<p>Filter by them to cut across brands: every blame-relocation ad, every unsayable symptom, every ad working a named hour of the day.</p>
+<p>Jobs roll up into three <b>families</b>: <b>life moments</b> (the struggle that brings someone to the category), <b>shopping moments</b> (the purchase being worked &#8212; which one, is it real, what price), and <b>social display</b> (being seen with it). One filter answers the first strategic question: which of these argue someone in, and which just close them.</p></div>
 
 <div class="mcard flag"><h3>Days running is not performance</h3>
 <p>The Ad Library exposes <b>no spend and no impressions</b> for US commercial ads. This measures how long a team kept paying &#8212; conviction, not return.</p>
@@ -156,8 +159,9 @@ ${nCat ? `<p>${nCat} of the ${totalAds} ads are always-on <b>serving units</b> &
 <div class="bar"><div class="wrap">
 <button class="chip" data-lane="*" aria-pressed="true">All lanes</button>${chips}
 <div class="seg" role="group" aria-label="Media type"><button data-kind="*" aria-pressed="true">All</button><button data-kind="video" aria-pressed="false">Video</button><button data-kind="static" aria-pressed="false">Static</button></div>
+<div class="seg" role="group" aria-label="Job family"><button data-fam="*" aria-pressed="true">All moments</button><button data-fam="life" aria-pressed="false" title="The struggle that brings someone to the category">Life</button><button data-fam="shopping" aria-pressed="false" title="The purchase being worked: which one, is it real, what price">Shopping</button><button data-fam="social" aria-pressed="false" title="Being seen with it">Social</button></div>
 ${nHand < totalAds ? '<div class="seg" role="group" aria-label="Annotation state"><button data-read="*" aria-pressed="true">Any read</button><button data-read="hand" aria-pressed="false">Hand-read</button></div>' : ''}
-<select class="fac" id="fjob" aria-label="Filter by job"><option value="*">Any job</option>${TAXONOMY.jobs.map(j=>`<option value="${e(j.id)}">${e(j.name)}</option>`).join('')}</select>
+<select class="fac" id="fjob" aria-label="Filter by job"><option value="*">Any job</option>${['life','shopping','social'].map(f=>`<optgroup label="${FAMNAME[f]}">${TAXONOMY.jobs.filter(j=>j.family===f).map(j=>`<option value="${e(j.id)}">${e(j.name)}</option>`).join('')}</optgroup>`).join('')}</select>
 <select class="fac" id="fmech" aria-label="Filter by mechanism"><option value="*">Any mechanism</option>${TAXONOMY.mechanisms.map(m=>`<option value="${e(m.id)}">${e(m.name)}</option>`).join('')}</select>
 <select class="fac" id="fpers" aria-label="Filter by persona"><option value="*">Any persona</option>${topPersonas.map(p=>`<option value="${e(p)}">${e(p)} &#183; ${pBrands[p].size} brands</option>`).join('')}</select>
 <input class="q" id="q" type="search" placeholder="Search&#8230;">
@@ -181,7 +185,7 @@ fs.writeFileSync(path.join(ROOT, 'public/census.json'), JSON.stringify({
   rows: brands.flatMap(b => b.ads.map(a => ({
     brand: b.n, lane: b.l, adId: a.id, days: a.days, kind: a.kind,
     title: a.title, persona: a.persona, psychographic: a.psycho,
-    job: a.job, mechanisms: a.mechanisms, casting: a.casting,
+    job: a.job, jobFamily: FAM[a.job] || null, mechanisms: a.mechanisms, casting: a.casting,
     readBy: a.by, indexBy: a.indexBy, ...(a.cat ? { servingUnit: true } : {}),
     landing: a.link, adLibrary: `https://www.facebook.com/ads/library/?id=${a.id}` }))),
 }, null, 1));
